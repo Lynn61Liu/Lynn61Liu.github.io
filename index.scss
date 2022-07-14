@@ -21,6 +21,7 @@ a {
     text-decoration: none;
     color: rgb(74, 73, 73);
     color: #45c2b5;
+
     &:hover {
         color: #45c2b5;
     }
@@ -36,15 +37,13 @@ a {
     background-color: #45c2b5;
 }
 
-
-
 //logo
-.logo{
-
-    img{
+.logo {
+    img {
         width: 40px;
     }
 }
+
 //section bio
 .bio {
     padding-top: 240px;
@@ -106,7 +105,6 @@ a {
 
     //mybio
     .mybio {
-
         display: flex;
         gap: 100px;
         justify-content: space-between;
@@ -138,12 +136,9 @@ a {
             position: relative;
 
             .line {
-                height: 20px
+                height: 20px;
             }
-
-            ;
         }
-
     }
 }
 
@@ -171,24 +166,22 @@ a {
                 position: absolute;
                 top: 0;
                 right: 13px;
-                content: '';
+                content: "";
                 display: inline-block;
                 width: 8px;
                 height: 8px;
                 background: white;
                 border-radius: 50%;
                 position: relative;
-                border: 2px solid #96EFE5;
+                border: 2px solid #96efe5;
             }
-
         }
     }
 }
 
-
 // section projects
 .project-list-wrap {
-margin-top: 80px;
+    margin-top: 80px;
 
     .project-item {
         margin-top: 80px;
@@ -197,82 +190,92 @@ margin-top: 80px;
         justify-content: space-between;
         flex-direction: row-reverse;
 
-        .project-pic{
+        .project-pic {
             // background-color: gainsboro;
             max-width: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         .project-title {
             font: normal normal bold 30px/30px Helvetica Neue;
             color: #080808;
             line-height: 2.5rem;
         }
-        .project-content{
+
+        .project-content {
             max-width: 50%;
             // background-color: pink;
             display: flex;
             flex-direction: column;
-             gap: 2rem;
-           
-            .project-stack{
+            gap: 2rem;
+
+            .project-stack {
                 display: flex;
-                gap:1rem;
+                gap: 1rem;
                 flex-wrap: wrap;
             }
-            button{
+
+            button {
                 border-style: none;
                 //  color:#45c2b5;
                 color: #606f7b;
                 background-color: transparent;
-                 border:  1px solid;
-                padding:3PX 10px;
+                border: 1px solid;
+                padding: 3px 10px;
                 text-transform: uppercase;
             }
-            .project-btn{
-               a{
-                color:#45c2b5;
-                font-weight: 600;
-                text-transform: uppercase;
-               }
+
+            .project-btn {
+                a {
+                    color: #45c2b5;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-right:40px ;
+                }
             }
         }
     }
 }
 
 //SECTION CONTACT
-.contact{
-    .layout-wrap{
-        margin-top:100px ;
+.contact {
+    .layout-wrap {
+        margin-top: 100px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
-        .subtitle{
+
+        .subtitle {
             width: 50%;
             // padding-right: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            h3{
+
+            h3 {
                 // width: 80%;
-                 text-align: right;
-                
+                text-align: right;
+
                 margin: 0;
-                color:#22292f;
-                span{
+                color: #22292f;
+
+                span {
                     position: relative;
                 }
             }
-            p{
-                 text-align: right;
-                 width: 70%;
+
+            p {
+                text-align: right;
+                width: 70%;
             }
-            & p:last-of-type{
-                color:black;
+
+            & p:last-of-type {
+                color: black;
                 font-weight: 500;
-                // background-color: green;
+                //  background-color: green;
             }
         }
 
@@ -283,28 +286,223 @@ margin-top: 80px;
         //         width: 475px;
         //     }
         // }
-        
     }
 }
 
 //footer
-footer{
-    color:black;
+footer {
+    color: black;
     font-size: 20px;
     font-weight: 500;
     // background-color: pink;
     height: 10vh;
-    .layout-wrap{
-        display: flex;
-       
-       gap:2rem;
-       & span:nth-child(2){
-        // background-color: green;
-        margin-left: auto;
-       }
 
-       img{
-        width: 40px;
-       }
+    .layout-wrap {
+        display: flex;
+        span a{
+            color: #080808;
+            &:hover{
+                color:#45c2b5;
+            }
+        }
+        gap: 2rem;
+
+        & span:nth-child(2) {
+            // background-color: green;
+            margin-left: auto;
+        }
+
+        img {
+            width: 40px;
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+    .bio {
+        h1 {
+            font-size: 54px;
+        }
+
+        padding-top: 46px;
+
+        .mybio {
+            display: block;
+        }
+    }
+
+    .skills {
+        p {
+            width: 70%;
+            margin-bottom: 80px;
+        }
+
+        ul {
+            grid-template-columns: 1FR 1FR;
+        }
+    }
+
+    .projects {
+        p {
+            width: 70%;
+            margin-bottom: 80px;
+        }
+
+        .project-list-wrap .project-item {
+            gap: 10px;
+
+            img {
+                width: 100%;
+            }
+
+            .project-content {
+                gap: 5px;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .project-content .project-stack {
+                gap: 10px;
+            }
+
+            .project-des,
+            .project-btn {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .contact .layout-wrap {
+        .subtitle {
+            h3 {
+                font-size: 26px;
+
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.5rem;
+            }
+
+
+        }
+
+        & div:nth-child(2) {
+            img {
+                width: 300px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 14px;
+    }
+
+    .layout-wrap {
+        padding: 0px 24px;
+    }
+
+
+    .line {
+        height: 14px;
+    }
+
+    .bio {
+        padding-top: 88px;
+        padding-bottom: 23px;
+
+        h1 {
+            width: 100%;
+            font-size: 33px;
+            line-height: 44px;
+            padding-bottom: 24px;
+        }
+
+        .mybio {
+            display: block;
+        }
+    }
+
+    .subtitle {
+        h3 {
+            margin-top: 35px;
+            margin-bottom: 0px;
+            font: normal normal bold 25px/30px Helvetica Neue;
+        }
+    }
+    .skills p, .projects p {
+        width: 100%;
+    }
+    .skills ul{
+        display: block;
+        padding-bottom:40px;
+        margin-top: 0px;
+    }
+
+    .projects {
+        p {
+            //  width: 70%;
+            margin-bottom: 80px;
+        }
+
+        .project-list-wrap .project-item {
+            display: block;
+            .project-pic {
+                display: block;
+                max-width: 100%;
+                // background-color: pink;
+               img{
+                width: 100%;
+               }
+            }
+            
+
+            .project-content {
+                max-width: 100%;
+                gap: 17px;
+            }
+
+            .project-title {
+                font-size: 19px;
+            }
+
+            .project-content .project-stack {
+                gap: 5px;
+            }
+
+            .project-des,
+            .project-btn {
+                font-size: 15px;
+            }
+        }
+    }
+    .contact .layout-wrap {
+        display: block;
+        .subtitle {
+           width: 100%;
+            h3 {
+                font-size: 26px;
+
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.5rem;
+            }
+
+
+        }
+
+        & div:nth-child(2) {
+            img {
+                width: 300px;
+            }
+
+        }
     }
 }
