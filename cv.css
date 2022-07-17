@@ -1,0 +1,78 @@
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, grey), color-stop(50%, lightgrey));
+  background-image: linear-gradient(to bottom, grey 50%, lightgrey 50%);
+  color: #606f7b;
+  font: normal normal normal 17px/30px Helvetica;
+  letter-spacing: 0.92px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  height: 100vh;
+}
+
+section .layout-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
+}
+
+section .layout-wrap div {
+  margin-top: 200px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 40vw;
+  height: 80vh;
+  background-color: #fff;
+  -webkit-box-shadow: #606f7b;
+          box-shadow: #606f7b;
+}
+
+footer {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  height: 10vh;
+}
+
+footer .layout-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+footer .layout-wrap span a {
+  color: #080808;
+}
+
+footer .layout-wrap span a:hover {
+  color: #45c2b5;
+}
+
+footer .layout-wrap span:nth-child(2) {
+  margin-left: auto;
+}
+
+footer .layout-wrap img {
+  width: 40px;
+}
+
+.layout-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+/*# sourceMappingURL=cv.css.map */
