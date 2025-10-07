@@ -1,0 +1,127 @@
+
+  :root {
+    --body-bg-color: #f7e8ad;
+    --container-bg-color: #fad25c;
+    --container-border-color: #cd8903;
+    --icon-bg-color: #694805;
+    --icon-border-color: white;
+    --title-color: #cd8903;
+    --button-text-color: #FFF6DB;
+  }
+
+  body {
+    font-family: "Amaranth", sans-serif;
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--container-bg-color);
+    background-image: url("./imgs/bgImg.webp");
+    background-repeat: repeat;
+    background-size: 700px 480px;
+    border: 10px solid var(--container-border-color);
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    height: 640px;
+  }
+
+  .topbar {
+    height: 16%;
+    display: flex;
+  }
+
+  .iconGroup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .iconGroup button {
+    width: 60px;
+    height: 60px;
+    color: transparent;
+  }
+
+  .iconGroup button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  .iconGroup button:first-child {
+    background-image: url(./imgs/homeIcon.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--icon-bg-color);
+    border-radius: 50%;
+    border: 2px var(--icon-border-color) solid;
+  }
+
+  .iconGroup button:last-child {
+    border-radius: 50%;
+    border: 1px var(--icon-border-color) solid;
+    background-image: url(./imgs/backIcon.png);
+    background-size: 100%;
+  }
+
+  .pageTitle {
+    flex: 3;
+    font-size: 40px;
+    color: var(--title-color);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .exitIcon {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .exitIcon button {
+    all: unset;
+    background-color: var(--icon-bg-color);
+    border-radius: 5%;
+    border: 1px var(--icon-border-color) solid;
+    color: var(--button-text-color);
+    font-size: 30px;
+    width: 90px;
+    height: 40px;
+   
+  }
+  .exitIcon div:first-of-type{
+    text-align: center;
+    margin: auto;
+    background-color: green;
+     border-radius: 10px;
+    width: 100px;
+    color: white;
+
+  }
+  .exitIcon img{
+    width: 100px;
+    /* height: 30px; */
+  }
+  .diy-link img {
+  transition: transform 0.3s ease, top 0.3s ease;
+  position: relative;
+}
+
+.diy-link:hover img {
+  transform: scale(1.2);
+  top: -5px;
+  cursor: pointer;
+}

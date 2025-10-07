@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LunchBoxDIY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="lunchBox.css" />
+  <script src="lunchBox.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shoppingList" style="display: none;">
+        <H3>Grocery List Activity</H3>
+        <P>What do you need to buy after a healthy lunch?</P>
+        <p>Draw on the list and go to the grocery store with your family！</p>
+        <img src="./imgs/shoppingKid.jpg" alt=""></div>
+      <div id="tips">
+        <img src="./imgs/intestinal.gif" alt="">
+        <H3>Plant/animal sources of Protein</H3>
+        <p>Legumes, nuts, seeds, fish,eggs,chicken and meat privde protein and iron for growing bodies and brain development. </p>
+        <img src="./imgs/headphones.png" id="playBtn01" alt="">
+        <audio src="./imgs/brain.mp3" controls id="audio01"></audio>
+      </div>
+      <div class="warning" id="warningDiv">
+        <button id="closeDangerDiv">X</button>
+         <img src="./imgs/al.gif" alt="">
+        <P>warning</P>
+        <p>Some foods like peanuts 🥜, eggs 🥚, or milk 🥛 can make some kids feel itchy 😣 or sick 🤢.
+
+That’s called an allergy ❗</P>
+<P>If you feel bad after eating,tell a grown-up right away! 👩‍👩‍👧‍👦❤️</p>
+        <img src="./imgs/headphones.gif" id="playBtn01" alt="">
+      </div>
+      <div class="topbar">
+        <div class="iconGroup">
+          <img id="trolley" src="./imgs/Trolleys.gif" alt="">
+        </div>
+        <div class="pageTitle">DIY your LunchBox </div>
+      </div>
+      <div class="main">
+      
+
+        <div class="plate">
+       <!-- <audio src="./audio/vf.mp3"></audio> -->
+        <div class="tableCloth"></div>
+          <div class="forkImage"><img src="./imgs/fork.png" alt="" /></div>
+          <div class="plateImg">
+            <div class="myplate">
+                <div class="slice half selectedVeg">
+                    <img id="veg" src="../LunchBox/imgs/plus.png" alt="">
+                    <img id="fruit" src="../LunchBox/imgs/plus.png" alt="">
+                </div>
+                <div class="slice quarter q1 selectedProtein"><img id="protein" src="../LunchBox/imgs/plus.png" alt=""></div>
+                <div class="slice quarter q2 selectedGrains"><img id="grain" src="../LunchBox/imgs/plus.png" alt=""></div>
+                <div class="slice quarter q3 selectedDairy"><img id="dairy" src="../LunchBox/imgs/plus.png" alt=""></div>
+              </div>
+          </div>
+          <div class="spoonImg"><img src="./imgs/spoon.png" alt="" /></div>
+        </div>
+        <div class="foodListWrap">
+          <div class="groupStyle foodList1">
+            <li><div class="foodstyle btn-dark veg"><img src="./imgs/ca.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark fruit"><img src="./imgs/blueberry.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark veg"><img src="./imgs/carrot.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark fruit"><img src="./imgs/bananas.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark dairy"><img src="./imgs/cheese.png" alt=""></div></li>
+            
+          </div>
+          <div class="groupStyle foodList2">
+            <li><div class="foodstyle btn-light protein"><img src="./imgs/fish.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light veg"><img src="./imgs/broccoli.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light grains"><img src="./imgs/rice.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light protein danger"><img src="./imgs/eggs.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light grains  "><img src="./imgs/br.png" alt=""></div></li>
+            
+          </div>
+        </div>
+      </div>
+     
+      <!-- <div class="exitIcon">
+        <button>Quit</button>
+      </div> -->
+    </div>
+  </body>
+</html>

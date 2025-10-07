@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Meals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="RainbowMeal.css" />
+    <script src="RainbowMeal.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="tips">
+        <img src="./imgs/intestinal.gif" alt="" />
+        <h3>Plant/animal sources of Protein</h3>
+        <p>
+          Legumes, nuts, seeds, fish,eggs,chicken and meat privde protein and
+          iron for growing bodies and brain development.
+        </p>
+        <img src="./imgs/headphones.png" id="playBtn01" alt="" />
+        <audio src="./imgs/brain.mp3" controls id="audio01"></audio>
+      </div>
+      <div class="topbar">
+        <div class="iconGroup">
+          <!-- <button>home</button><button>back</button> -->
+        </div>
+        <div class="pageTitle">❤️ 🧡 💛 Rainbow Meals 💚 💙 💜</div>
+      </div>
+      <div class="main">
+        <div class="plate">
+          <!-- <audio src="./audio/vf.mp3"></audio> -->
+          <div class="tableCloth"></div>
+          <div class="forkImage"><img src="./imgs/fork.png" alt="" /></div>
+          <div class="plateImg">
+            <div class="myplate">
+              <div class="slice half selectedVeg">
+                <!-- <img id="veg" src="../LunchBox/imgs/carrot.png" alt=""> -->
+                <!-- <img id="fruit" src="../LunchBox/imgs/bananas.png" alt=""> -->
+              </div>
+              <div class="slice quarter q1 selectedProtein">
+                <!-- <img id="protein" src="../LunchBox/imgs/eggs.png" alt=""> -->
+              </div>
+              <div class="slice quarter q2 selectedGrains">
+                <!-- <img id="grain" src="../LunchBox/imgs/br.png" alt=""> -->
+              </div>
+              <div class="slice quarter q3 selectedDairy">
+                <!-- <img id="dairy" src="../LunchBox/imgs/rice.png" alt=""> -->
+              </div>
+            </div>
+          </div>
+          <div class="spoonImg"><img src="./imgs/spoon.png" alt="" /></div>
+        </div>
+        <!-- <div class="foodListWrap">
+          <div class="groupStyle foodList1">
+            <li><div class="foodstyle btn-dark veg"><img src="./imgs/ca.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark fruit"><img src="./imgs/blueberry.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark veg"><img src="./imgs/carrot.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark fruit"><img src="./imgs/bananas.png" alt=""></div></li>
+            <li><div class="foodstyle btn-dark bad"><img src="./imgs/donut.png" alt=""></div></li>
+            
+          </div>
+          <div class="groupStyle foodList2">
+            <li><div class="foodstyle btn-light protein"><img src="./imgs/fish.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light veg"><img src="./imgs/broccoli.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light grains"><img src="./imgs/rice.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light protein danger"><img src="./imgs/eggs.png" alt=""></div></li>
+            <li><div class="foodstyle btn-light grains  "><img src="./imgs/br.png" alt=""></div></li>
+            
+          </div>
+        </div> -->
+      </div>
+
+      <div class="exitIcon">
+        <div class="diy-container">👇 D I Y</div>
+        <a href="./BuildingLunchBox.html" class="diy-link">
+          <img src="./imgs/diy.gif" alt="" />
+        </a>
+      </div>
+      <div id="introPopup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <div id="popupPage1" class="popup-page">
+            <h2>🥗 Welcome to My Healthy Plate!</h2>
+            <p>
+              👋 Hi there, little buddy! Did you know your body is like a super
+              cool race car? And to go fast and feel great, it needs the right
+              kind of fuel — healthy food! 🚗💨
+            </p>
+            <p>
+              Click each part of the plate to learn what different foods do for
+              your body. Some help your brain grow smarter 🧠, some make your
+              bones strong 🦴, and others help you fight off sickness 🛡️!
+            </p>
+            <div>
+              <img id="playintroBtn01" src="./imgs/headphones.gif" alt="" /><audio
+                src="./audio/intro01.mp3"
+                controls
+               
+              ></audio>
+            </div>
+          </div>
+
+          <div id="popupPage2" class="popup-page" style="display: none">
+            <h2>🎯 Our goal is:</h2>
+            <p>
+              To help you learn how to build a healthy and yummy lunchbox!
+              You’ll discover:
+            </p>
+            <ul>
+              <li>🍎🥦 What foods are good for your body？🍞🥛</li>
+              <li>How much of each you should eat？✅</li>
+              <li>Fun facts and stories you can listen to🎧</li>
+            </ul>
+            <div>
+              <img src="./imgs/headphones.gif" alt="" /><audio
+                src="./audio/intro02.mp3"
+                controls
+                id="intro02"
+              ></audio>
+            </div>
+          </div>
+
+          <div id="popupPage3" class="popup-page" style="display: none">
+            <h2>🎛 How to play:</h2>
+            <ul>
+              <li>👆 Hover or click on different parts of the plate.</li>
+              <li>
+                👀 Look at the pictures and read the tips, or listen to the
+                audio.
+              </li>
+              <li>
+                🤔 Think about this: Did you eat any of these foods today?
+              </li>
+            </ul>
+            <div>
+              <img src="./imgs/headphones.gif" alt="" /><audio
+                src="./audio/intro03.mp3"
+                controls
+                id="intro03"
+              ></audio>
+            </div>
+          </div>
+
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
