@@ -39,6 +39,9 @@ a:hover {
   height: 32px;
   background-color: #45c2b5;
 }
+.titleLine{
+  width: 550px;
+}
 
 .logo img {
   width: 40px;
