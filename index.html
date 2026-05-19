@@ -21,7 +21,7 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#articles">Articles</a>
+        <a href="#project-library">Project List</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -55,7 +55,7 @@
           </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">View Projects</a>
-            <a class="button button-secondary" href="#articles">Engineering Reflections</a>
+            <a class="button button-secondary" href="#project-library">Browse Project List</a>
           </div>
           <ul class="hero-signals" aria-label="Engineering focus areas">
             <li>Backend and service-layer thinking</li>
@@ -64,19 +64,34 @@
           </ul>
         </div>
         <aside class="hero-panel">
-          <p class="panel-label">Current focus</p>
+          <div class="focus-header">
+            <p class="panel-label">Current focus</p>
+            <span class="focus-badge">2026 Learning Track</span>
+          </div>
+          <p class="focus-intro">
+            The areas I am actively deepening now, with an emphasis on practical implementation and long-term systems
+            thinking.
+          </p>
+          <div class="focus-meta-list" aria-label="Current focus signals">
+            <span class="focus-meta">Cloud-ready delivery</span>
+            <span class="focus-meta">AI-assisted workflows</span>
+            <span class="focus-meta">Quality and security</span>
+          </div>
           <div class="focus-list">
             <div class="focus-item">
+              <span class="focus-step">Focus 01</span>
               <span class="focus-title">AI-assisted engineering</span>
               <p>Applying prompt engineering, AI APIs, and practical machine learning concepts to modern software
                 development workflows and product features.</p>
             </div>
             <div class="focus-item">
+              <span class="focus-step">Focus 02</span>
               <span class="focus-title">Cloud architecture &amp; distributed systems</span>
               <p>Building cloud-ready and event-driven applications with Azure Functions, Logic Apps, Docker, and CI/CD
                 while learning scalable system and API design through the AI-200 certification pathway.</p>
             </div>
             <div class="focus-item">
+              <span class="focus-step">Focus 03</span>
               <span class="focus-title">Engineering quality &amp; secure user experience</span>
               <p>Focusing on TDD, refactoring, debugging, secure application design, accessibility, and maintainable
                 engineering practices for real-world systems.</p>
@@ -384,8 +399,7 @@
                 digital learning experience.
               </p>
 
-             <div class="tag-list">
-
+              <div class="tag-list">
                 <span class="skill-tag">UX Design</span>
                 <span class="skill-tag">Accessibility Design</span>
                 <span class="skill-tag">User Research</span>
@@ -394,89 +408,218 @@
                 <span class="skill-tag">Curriculum Alignment</span>
                 <span class="skill-tag">Usability Testing</span>
                 <span class="skill-tag">Product Thinking</span>
-
               </div>
-
+              </div>
+            </div>
           </article>
-
-
         </div>
       </div>
     </section>
 
-    <section class="articles section" id="articles">
+    <section class="articles section" id="project-library">
       <div class="layout-wrap">
         <div class="section-heading">
-          <p class="section-kicker">Engineering Articles</p>
-          <h2>Writing that shows system thinking, trade-offs, and engineering growth.</h2>
+          <p class="section-kicker">Project List</p>
+          <h2>A browsable project library organised by engineering direction and skills.</h2>
           <p>
-            These article slots are designed to strengthen software engineering credibility without turning the site
-            into a blog-heavy content hub.
+            Use the left rail to switch between project types, then narrow the list with skills across frontend,
+            backend, UX, cloud, and testing themes.
           </p>
         </div>
-        <div class="article-grid">
-          <article class="article-card">
-            <div class="article-media">
-              <img src="./images/weeklyplan.png" alt="Illustration for article about Docker and deployment workflows" />
+        <div class="project-library-shell">
+          <aside class="filter-rail" aria-label="Project category filters">
+            <p class="filter-rail-label">Project type</p>
+            <div class="filter-rail-buttons">
+              <button class="filter-button is-active" type="button" data-filter-group="category" data-filter-value="all" aria-pressed="true">All projects</button>
+              <button class="filter-button" type="button" data-filter-group="category" data-filter-value="full-stack" aria-pressed="false">Full-Stack Systems</button>
+              <button class="filter-button" type="button" data-filter-group="category" data-filter-value="frontend" aria-pressed="false">Frontend Products</button>
+              <button class="filter-button" type="button" data-filter-group="category" data-filter-value="ux-research" aria-pressed="false">UX &amp; Research</button>
             </div>
-            <div class="article-body">
-              <div class="card-topline">
-                <h3>Containerising a Full-Stack Application with Docker</h3>
-                <span class="meta-tag">Cloud &amp; DevOps</span>
-              </div>
-              <p>Notes on splitting frontend and backend services, handling environment setup, and preparing local apps
-                for deployment workflows.</p>
-              <div class="tag-list">
-                <span>Docker</span>
-                <span>Deployment</span>
-                <span>Environment Config</span>
-              </div>
-              <p class="lesson">Lesson learned: shipping confidence increases when local development and deployment
-                environments behave similarly.</p>
-            </div>
-          </article>
+          </aside>
 
-          <article class="article-card">
-            <div class="article-media">
-              <img src="./images/kiwi0.png" alt="Illustration for article about role-based access control and backend permissions" />
-            </div>
-            <div class="article-body">
-              <div class="card-topline">
-                <h3>Designing Role-Based Access Control in .NET</h3>
-                <span class="meta-tag">.NET</span>
+          <div class="project-library-main">
+            <div class="library-toolbar">
+              <div>
+                <p class="library-toolbar-label">Skill filter</p>
+                <p class="library-toolbar-copy">Select one skill focus to narrow the cards while keeping the premium overview layout.</p>
               </div>
-              <p>How I think about separating authentication, authorisation, and admin-only actions when building
-                API-driven applications.</p>
-              <div class="tag-list">
-                <span>.NET 8</span>
-                <span>RBAC</span>
-                <span>API Design</span>
-              </div>
-              <p class="lesson">Lesson learned: permission rules are safer and easier to maintain when they live in
-                backend policies, not scattered UI conditions.</p>
+              <p class="project-count" data-project-count>6 projects shown</p>
             </div>
-          </article>
 
-          <article class="article-card">
-            <div class="article-media">
-              <img src="./images/salon.png" alt="Illustration for article about internal workflow systems and documentation" />
+            <div class="skill-filter-row" aria-label="Project skill filters">
+              <button class="skill-filter is-active" type="button" data-filter-group="skill" data-filter-value="all" aria-pressed="true">All skills</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="react" aria-pressed="false">React</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="typescript" aria-pressed="false">TypeScript</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="dotnet" aria-pressed="false">.NET</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="node" aria-pressed="false">Node.js</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="ux" aria-pressed="false">UX Design</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="accessibility" aria-pressed="false">Accessibility</button>
+              <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="docker" aria-pressed="false">Docker</button>
             </div>
-            <div class="article-body">
-              <div class="card-topline">
-                <h3>What I Learned Building Internal Workflow Systems</h3>
-                <span class="meta-tag">Engineering Thinking</span>
-              </div>
-              <p>Reflections on process mapping, training usability, and why internal tools need the same clarity and care
-                as customer-facing products.</p>
-              <div class="tag-list">
-                <span>Workflow Design</span>
-                <span>Systems Thinking</span>
-                <span>Documentation</span>
-              </div>
-              <p class="lesson">Lesson learned: a system is only effective when the workflow logic is obvious to the
-                people who rely on it every day.</p>
+
+            <div class="project-library-grid">
+              <article class="library-card" data-category="full-stack" data-skills="react typescript dotnet docker api azure testing">
+                <div class="library-card-media">
+                  <img src="./images/nzat-project.jpg" alt="NZAT workshop management system interface preview" />
+                </div>
+                <div class="library-card-body">
+                  <div class="card-topline">
+                    <h3>NZAT Workshop Management System</h3>
+                    <span class="meta-tag">Full-Stack</span>
+                  </div>
+                  <p>
+                    A workshop operations platform built to replace fragmented paper processes with a centralised
+                    service, inventory, invoicing, and job-tracking workflow.
+                  </p>
+                  <div class="tag-list">
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>.NET Web API</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                    <span>Azure</span>
+                  </div>
+                  <p class="library-card-note">Focus: workflow digitisation, business process clarity, and delivery-ready architecture.</p>
+                  <div class="library-card-actions">
+                    <a href="#projects">View featured summary</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="library-card" data-category="full-stack" data-skills="react typescript node api ux testing">
+                <div class="library-card-media">
+                  <img src="./images/ai-inventory-meal-planner-thumbnail.jpg" alt="AI-enabled inventory and meal planning application preview" />
+                </div>
+                <div class="library-card-body">
+                  <div class="card-topline">
+                    <h3>AI-Enabled Inventory &amp; Meal Planning</h3>
+                    <span class="meta-tag">Applied AI</span>
+                  </div>
+                  <p>
+                    A planning tool that combines ingredient tracking, meal suggestions, and grocery comparison to
+                    support budget-aware and lower-waste household decisions.
+                  </p>
+                  <div class="tag-list">
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>REST API</span>
+                    <span>AI Features</span>
+                  </div>
+                  <p class="library-card-note">Focus: API integration, AI-assisted features, and user-centred workflow design.</p>
+                  <div class="library-card-actions">
+                    <a href="#projects">View featured summary</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="library-card" data-category="ux-research" data-skills="ux accessibility research product testing">
+                <div class="library-card-media">
+                  <img src="./images/NutriPlays_HERO.png" alt="NutriPlays educational product preview" />
+                </div>
+                <div class="library-card-body">
+                  <div class="card-topline">
+                    <h3>NutriPlays</h3>
+                    <span class="meta-tag">Learning Design</span>
+                  </div>
+                  <p>
+                    An educational web concept for helping children learn healthy eating through playful interaction,
+                    accessible visual grouping, and curriculum-aware content design.
+                  </p>
+                  <div class="tag-list">
+                    <span>UX Design</span>
+                    <span>Accessibility</span>
+                    <span>User Research</span>
+                    <span>Curriculum Alignment</span>
+                    <span>Usability Testing</span>
+                  </div>
+                  <p class="library-card-note">Focus: product thinking, educational interaction design, and age-appropriate usability.</p>
+                  <div class="library-card-actions">
+                    <a href="#projects">View featured summary</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="library-card" data-category="frontend" data-skills="ux frontend responsive research">
+                <div class="library-card-media">
+                  <img src="./images/triphome.png" alt="HomeTrip booking app preview" />
+                </div>
+                <div class="library-card-body">
+                  <div class="card-topline">
+                    <h3>HomeTrip Booking App</h3>
+                    <span class="meta-tag">Frontend Concept</span>
+                  </div>
+                  <p>
+                    A booking experience concept focused on accommodation browsing, decision flow clarity, and a more
+                    intuitive trip-planning journey across mobile-friendly screens.
+                  </p>
+                  <div class="tag-list">
+                    <span>Responsive UI</span>
+                    <span>UX Flow</span>
+                    <span>Interface Design</span>
+                    <span>Case Study</span>
+                  </div>
+                  <p class="library-card-note">Focus: front-end clarity, booking journey structure, and user decision support.</p>
+                  <div class="library-card-actions">
+                    <a href="./casestudy/HomeTrip Booking App_compressed.pdf" target="_blank" rel="noreferrer">Open case study</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="library-card" data-category="ux-research" data-skills="ux accessibility research product">
+                <div class="library-card-media">
+                  <img src="./images/kiwi.png" alt="Tiny Eco Kiwis project preview" />
+                </div>
+                <div class="library-card-body">
+                  <div class="card-topline">
+                    <h3>Tiny Eco Kiwis</h3>
+                    <span class="meta-tag">Research Concept</span>
+                  </div>
+                  <p>
+                    A child-friendly concept project exploring sustainability learning, visual communication, and
+                    simple interaction patterns for younger audiences.
+                  </p>
+                  <div class="tag-list">
+                    <span>UX Design</span>
+                    <span>Accessibility</span>
+                    <span>User Research</span>
+                    <span>Learning Experience</span>
+                  </div>
+                  <p class="library-card-note">Focus: playful communication, audience-aware design, and educational usability.</p>
+                  <div class="library-card-actions">
+                    <a href="./casestudy/Tiny Eco Kiwis_compressed.pdf" target="_blank" rel="noreferrer">Open case study</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="library-card" data-category="frontend" data-skills="ux frontend responsive product">
+                <div class="library-card-media">
+                  <img src="./images/salon.png" alt="Hair salon digital experience preview" />
+                </div>
+                <div class="library-card-body">
+                  <div class="card-topline">
+                    <h3>Hair Salon Service Experience</h3>
+                    <span class="meta-tag">Service UX</span>
+                  </div>
+                  <p>
+                    A salon-focused digital experience concept exploring service presentation, booking touchpoints, and
+                    a polished brand-led customer journey.
+                  </p>
+                  <div class="tag-list">
+                    <span>Service Design</span>
+                    <span>Responsive UI</span>
+                    <span>UX Design</span>
+                    <span>Case Study</span>
+                  </div>
+                  <p class="library-card-note">Focus: visual hierarchy, trust-building details, and service booking usability.</p>
+                  <div class="library-card-actions">
+                    <a href="./casestudy/Hair Salon_compressed.pdf" target="_blank" rel="noreferrer">Open case study</a>
+                  </div>
+                </div>
+              </article>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -513,6 +656,53 @@
       <p>Focused on software engineering, systems thinking, and practical delivery.</p>
     </div>
   </footer>
+  <script>
+    (() => {
+      const state = { category: "all", skill: "all" };
+      const buttons = document.querySelectorAll("[data-filter-group]");
+      const cards = document.querySelectorAll(".library-card");
+      const countNode = document.querySelector("[data-project-count]");
+
+      const applyFilters = () => {
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+          const skills = (card.dataset.skills || "").split(" ");
+          const categoryMatch = state.category === "all" || category === state.category;
+          const skillMatch = state.skill === "all" || skills.includes(state.skill);
+          const shouldShow = categoryMatch && skillMatch;
+
+          card.hidden = !shouldShow;
+          if (shouldShow) visibleCount += 1;
+        });
+
+        if (countNode) {
+          countNode.textContent = `${visibleCount} project${visibleCount === 1 ? "" : "s"} shown`;
+        }
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const group = button.dataset.filterGroup;
+          const value = button.dataset.filterValue;
+          state[group] = value;
+
+          buttons.forEach((candidate) => {
+            if (candidate.dataset.filterGroup === group) {
+              const isActive = candidate === button;
+              candidate.classList.toggle("is-active", isActive);
+              candidate.setAttribute("aria-pressed", String(isActive));
+            }
+          });
+
+          applyFilters();
+        });
+      });
+
+      applyFilters();
+    })();
+  </script>
 </body>
 
 </html>

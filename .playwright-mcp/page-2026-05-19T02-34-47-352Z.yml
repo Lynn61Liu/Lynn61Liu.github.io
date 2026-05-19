@@ -1,0 +1,442 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Lynn Liu logo Lynn Liu" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+        - img "Lynn Liu logo" [ref=e5]
+        - generic [ref=e6]: Lynn Liu
+      - navigation "Primary" [ref=e7]:
+        - link "Skills" [ref=e8] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Experience" [ref=e9] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e10] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Project List" [ref=e11] [cursor=pointer]:
+          - /url: "#project-library"
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e13]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Software Engineer Portfolio
+        - heading "Full-Stack Developer building cloud-ready systems with .NET, React, and modern engineering practices." [level=2] [ref=e18]
+        - paragraph [ref=e19]: I build API-driven applications with a strong focus on maintainability, delivery, and real-world workflow design. My work sits at the intersection of product thinking, backend logic, and user-focused implementation.
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: My background combines software implementation, UX awareness, and the discipline of building solutions that are clear to operate and maintain.
+          - paragraph [ref=e22]: Experience connected to organisations such as Huawei and Hon Hai strengthened my troubleshooting mindset, reliability focus, and attention to execution details. More recently, internal systems work in New Zealand deepened my interest in workflow clarity, training usability, and practical engineering outcomes.
+          - paragraph [ref=e23]: I am especially interested in backend architecture, API design, authentication, deployment pipelines, and the trade-offs that appear when product needs meet technical constraints.
+        - generic [ref=e24]:
+          - link "View Projects" [ref=e25] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Browse Project List" [ref=e26] [cursor=pointer]:
+            - /url: "#project-library"
+        - list "Engineering focus areas" [ref=e27]:
+          - listitem [ref=e28]: Backend and service-layer thinking
+          - listitem [ref=e29]: Cloud-ready delivery mindset
+          - listitem [ref=e30]: UX-aware implementation
+      - complementary [ref=e31]:
+        - generic [ref=e32]:
+          - paragraph [ref=e33]: Current focus
+          - generic [ref=e34]: 2026 Learning Track
+        - paragraph [ref=e35]: The areas I am actively deepening now, with an emphasis on practical implementation and long-term systems thinking.
+        - generic "Current focus signals" [ref=e36]:
+          - generic [ref=e37]: Cloud-ready delivery
+          - generic [ref=e38]: AI-assisted workflows
+          - generic [ref=e39]: Quality and security
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: Focus 01
+            - generic [ref=e43]: AI-assisted engineering
+            - paragraph [ref=e44]: Applying prompt engineering, AI APIs, and practical machine learning concepts to modern software development workflows and product features.
+          - generic [ref=e45]:
+            - generic [ref=e46]: Focus 02
+            - generic [ref=e47]: Cloud architecture & distributed systems
+            - paragraph [ref=e48]: Building cloud-ready and event-driven applications with Azure Functions, Logic Apps, Docker, and CI/CD while learning scalable system and API design through the AI-200 certification pathway.
+          - generic [ref=e49]:
+            - generic [ref=e50]: Focus 03
+            - generic [ref=e51]: Engineering quality & secure user experience
+            - paragraph [ref=e52]: Focusing on TDD, refactoring, debugging, secure application design, accessibility, and maintainable engineering practices for real-world systems.
+    - generic [ref=e54]:
+      - paragraph [ref=e56]: Skills & Technologies
+      - generic [ref=e57]:
+        - article [ref=e58]:
+          - paragraph [ref=e59]: Skill 01
+          - heading "Application Engineering" [level=3] [ref=e60]
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - text: Building
+              - generic [ref=e63]: full-stack web applications
+              - text: with clear
+              - generic [ref=e64]: frontend, API, and backend
+              - text: responsibilities
+            - listitem [ref=e65]:
+              - text: Designing
+              - generic [ref=e66]: component-driven interfaces
+              - text: that stay
+              - generic [ref=e67]: responsive
+              - text: ","
+              - generic [ref=e68]: accessible
+              - text: ", and maintainable"
+            - listitem [ref=e69]:
+              - text: Translating
+              - generic [ref=e70]: product and workflow requirements
+              - text: into practical implementation decisions
+            - listitem [ref=e71]:
+              - text: Integrating
+              - generic [ref=e72]: REST APIs
+              - text: ","
+              - generic [ref=e73]: authentication flows
+              - text: ", and"
+              - generic [ref=e74]: async state
+              - text: into real user journeys
+            - listitem [ref=e75]:
+              - text: Structuring applications for
+              - generic [ref=e76]: readability
+              - text: ","
+              - generic [ref=e77]: reuse
+              - text: ", and long-term change"
+        - article [ref=e78]:
+          - paragraph [ref=e79]: Skill 02
+          - heading "Cloud, Systems & Delivery" [level=3] [ref=e80]
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - text: Developing
+              - generic [ref=e83]: cloud-ready applications
+              - text: with
+              - generic [ref=e84]: deployment
+              - text: ", configuration, and environment awareness"
+            - listitem [ref=e85]:
+              - text: Applying
+              - generic [ref=e86]: containerisation
+              - text: and
+              - generic [ref=e87]: CI/CD
+              - text: practices to support reliable delivery workflows
+            - listitem [ref=e88]:
+              - text: Designing
+              - generic [ref=e89]: backend workflows
+              - text: ","
+              - generic [ref=e90]: service boundaries
+              - text: ", and"
+              - generic [ref=e91]: API-driven
+              - text: application structures
+            - listitem [ref=e92]:
+              - text: Growing capability in
+              - generic [ref=e93]: distributed systems
+              - text: ","
+              - generic [ref=e94]: event-driven patterns
+              - text: ", and scalable cloud architecture"
+            - listitem [ref=e95]:
+              - text: Working across
+              - generic [ref=e96]: AWS
+              - text: and
+              - generic [ref=e97]: Azure
+              - text: "-oriented hosting and integration concepts"
+        - article [ref=e98]:
+          - paragraph [ref=e99]: Skill 03
+          - heading "Engineering Quality & Problem Solving" [level=3] [ref=e100]
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - text: Using
+              - generic [ref=e103]: debugging
+              - text: ","
+              - generic [ref=e104]: issue isolation
+              - text: ", and"
+              - generic [ref=e105]: troubleshooting
+              - text: to resolve problems methodically
+            - listitem [ref=e106]:
+              - text: Applying
+              - generic [ref=e107]: refactoring
+              - text: ","
+              - generic [ref=e108]: testing awareness
+              - text: ", and maintainability thinking to everyday development"
+            - listitem [ref=e109]:
+              - text: Balancing
+              - generic [ref=e110]: security
+              - text: ","
+              - generic [ref=e111]: accessibility
+              - text: ", and"
+              - generic [ref=e112]: usability
+              - text: in production-minded software decisions
+            - listitem [ref=e113]:
+              - text: Documenting
+              - generic [ref=e114]: trade-offs
+              - text: ", lessons learned, and"
+              - generic [ref=e115]: engineering reflections
+              - text: as part of growth
+        - article [ref=e116]:
+          - paragraph [ref=e117]: Skill 04
+          - heading "AI-Assisted Engineering" [level=3] [ref=e118]
+          - list [ref=e119]:
+            - listitem [ref=e120]:
+              - generic [ref=e121]: Prompt engineering
+              - text: workflows
+            - listitem [ref=e122]:
+              - generic [ref=e123]: AI API
+              - text: integration
+            - listitem [ref=e124]:
+              - text: Applied
+              - generic [ref=e125]: AI tooling
+              - text: exploration
+            - listitem [ref=e126]:
+              - generic [ref=e127]: AI-assisted development
+              - text: practices
+            - listitem [ref=e128]:
+              - generic [ref=e129]: Machine learning
+              - text: fundamentals
+    - generic [ref=e131]:
+      - paragraph [ref=e133]: Where I've Worked
+      - generic [ref=e134]:
+        - radio "Full-stack Developer" [checked]
+        - radio "Developer Intern"
+        - radio "Education Consultant"
+        - radio "Support Engineer"
+        - generic "Work experience companies" [ref=e135]:
+          - generic [ref=e136] [cursor=pointer]: Full-stack Developer
+          - generic [ref=e137] [cursor=pointer]: Developer Intern
+          - generic [ref=e138] [cursor=pointer]: Education Consultant
+          - generic [ref=e139] [cursor=pointer]: Support Engineer
+        - generic [ref=e140]:
+          - article [ref=e141]:
+            - heading "Full-stack Developer @ Auto Tech Repair & Services" [level=3] [ref=e142]
+            - paragraph [ref=e143]: 2025 - Now Auckland
+            - list [ref=e144]:
+              - listitem [ref=e145]:
+                - text: ▹ Contributed to the design, development, and deployment of a
+                - generic [ref=e146]: full-stack digital workflow platform
+                - text: ", transforming paper-based workshop operations into a centralised digital business system."
+              - listitem [ref=e147]:
+                - text: ▹ Developed
+                - generic [ref=e148]: React + TypeScript
+                - text: web applications for vehicle servicing, WOF inspections, job tracking, appointment scheduling, inventory management, purchasing, and multi-location operational workflows.
+              - listitem [ref=e149]:
+                - text: ▹ Built and improved integrated digital features, including service workflow visualisation, email tracking and reminders,
+                - generic [ref=e150]: Xero
+                - text: accounting integration, inventory management, purchase automation, and paperless administration.
+              - listitem [ref=e151]: ▹ Collaborated with business users to analyse manual workflows, clarify requirements, test improvements, and iterate practical solutions based on operational feedback.
+              - listitem [ref=e152]:
+                - text: ▹ Applied
+                - generic [ref=e153]: Playwright
+                - text: end-to-end testing to validate critical user journeys, business workflows, and external system integrations.
+              - listitem [ref=e154]:
+                - text: ▹ Supported
+                - generic [ref=e155]: Docker-based CI/CD
+                - text: deployment workflows using
+                - generic [ref=e156]: GitHub Actions
+                - text: and
+                - generic [ref=e157]: Azure Container Registry
+                - text: ", building and managing container images to improve release consistency across Azure-hosted and multi-location server environments"
+          - text: ▹ ▹ ▹ ▹ ▹ ▹ ▹ ▹ ▹ ▹ ▹ ▹ ▹
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - heading "Featured Projects" [level=3] [ref=e161]
+        - paragraph [ref=e162]: Each featured project highlights the problem, the core architecture idea, the main implementation challenge, and a reflection on what I would improve in the next iteration.
+      - generic [ref=e163]:
+        - article [ref=e164]:
+          - img "NZAT workshop management system project preview" [ref=e166]
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - heading "NZAT Workshop Management System" [level=3] [ref=e169]
+              - generic [ref=e170]: Full-Stack Project
+            - paragraph [ref=e171]: A full-stack workshop management platform built from scratch to digitise and automate paper-based workshop operations. The system centralises vehicle records, customer information, job tracking, WOF service records, work logs, invoices, purchase orders, and follow-up tasks, while integrating Excel, email, Xero, and internal data sources. By replacing fragmented manual processes with a centralised digital workflow, the project helps reduce duplicate data entry, improve operational efficiency, increase process traceability, minimise errors, and create a scalable foundation for future reporting, automation, and business growth.
+            - generic [ref=e172]:
+              - generic [ref=e173]: React
+              - generic [ref=e174]: TypeScript
+              - generic [ref=e175]: Tailwind CSS
+              - generic [ref=e176]: C#
+              - generic [ref=e177]: .NET Web API
+              - generic [ref=e178]: PostgreSQL
+              - generic [ref=e179]: Redis
+              - generic [ref=e180]: Docker
+              - generic [ref=e181]: GitHub Actions
+              - generic [ref=e182]: REST API
+              - generic [ref=e183]: outbox patterns
+              - generic [ref=e184]: unit testing
+              - generic [ref=e185]: Playwright
+              - generic [ref=e186]: Azure
+              - generic [ref=e187]: Figma
+        - article [ref=e188]:
+          - img "AI-enabled inventory and meal planning application interface preview" [ref=e190]
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - heading "AI-Enabled Inventory & Meal Planning Application" [level=3] [ref=e193]
+              - generic [ref=e194]: MERN
+            - paragraph [ref=e195]: A full-stack AI-enabled refrigerator inventory and meal planning application that helps users manage food items, generate weekly lunchbox meal plans based on available ingredients, compare grocery prices from Countdown and Pak'nSave, receive recipe suggestions, and build shopping lists. The project demonstrates how AI, API integration, and user-centred design can reduce food waste, support budget-aware grocery planning, and improve everyday household decision-making.
+            - generic [ref=e196]:
+              - generic [ref=e197]: React.js
+              - generic [ref=e198]: TypeScript
+              - generic [ref=e199]: Tailwind CSS
+              - generic [ref=e200]: Node.js
+              - generic [ref=e201]: Express.js
+              - generic [ref=e202]: MongoDB
+              - generic [ref=e203]: RESTful API
+              - generic [ref=e204]: AI-assisted Features
+              - generic [ref=e205]: Jest
+              - generic [ref=e206]: UX Design
+              - generic [ref=e207]: Responsive UI
+              - generic [ref=e208]: GitHub
+              - generic [ref=e209]: Agile Methodology
+              - generic [ref=e210]: Trello
+              - generic [ref=e211]: Team Collaboration
+        - article [ref=e212]:
+          - img "NutriPlays interactive nutrition education web application preview" [ref=e214]
+          - generic [ref=e215]:
+            - generic [ref=e216]:
+              - heading "NutriPlays" [level=3] [ref=e217]
+              - generic [ref=e218]: Product Thinking
+            - paragraph [ref=e219]: NutriPlays is an interactive educational web application that helps young primary school children learn healthy eating by building their own lunchbox through colour-based food grouping and playful interaction. The project connects nutrition learning with New Zealand health and physical education goals, while demonstrating product thinking, target-user research, accessibility-aware UI design, competitor analysis, educational theory mapping, and user testing for an age-appropriate digital learning experience.
+            - generic [ref=e220]:
+              - generic [ref=e221]: UX Design
+              - generic [ref=e222]: Accessibility Design
+              - generic [ref=e223]: User Research
+              - generic [ref=e224]: Competitor Analysis
+              - generic [ref=e225]: Educational Theory Mapping
+              - generic [ref=e226]: Curriculum Alignment
+              - generic [ref=e227]: Usability Testing
+              - generic [ref=e228]: Product Thinking
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - paragraph [ref=e232]: Project List
+        - heading "A browsable project library organised by engineering direction and skills." [level=2] [ref=e233]
+        - paragraph [ref=e234]: Use the left rail to switch between project types, then narrow the list with skills across frontend, backend, UX, cloud, and testing themes.
+      - generic [ref=e235]:
+        - complementary "Project category filters" [ref=e236]:
+          - paragraph [ref=e237]: Project type
+          - generic [ref=e238]:
+            - button "All projects" [pressed] [ref=e239] [cursor=pointer]
+            - button "Full-Stack Systems" [ref=e240] [cursor=pointer]
+            - button "Frontend Products" [ref=e241] [cursor=pointer]
+            - button "UX & Research" [ref=e242] [cursor=pointer]
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - generic [ref=e245]:
+              - paragraph [ref=e246]: Skill filter
+              - paragraph [ref=e247]: Select one skill focus to narrow the cards while keeping the premium overview layout.
+            - paragraph [ref=e248]: 6 projects shown
+          - generic "Project skill filters" [ref=e249]:
+            - button "All skills" [pressed] [ref=e250] [cursor=pointer]
+            - button "React" [ref=e251] [cursor=pointer]
+            - button "TypeScript" [ref=e252] [cursor=pointer]
+            - button ".NET" [ref=e253] [cursor=pointer]
+            - button "Node.js" [ref=e254] [cursor=pointer]
+            - button "UX Design" [ref=e255] [cursor=pointer]
+            - button "Accessibility" [ref=e256] [cursor=pointer]
+            - button "Docker" [ref=e257] [cursor=pointer]
+          - generic [ref=e258]:
+            - article [ref=e259]:
+              - img "NZAT workshop management system interface preview" [ref=e261]
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - heading "NZAT Workshop Management System" [level=3] [ref=e264]
+                  - generic [ref=e265]: Full-Stack
+                - paragraph [ref=e266]: A workshop operations platform built to replace fragmented paper processes with a centralised service, inventory, invoicing, and job-tracking workflow.
+                - generic [ref=e267]:
+                  - generic [ref=e268]: React
+                  - generic [ref=e269]: TypeScript
+                  - generic [ref=e270]: .NET Web API
+                  - generic [ref=e271]: PostgreSQL
+                  - generic [ref=e272]: Docker
+                  - generic [ref=e273]: Azure
+                - paragraph [ref=e274]: "Focus: workflow digitisation, business process clarity, and delivery-ready architecture."
+                - link "View featured summary" [ref=e276] [cursor=pointer]:
+                  - /url: "#projects"
+            - article [ref=e277]:
+              - img "AI-enabled inventory and meal planning application preview" [ref=e279]
+              - generic [ref=e280]:
+                - generic [ref=e281]:
+                  - heading "AI-Enabled Inventory & Meal Planning" [level=3] [ref=e282]
+                  - generic [ref=e283]: Applied AI
+                - paragraph [ref=e284]: A planning tool that combines ingredient tracking, meal suggestions, and grocery comparison to support budget-aware and lower-waste household decisions.
+                - generic [ref=e285]:
+                  - generic [ref=e286]: React
+                  - generic [ref=e287]: TypeScript
+                  - generic [ref=e288]: Node.js
+                  - generic [ref=e289]: MongoDB
+                  - generic [ref=e290]: REST API
+                  - generic [ref=e291]: AI Features
+                - paragraph [ref=e292]: "Focus: API integration, AI-assisted features, and user-centred workflow design."
+                - link "View featured summary" [ref=e294] [cursor=pointer]:
+                  - /url: "#projects"
+            - article [ref=e295]:
+              - img "NutriPlays educational product preview" [ref=e297]
+              - generic [ref=e298]:
+                - generic [ref=e299]:
+                  - heading "NutriPlays" [level=3] [ref=e300]
+                  - generic [ref=e301]: Learning Design
+                - paragraph [ref=e302]: An educational web concept for helping children learn healthy eating through playful interaction, accessible visual grouping, and curriculum-aware content design.
+                - generic [ref=e303]:
+                  - generic [ref=e304]: UX Design
+                  - generic [ref=e305]: Accessibility
+                  - generic [ref=e306]: User Research
+                  - generic [ref=e307]: Curriculum Alignment
+                  - generic [ref=e308]: Usability Testing
+                - paragraph [ref=e309]: "Focus: product thinking, educational interaction design, and age-appropriate usability."
+                - link "View featured summary" [ref=e311] [cursor=pointer]:
+                  - /url: "#projects"
+            - article [ref=e312]:
+              - img "HomeTrip booking app preview" [ref=e314]
+              - generic [ref=e315]:
+                - generic [ref=e316]:
+                  - heading "HomeTrip Booking App" [level=3] [ref=e317]
+                  - generic [ref=e318]: Frontend Concept
+                - paragraph [ref=e319]: A booking experience concept focused on accommodation browsing, decision flow clarity, and a more intuitive trip-planning journey across mobile-friendly screens.
+                - generic [ref=e320]:
+                  - generic [ref=e321]: Responsive UI
+                  - generic [ref=e322]: UX Flow
+                  - generic [ref=e323]: Interface Design
+                  - generic [ref=e324]: Case Study
+                - paragraph [ref=e325]: "Focus: front-end clarity, booking journey structure, and user decision support."
+                - link "Open case study" [ref=e327] [cursor=pointer]:
+                  - /url: ./casestudy/HomeTrip Booking App_compressed.pdf
+            - article [ref=e328]:
+              - img "Tiny Eco Kiwis project preview" [ref=e330]
+              - generic [ref=e331]:
+                - generic [ref=e332]:
+                  - heading "Tiny Eco Kiwis" [level=3] [ref=e333]
+                  - generic [ref=e334]: Research Concept
+                - paragraph [ref=e335]: A child-friendly concept project exploring sustainability learning, visual communication, and simple interaction patterns for younger audiences.
+                - generic [ref=e336]:
+                  - generic [ref=e337]: UX Design
+                  - generic [ref=e338]: Accessibility
+                  - generic [ref=e339]: User Research
+                  - generic [ref=e340]: Learning Experience
+                - paragraph [ref=e341]: "Focus: playful communication, audience-aware design, and educational usability."
+                - link "Open case study" [ref=e343] [cursor=pointer]:
+                  - /url: ./casestudy/Tiny Eco Kiwis_compressed.pdf
+            - article [ref=e344]:
+              - img "Hair salon digital experience preview" [ref=e346]
+              - generic [ref=e347]:
+                - generic [ref=e348]:
+                  - heading "Hair Salon Service Experience" [level=3] [ref=e349]
+                  - generic [ref=e350]: Service UX
+                - paragraph [ref=e351]: A salon-focused digital experience concept exploring service presentation, booking touchpoints, and a polished brand-led customer journey.
+                - generic [ref=e352]:
+                  - generic [ref=e353]: Service Design
+                  - generic [ref=e354]: Responsive UI
+                  - generic [ref=e355]: UX Design
+                  - generic [ref=e356]: Case Study
+                - paragraph [ref=e357]: "Focus: visual hierarchy, trust-building details, and service booking usability."
+                - link "Open case study" [ref=e359] [cursor=pointer]:
+                  - /url: ./casestudy/Hair Salon_compressed.pdf
+    - generic [ref=e361]:
+      - generic [ref=e362]:
+        - generic [ref=e363]:
+          - paragraph [ref=e364]: Contact
+          - heading "Open to software engineering opportunities in New Zealand." [level=2] [ref=e365]
+        - paragraph [ref=e366]: If you are hiring for a full-stack or software engineering role and value clear communication, product awareness, and engineering growth mindset, I would be glad to connect.
+        - generic [ref=e367]:
+          - link "yilu747@aucklanduni.ac.nz" [ref=e368] [cursor=pointer]:
+            - /url: mailto:yilu747@aucklanduni.ac.nz
+          - link "+64 027 445 1032" [ref=e369] [cursor=pointer]:
+            - /url: tel:+64274451032
+          - link "GitHub" [ref=e370] [cursor=pointer]:
+            - /url: https://github.com/Lynn61Liu
+          - link "LinkedIn" [ref=e371] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/yin-liu-5a44b4219
+          - link "View CV" [ref=e372] [cursor=pointer]:
+            - /url: ./casestudy/YinLIU--Resume-0274451032.pdf
+      - img "Illustration representing collaboration" [ref=e374]
+  - contentinfo [ref=e375]:
+    - generic [ref=e376]:
+      - paragraph [ref=e377]: Lynn Liu Portfolio
+      - paragraph [ref=e378]: Focused on software engineering, systems thinking, and practical delivery.
