@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="index.css" />
   <link rel="shortcut icon" href="./images/logo copy.ico" type="image/x-icon" />
   <title>Lynn Liu | Full-Stack Software Engineer</title>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -20,8 +21,8 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#project-library">Project List</a>
+        <!-- <a href="#projects">Projects</a> -->
+        <a href="#project-library">Learning Reflection</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -32,30 +33,21 @@
       <div class="layout-wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Software Engineer Portfolio</p>
-          <h2>Full-Stack Developer building cloud-ready systems with .NET, React, and modern engineering practices.</h2>
-          <p class="hero-intro">
-            I build API-driven applications with a strong focus on maintainability, delivery, and real-world workflow
-            design. My work sits at the intersection of product thinking, backend logic, and user-focused
-            implementation.
+          <h2>Full-Stack Developer building cloud-ready systems with modern engineering practices.
+           </h2> <p >
+            I build API-driven applications with a focus on maintainability, delivery, and real-world workflow design. My work combines backend logic, product thinking, and user-focused implementation.
           </p>
-          <div class="hero-details">
+        
             <p>
-              My background combines software implementation, UX awareness, and the discipline of building solutions
-              that are clear to operate and maintain.
+              My background in UX, software development, and enterprise system support has shaped a practical engineering mindset focused on reliability, clarity, and maintainable systems.
             </p>
             <p>
-              Experience connected to organisations such as Huawei and Hon Hai strengthened my troubleshooting mindset,
-              reliability focus, and attention to execution details. More recently, internal systems work in New
-              Zealand deepened my interest in workflow clarity, training usability, and practical engineering outcomes.
-            </p>
-            <p>
-              I am especially interested in backend architecture, API design, authentication, deployment pipelines, and
-              the trade-offs that appear when product needs meet technical constraints.
-            </p>
-          </div>
+            I am especially interested in backend architecture, API design, authentication, deployment pipelines, AI-assisted engineering, and the trade-offs between product needs and technical constraints.</p>
+          
+     
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">View Projects</a>
-            <a class="button button-secondary" href="#project-library">Browse Project List</a>
+            <a class="button button-secondary" href="#project-library">Learning Reflection</a>
           </div>
           <ul class="hero-signals" aria-label="Engineering focus areas">
             <li>Backend and service-layer thinking</li>
@@ -65,18 +57,15 @@
         </div>
         <aside class="hero-panel">
           <div class="focus-header">
-            <p class="panel-label">Current focus</p>
-            <span class="focus-badge">2026 Learning Track</span>
+            <h3 class="panel-label">Current focus</h3>
+            <!-- <span class="focus-badge">2026 Learning Track</span> -->
           </div>
-          <p class="focus-intro">
-            The areas I am actively deepening now, with an emphasis on practical implementation and long-term systems
-            thinking.
-          </p>
-          <div class="focus-meta-list" aria-label="Current focus signals">
+       
+          <!-- <div class="focus-meta-list" aria-label="Current focus signals">
             <span class="focus-meta">Cloud-ready delivery</span>
             <span class="focus-meta">AI-assisted workflows</span>
             <span class="focus-meta">Quality and security</span>
-          </div>
+          </div> -->
           <div class="focus-list">
             <div class="focus-item">
               <span class="focus-step">Focus 01</span>
@@ -275,156 +264,29 @@
       </div>
     </section>
 
-    <section class="projects section" id="projects">
+    <!-- <section class="projects section" id="projects">
       <div class="layout-wrap">
-        <div class="section-heading">
+      <div class="section-heading">
           <h3 class="section-kicker">Featured Projects</h3>
-          <!-- <h2>Projects presented as engineering case studies, not just UI screenshots.</h2> -->
-          <p>
+         <p>
             Each featured project highlights the problem, the core architecture idea, the main implementation challenge,
             and a reflection on what I would improve in the next iteration.
           </p>
-        </div>
+        </div> 
 
-        <div class="project-list">
-          <article class="project-card project-featured">
-            <div class="project-media">
-              <img src="./images/nzat-project.jpg" alt="NZAT workshop management system project preview" />
-            </div>
-
-            <div class="project-body">
-              <div class="card-topline">
-                <h3>NZAT Workshop Management System</h3>
-                <span class="status-pill">Full-Stack Project</span>
-              </div>
-
-              <p class="project-summary">
-                A full-stack workshop management platform built from scratch to digitise and automate paper-based
-                workshop operations. The system centralises vehicle records, customer information,
-                job tracking, WOF service records, work logs, invoices, purchase orders, and follow-up tasks,
-                while integrating Excel, email, Xero, and internal data sources. By replacing fragmented
-                manual processes with a centralised digital workflow, the project helps reduce duplicate data entry,
-                improve operational efficiency, increase process traceability, minimise errors, and create a scalable
-                foundation for future reporting, automation, and business growth.
-              </p>
-              <div class="tag-list">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Tailwind CSS</span>
-                <span>C#</span>
-                <span>.NET Web API</span>
-                <span>PostgreSQL</span>
-                <span>Redis</span>
-                <span>Docker</span>
-                <span>GitHub Actions</span>
-                <span>REST API</span>
-                <span>outbox patterns</span>
-                <span>unit testing</span>
-                <span>Playwright</span>
-                <span>Azure</span>
-                <span>Figma</span>
-
-              </div>
-
-
-            </div>
-          </article>
-
-          <article class="project-card project-featured">
-            <div class="project-media">
-              <img src="./images/ai-inventory-meal-planner-thumbnail.jpg"
-                alt="AI-enabled inventory and meal planning application interface preview" />
-            </div>
-
-            <div class="project-body">
-              <div class="card-topline">
-                <h3>AI-Enabled Inventory &amp; Meal Planning Application</h3>
-                <span class="status-pill">MERN </span>
-              </div>
-
-
-
-              <p class="project-summary">
-                A full-stack AI-enabled refrigerator inventory and meal planning application that helps
-                users manage food items, generate weekly lunchbox meal plans based on available ingredients,
-                compare grocery prices from Countdown and Pak'nSave, receive recipe suggestions, and build
-                shopping lists. The project demonstrates how AI, API integration, and user-centred design
-                can reduce food waste, support budget-aware grocery planning, and improve everyday household
-                decision-making.
-              </p>
-
-              <div class="tag-list">
-                <span>React.js</span>
-                <span>TypeScript</span>
-                <span>Tailwind CSS</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>MongoDB</span>
-                <span>RESTful API</span>
-                <!-- <span>Third-party API Integration</span> -->
-                <span>AI-assisted Features</span>
-                <span>Jest</span>
-                <!-- <span>Unit Testing</span> -->
-                <span>UX Design</span>
-                <span>Responsive UI</span>
-                <span>GitHub</span>
-                <span>Agile Methodology</span>
-                <!-- <span>Kanban</span> -->
-                <span>Trello</span>
-                <span>Team Collaboration</span>
-                <!-- <span>Project Management</span> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card project-featured">
-            <div class="project-media project-thumbnail-square">
-              <img src="./images/NutriPlays_HERO.png"
-                alt="NutriPlays interactive nutrition education web application preview" />
-            </div>
-
-            <div class="project-body">
-              <div class="card-topline">
-                <h3>NutriPlays</h3>
-                <span class="status-pill">Product Thinking </span>
-              </div>
-
-              <p class="project-summary">
-                NutriPlays is an interactive educational web application that helps young primary
-                school children learn healthy eating by building their own lunchbox through
-                colour-based food grouping and playful interaction. The project connects nutrition
-                learning with New Zealand health and physical education goals, while demonstrating
-                product thinking, target-user research, accessibility-aware UI design, competitor
-                analysis, educational theory mapping, and user testing for an age-appropriate
-                digital learning experience.
-              </p>
-
-              <div class="tag-list">
-                <span class="skill-tag">UX Design</span>
-                <span class="skill-tag">Accessibility Design</span>
-                <span class="skill-tag">User Research</span>
-                <span class="skill-tag">Competitor Analysis</span>
-                <span class="skill-tag">Educational Theory Mapping</span>
-                <span class="skill-tag">Curriculum Alignment</span>
-                <span class="skill-tag">Usability Testing</span>
-                <span class="skill-tag">Product Thinking</span>
-              </div>
-              </div>
-            </div>
-          </article>
-        </div>
+        <div class="project-list" data-featured-projects ></div>
       </div>
-    </section>
+    </section> -->
 
     <section class="articles section" id="project-library">
       <div class="layout-wrap">
         <div class="section-heading">
           <p class="section-kicker">Project List</p>
-          <h2>A browsable project library organised by engineering direction and skills.</h2>
-          <p>
+          <!-- <h2>A browsable project library organised by engineering direction and skills.</h2> -->
+          <!-- <p>
             Use the left rail to switch between project types, then narrow the list with skills across frontend,
             backend, UX, cloud, and testing themes.
-          </p>
+          </p> -->
         </div>
         <div class="project-library-shell">
           <aside class="filter-rail" aria-label="Project category filters">
@@ -457,168 +319,7 @@
               <button class="skill-filter" type="button" data-filter-group="skill" data-filter-value="docker" aria-pressed="false">Docker</button>
             </div>
 
-            <div class="project-library-grid">
-              <article class="library-card" data-category="full-stack" data-skills="react typescript dotnet docker api azure testing">
-                <div class="library-card-media">
-                  <img src="./images/nzat-project.jpg" alt="NZAT workshop management system interface preview" />
-                </div>
-                <div class="library-card-body">
-                  <div class="card-topline">
-                    <h3>NZAT Workshop Management System</h3>
-                    <span class="meta-tag">Full-Stack</span>
-                  </div>
-                  <p>
-                    A workshop operations platform built to replace fragmented paper processes with a centralised
-                    service, inventory, invoicing, and job-tracking workflow.
-                  </p>
-                  <div class="tag-list">
-                    <span>React</span>
-                    <span>TypeScript</span>
-                    <span>.NET Web API</span>
-                    <span>PostgreSQL</span>
-                    <span>Docker</span>
-                    <span>Azure</span>
-                  </div>
-                  <p class="library-card-note">Focus: workflow digitisation, business process clarity, and delivery-ready architecture.</p>
-                  <div class="library-card-actions">
-                    <a href="#projects">View featured summary</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="library-card" data-category="full-stack" data-skills="react typescript node api ux testing">
-                <div class="library-card-media">
-                  <img src="./images/ai-inventory-meal-planner-thumbnail.jpg" alt="AI-enabled inventory and meal planning application preview" />
-                </div>
-                <div class="library-card-body">
-                  <div class="card-topline">
-                    <h3>AI-Enabled Inventory &amp; Meal Planning</h3>
-                    <span class="meta-tag">Applied AI</span>
-                  </div>
-                  <p>
-                    A planning tool that combines ingredient tracking, meal suggestions, and grocery comparison to
-                    support budget-aware and lower-waste household decisions.
-                  </p>
-                  <div class="tag-list">
-                    <span>React</span>
-                    <span>TypeScript</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>REST API</span>
-                    <span>AI Features</span>
-                  </div>
-                  <p class="library-card-note">Focus: API integration, AI-assisted features, and user-centred workflow design.</p>
-                  <div class="library-card-actions">
-                    <a href="#projects">View featured summary</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="library-card" data-category="ux-research" data-skills="ux accessibility research product testing">
-                <div class="library-card-media">
-                  <img src="./images/NutriPlays_HERO.png" alt="NutriPlays educational product preview" />
-                </div>
-                <div class="library-card-body">
-                  <div class="card-topline">
-                    <h3>NutriPlays</h3>
-                    <span class="meta-tag">Learning Design</span>
-                  </div>
-                  <p>
-                    An educational web concept for helping children learn healthy eating through playful interaction,
-                    accessible visual grouping, and curriculum-aware content design.
-                  </p>
-                  <div class="tag-list">
-                    <span>UX Design</span>
-                    <span>Accessibility</span>
-                    <span>User Research</span>
-                    <span>Curriculum Alignment</span>
-                    <span>Usability Testing</span>
-                  </div>
-                  <p class="library-card-note">Focus: product thinking, educational interaction design, and age-appropriate usability.</p>
-                  <div class="library-card-actions">
-                    <a href="#projects">View featured summary</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="library-card" data-category="frontend" data-skills="ux frontend responsive research">
-                <div class="library-card-media">
-                  <img src="./images/triphome.png" alt="HomeTrip booking app preview" />
-                </div>
-                <div class="library-card-body">
-                  <div class="card-topline">
-                    <h3>HomeTrip Booking App</h3>
-                    <span class="meta-tag">Frontend Concept</span>
-                  </div>
-                  <p>
-                    A booking experience concept focused on accommodation browsing, decision flow clarity, and a more
-                    intuitive trip-planning journey across mobile-friendly screens.
-                  </p>
-                  <div class="tag-list">
-                    <span>Responsive UI</span>
-                    <span>UX Flow</span>
-                    <span>Interface Design</span>
-                    <span>Case Study</span>
-                  </div>
-                  <p class="library-card-note">Focus: front-end clarity, booking journey structure, and user decision support.</p>
-                  <div class="library-card-actions">
-                    <a href="./casestudy/HomeTrip Booking App_compressed.pdf" target="_blank" rel="noreferrer">Open case study</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="library-card" data-category="ux-research" data-skills="ux accessibility research product">
-                <div class="library-card-media">
-                  <img src="./images/kiwi.png" alt="Tiny Eco Kiwis project preview" />
-                </div>
-                <div class="library-card-body">
-                  <div class="card-topline">
-                    <h3>Tiny Eco Kiwis</h3>
-                    <span class="meta-tag">Research Concept</span>
-                  </div>
-                  <p>
-                    A child-friendly concept project exploring sustainability learning, visual communication, and
-                    simple interaction patterns for younger audiences.
-                  </p>
-                  <div class="tag-list">
-                    <span>UX Design</span>
-                    <span>Accessibility</span>
-                    <span>User Research</span>
-                    <span>Learning Experience</span>
-                  </div>
-                  <p class="library-card-note">Focus: playful communication, audience-aware design, and educational usability.</p>
-                  <div class="library-card-actions">
-                    <a href="./casestudy/Tiny Eco Kiwis_compressed.pdf" target="_blank" rel="noreferrer">Open case study</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="library-card" data-category="frontend" data-skills="ux frontend responsive product">
-                <div class="library-card-media">
-                  <img src="./images/salon.png" alt="Hair salon digital experience preview" />
-                </div>
-                <div class="library-card-body">
-                  <div class="card-topline">
-                    <h3>Hair Salon Service Experience</h3>
-                    <span class="meta-tag">Service UX</span>
-                  </div>
-                  <p>
-                    A salon-focused digital experience concept exploring service presentation, booking touchpoints, and
-                    a polished brand-led customer journey.
-                  </p>
-                  <div class="tag-list">
-                    <span>Service Design</span>
-                    <span>Responsive UI</span>
-                    <span>UX Design</span>
-                    <span>Case Study</span>
-                  </div>
-                  <p class="library-card-note">Focus: visual hierarchy, trust-building details, and service booking usability.</p>
-                  <div class="library-card-actions">
-                    <a href="./casestudy/Hair Salon_compressed.pdf" target="_blank" rel="noreferrer">Open case study</a>
-                  </div>
-                </div>
-              </article>
-            </div>
+            <div class="project-library-grid" data-project-library-grid></div>
           </div>
         </div>
       </div>
@@ -656,53 +357,6 @@
       <p>Focused on software engineering, systems thinking, and practical delivery.</p>
     </div>
   </footer>
-  <script>
-    (() => {
-      const state = { category: "all", skill: "all" };
-      const buttons = document.querySelectorAll("[data-filter-group]");
-      const cards = document.querySelectorAll(".library-card");
-      const countNode = document.querySelector("[data-project-count]");
-
-      const applyFilters = () => {
-        let visibleCount = 0;
-
-        cards.forEach((card) => {
-          const category = card.dataset.category;
-          const skills = (card.dataset.skills || "").split(" ");
-          const categoryMatch = state.category === "all" || category === state.category;
-          const skillMatch = state.skill === "all" || skills.includes(state.skill);
-          const shouldShow = categoryMatch && skillMatch;
-
-          card.hidden = !shouldShow;
-          if (shouldShow) visibleCount += 1;
-        });
-
-        if (countNode) {
-          countNode.textContent = `${visibleCount} project${visibleCount === 1 ? "" : "s"} shown`;
-        }
-      };
-
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const group = button.dataset.filterGroup;
-          const value = button.dataset.filterValue;
-          state[group] = value;
-
-          buttons.forEach((candidate) => {
-            if (candidate.dataset.filterGroup === group) {
-              const isActive = candidate === button;
-              candidate.classList.toggle("is-active", isActive);
-              candidate.setAttribute("aria-pressed", String(isActive));
-            }
-          });
-
-          applyFilters();
-        });
-      });
-
-      applyFilters();
-    })();
-  </script>
 </body>
 
 </html>

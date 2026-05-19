@@ -1,0 +1,10 @@
+{
+  "projects": [
+    "./src/data/projects/nzat-workshop-management-system.json",
+    "./src/data/projects/ai-enabled-inventory-meal-planning-application.json",
+    "./src/data/projects/nutriplays.json",
+    "./src/data/projects/hometrip-booking-app.json",
+    "./src/data/projects/tiny-eco-kiwis.json",
+    "./src/data/projects/hair-salon-service-experience.json"
+  ]
+}

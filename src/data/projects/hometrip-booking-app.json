@@ -1,0 +1,65 @@
+{
+  "id": "hometrip-booking-app",
+  "projectName": "HomeTrip Booking App",
+  "projectTypeBadges": ["MOBILE PROTOTYPE", "FRONTEND PRODUCT"],
+  "status": "Case study",
+  "oneLineSummary": "A booking experience concept focused on accommodation browsing, mobile-friendly decision flow, and clearer trip-planning interactions across key screens.",
+  "summary": {
+    "systemDefinition": "A frontend-led booking app concept for accommodation discovery and trip planning.",
+    "coreWorkflowsFeatures": [
+      "Accommodation browsing and selection flow",
+      "Mobile-first layout decisions for trip planning",
+      "Clearer screen hierarchy for booking-related actions"
+    ],
+    "businessOrOperationalImpact": "The concept explores how stronger information hierarchy can reduce friction in travel booking decisions.",
+    "engineeringValue": "It demonstrates product flow thinking, responsive interface planning, and structured case-study communication."
+  },
+  "projectNarrative": {
+    "problem": "Travel booking journeys can become confusing when too much information competes for attention across small screens.",
+    "approach": "I explored a more structured accommodation browsing and decision-making flow with clearer screen hierarchy and mobile responsiveness.",
+    "result": "The case study shows how frontend clarity and interaction structure can improve a booking experience."
+  },
+  "engineeringHighlights": [
+    "Responsive UI planning for booking flows",
+    "UX flow simplification for decision-heavy screens",
+    "Case-study driven interface iteration"
+  ],
+  "technologyTags": {
+    "frontend": ["Responsive UI", "Interface Design"],
+    "backend": [],
+    "database": [],
+    "cloudAndDevOps": [],
+    "architecture": ["Workflow Prototype"],
+    "testingAndQuality": ["Case Study Review"],
+    "integrations": ["UX Flow"]
+  },
+  "reflection": {
+    "tradeoffs": "Improving browsing clarity required deciding which information to delay so the user journey stayed focused instead of overloaded.",
+    "lessonsLearned": [
+      "Booking products benefit from clearer priority ordering across screens.",
+      "Mobile-first structure improves flow discipline.",
+      "Case studies are stronger when interaction rationale is explicit."
+    ],
+    "futureImprovements": [
+      "Prototype validation with task-based user testing",
+      "Higher-fidelity booking states",
+      "Stronger accessibility review"
+    ]
+  },
+  "display": {
+    "featured": false,
+    "category": "frontend",
+    "libraryMetaTag": "Frontend Concept",
+    "heroImage": "./images/triphome.png",
+    "heroImageAlt": "HomeTrip booking app preview",
+    "skillFilters": ["ux"],
+    "libraryFocus": "front-end clarity, booking journey structure, and user decision support",
+    "links": [
+      {
+        "label": "Open case study",
+        "href": "./casestudy/HomeTrip Booking App_compressed.pdf",
+        "type": "external"
+      }
+    ]
+  }
+}

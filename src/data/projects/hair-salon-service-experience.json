@@ -1,0 +1,65 @@
+{
+  "id": "hair-salon-service-experience",
+  "projectName": "Hair Salon Service Experience",
+  "projectTypeBadges": ["PHP", "WORDPRESS"],
+  "status": "Case study",
+  "oneLineSummary": "A salon-focused digital experience concept exploring service presentation, booking touchpoints, and a more polished brand-led customer journey.",
+  "summary": {
+    "systemDefinition": "A service-oriented frontend concept for a salon booking and brand experience.",
+    "coreWorkflowsFeatures": [
+      "Service presentation and booking-oriented layouts",
+      "Brand-led visual hierarchy and trust-building details",
+      "Responsive screens for customer decision points"
+    ],
+    "businessOrOperationalImpact": "The concept explores how service presentation and booking clarity can strengthen customer confidence before conversion.",
+    "engineeringValue": "It highlights frontend hierarchy decisions, service design thinking, and polished interaction planning."
+  },
+  "projectNarrative": {
+    "problem": "Service businesses need digital experiences that build trust quickly while keeping booking journeys simple.",
+    "approach": "I designed a salon-focused experience that balances visual polish, service explanation, and clear customer action points.",
+    "result": "The case study demonstrates how interface hierarchy can support both branding and usability."
+  },
+  "engineeringHighlights": [
+    "Service design translated into responsive UI structure",
+    "Visual hierarchy tuned for trust and conversion touchpoints",
+    "Case-study based exploration of branded UX decisions"
+  ],
+  "technologyTags": {
+    "frontend": ["Responsive UI", "UX Design"],
+    "backend": [],
+    "database": [],
+    "cloudAndDevOps": [],
+    "architecture": ["Workflow Prototype"],
+    "testingAndQuality": ["Case Study Review"],
+    "integrations": ["Service Design"]
+  },
+  "reflection": {
+    "tradeoffs": "Creating a polished branded feel required careful restraint so the interface remained scannable and booking-focused.",
+    "lessonsLearned": [
+      "Visual polish is most effective when it supports decision clarity.",
+      "Service interfaces need explicit trust signals.",
+      "Responsive refinement often determines whether a concept feels practical."
+    ],
+    "futureImprovements": [
+      "Prototype testing around appointment flow",
+      "Expanded mobile booking states",
+      "Accessibility pass across branded visuals"
+    ]
+  },
+  "display": {
+    "featured": false,
+    "category": "frontend",
+    "libraryMetaTag": "Service UX",
+    "heroImage": "./images/salon.png",
+    "heroImageAlt": "Hair salon digital experience preview",
+    "skillFilters": ["ux"],
+    "libraryFocus": "visual hierarchy, trust-building details, and service booking usability",
+    "links": [
+      {
+        "label": "Open case study",
+        "href": "./casestudy/Hair Salon_compressed.pdf",
+        "type": "external"
+      }
+    ]
+  }
+}

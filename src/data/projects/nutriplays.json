@@ -1,0 +1,66 @@
+{
+  "id": "nutriplays",
+  "projectName": "NutriPlays",
+  "projectTypeBadges": ["TRAINING PLATFORM", "PRODUCT THINKING"],
+  "status": "Concept / Educational product",
+  "oneLineSummary": "An interactive educational web concept that helps young children learn healthy eating through playful lunchbox building, clear visual grouping, and age-appropriate interaction design.",
+  "summary": {
+    "systemDefinition": "A child-focused learning experience designed around nutrition education and simple digital interaction.",
+    "coreWorkflowsFeatures": [
+      "Interactive lunchbox building with colour-based food grouping",
+      "Curriculum-aware nutrition learning and visual explanation",
+      "Age-appropriate interaction patterns supported by user research"
+    ],
+    "businessOrOperationalImpact": "The concept explores how digital learning tools can make nutrition education more engaging and easier for children to understand.",
+    "engineeringValue": "It highlights accessibility-aware UI thinking, product design structure, and careful alignment between user needs and interaction complexity."
+  },
+  "projectNarrative": {
+    "problem": "Nutrition education for young children can be hard to make engaging without overwhelming them with complexity.",
+    "approach": "I designed an interactive concept that translates healthy eating guidance into playful actions, simple grouping, and child-friendly visual communication.",
+    "result": "The project strengthened my product thinking around audience-aware design, educational interaction, and usability for younger users."
+  },
+  "engineeringHighlights": [
+    "Accessibility-aware interaction design for younger audiences",
+    "User research and competitor analysis to shape product direction",
+    "Curriculum-informed content structure",
+    "Usability thinking tailored to age-appropriate interfaces"
+  ],
+  "technologyTags": {
+    "frontend": ["HTML", "CSS", "JavaScript"],
+    "backend": [],
+    "database": [],
+    "cloudAndDevOps": [],
+    "architecture": ["Component Architecture"],
+    "testingAndQuality": ["Usability Testing", "Accessibility"],
+    "integrations": ["Curriculum Alignment", "Educational Theory Mapping"]
+  },
+  "reflection": {
+    "tradeoffs": "Designing for children required reducing interaction complexity while still making the learning experience feel playful and rewarding.",
+    "lessonsLearned": [
+      "Audience age changes how navigation, copy, and feedback should be designed.",
+      "Accessibility and clarity are deeply connected in educational products.",
+      "Research-backed interaction choices are especially important in child-focused design."
+    ],
+    "futureImprovements": [
+      "More guided progression",
+      "Expanded learning feedback loops",
+      "Broader usability validation with target users"
+    ]
+  },
+  "display": {
+    "featured": true,
+    "category": "ux-research",
+    "libraryMetaTag": "Learning Design",
+    "heroImage": "./images/NutriPlays_HERO.png",
+    "heroImageAlt": "NutriPlays educational product preview",
+    "skillFilters": ["ux", "accessibility"],
+    "libraryFocus": "product thinking, educational interaction design, and age-appropriate usability",
+    "links": [
+      {
+        "label": "View featured summary",
+        "href": "#nutriplays",
+        "type": "anchor"
+      }
+    ]
+  }
+}

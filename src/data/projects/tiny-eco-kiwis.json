@@ -1,0 +1,65 @@
+{
+  "id": "tiny-eco-kiwis",
+  "projectName": "Tiny Eco Kiwis",
+  "projectTypeBadges": ["RESEARCH CONCEPT", "LEARNING EXPERIENCE"],
+  "status": "Case study",
+  "oneLineSummary": "A child-friendly sustainability learning concept exploring visual communication, simple interaction patterns, and audience-aware educational design.",
+  "summary": {
+    "systemDefinition": "A concept project focused on early sustainability learning for younger audiences.",
+    "coreWorkflowsFeatures": [
+      "Simple interaction patterns for young learners",
+      "Visual communication tailored to child-friendly understanding",
+      "Educational experience framed through research and accessibility thinking"
+    ],
+    "businessOrOperationalImpact": "The concept examines how sustainability topics can be made more approachable and engaging for children.",
+    "engineeringValue": "It demonstrates research-led UX thinking, educational framing, and careful audience-aware design decisions."
+  },
+  "projectNarrative": {
+    "problem": "Sustainability education often uses explanations that are too abstract or visually dense for younger children.",
+    "approach": "I explored a more playful, simplified learning concept that prioritises accessible communication and audience-appropriate interaction.",
+    "result": "The project reinforced the importance of visual clarity and research-backed simplification in educational design."
+  },
+  "engineeringHighlights": [
+    "Audience-aware educational UX design",
+    "Accessibility thinking for younger users",
+    "Research-informed concept development"
+  ],
+  "technologyTags": {
+    "frontend": ["UX Design"],
+    "backend": [],
+    "database": [],
+    "cloudAndDevOps": [],
+    "architecture": ["Workflow Prototype"],
+    "testingAndQuality": ["Accessibility", "User Research"],
+    "integrations": ["Learning Experience"]
+  },
+  "reflection": {
+    "tradeoffs": "Keeping the concept simple enough for children meant removing interactions that were visually appealing but cognitively distracting.",
+    "lessonsLearned": [
+      "Educational concepts need age-appropriate abstraction levels.",
+      "Accessibility starts with communication clarity.",
+      "Research can guide which playful elements truly support learning."
+    ],
+    "futureImprovements": [
+      "More structured learning progression",
+      "Target-user testing",
+      "Expanded educational content states"
+    ]
+  },
+  "display": {
+    "featured": false,
+    "category": "ux-research",
+    "libraryMetaTag": "Research Concept",
+    "heroImage": "./images/kiwi.png",
+    "heroImageAlt": "Tiny Eco Kiwis project preview",
+    "skillFilters": ["ux", "accessibility"],
+    "libraryFocus": "playful communication, audience-aware design, and educational usability",
+    "links": [
+      {
+        "label": "Open case study",
+        "href": "./casestudy/Tiny Eco Kiwis_compressed.pdf",
+        "type": "external"
+      }
+    ]
+  }
+}

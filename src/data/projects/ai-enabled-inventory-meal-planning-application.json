@@ -1,0 +1,67 @@
+{
+  "id": "ai-enabled-inventory-meal-planning-application",
+  "projectName": "AI-Enabled Inventory & Meal Planning Application",
+  "projectTypeBadges": ["FULL-STACK PROJECT", "AI-ENABLED PRODUCT"],
+  "status": "Prototype / Team project",
+  "oneLineSummary": "A full-stack meal planning tool that combines ingredient tracking, recipe suggestions, grocery comparison, and AI-assisted planning to support lower-waste household decisions.",
+  "summary": {
+    "systemDefinition": "A MERN-style application focused on food inventory visibility and meal planning support.",
+    "coreWorkflowsFeatures": [
+      "Ingredient tracking for fridge and pantry items",
+      "Weekly meal planning and lunchbox-oriented suggestions",
+      "Recipe discovery, shopping list creation, and grocery price comparison"
+    ],
+    "businessOrOperationalImpact": "The product concept helps users make more budget-aware and lower-waste food decisions in everyday household planning.",
+    "engineeringValue": "It shows API integration, applied AI feature thinking, and full-stack coordination across frontend, backend, and data workflows."
+  },
+  "projectNarrative": {
+    "problem": "People often lose track of ingredients, overbuy groceries, and struggle to turn available food into practical meal plans.",
+    "approach": "We designed a web application that pairs inventory visibility with meal generation, recipe discovery, and external grocery comparison workflows.",
+    "result": "The project demonstrated how AI-assisted suggestions can make routine household planning more practical and user-centred."
+  },
+  "engineeringHighlights": [
+    "REST API integration across planning and inventory flows",
+    "AI-assisted meal suggestion workflow exploration",
+    "User-centred interface design for planning-heavy interactions",
+    "Backend coordination with Node.js, Express, and MongoDB",
+    "Collaborative delivery using modern frontend engineering practices"
+  ],
+  "technologyTags": {
+    "frontend": ["React", "TypeScript", "Tailwind CSS", "Responsive UI"],
+    "backend": ["Node.js", "Express.js", "REST API"],
+    "database": ["MongoDB"],
+    "cloudAndDevOps": ["GitHub"],
+    "architecture": ["API Platform", "Workflow Processing"],
+    "testingAndQuality": ["Jest"],
+    "integrations": ["AI Features", "Grocery Price Comparison APIs"]
+  },
+  "reflection": {
+    "tradeoffs": "Combining smart suggestions with transparent user control meant keeping the planning workflow explainable instead of over-automated.",
+    "lessonsLearned": [
+      "AI features are more useful when grounded in clear user workflows.",
+      "Planning tools need good defaults and simple state transitions.",
+      "Cross-team alignment matters when UX, backend logic, and AI features evolve together."
+    ],
+    "futureImprovements": [
+      "Richer recommendation logic",
+      "Improved data freshness for grocery comparisons",
+      "More structured testing around planning edge cases"
+    ]
+  },
+  "display": {
+    "featured": true,
+    "category": "full-stack",
+    "libraryMetaTag": "Applied AI",
+    "heroImage": "./images/ai-inventory-meal-planner-thumbnail.jpg",
+    "heroImageAlt": "AI-enabled inventory and meal planning application preview",
+    "skillFilters": ["react", "typescript", "node"],
+    "libraryFocus": "API integration, AI-assisted features, and user-centred workflow design",
+    "links": [
+      {
+        "label": "View featured summary",
+        "href": "#ai-enabled-inventory-meal-planning-application",
+        "type": "anchor"
+      }
+    ]
+  }
+}

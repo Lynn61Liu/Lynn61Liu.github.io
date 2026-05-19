@@ -1,0 +1,67 @@
+{
+  "id": "nzat-workshop-management-system",
+  "projectName": "NZAT Workshop Management System",
+  "projectTypeBadges": ["FULL-STACK PROJECT", "WORKFLOW PLATFORM"],
+  "status": "In progress / Production use",
+  "oneLineSummary": "A full-stack workshop operations platform built to replace fragmented paper processes with centralised service, inventory, invoicing, and job-tracking workflows.",
+  "summary": {
+    "systemDefinition": "A production-oriented workshop management system for day-to-day vehicle service operations.",
+    "coreWorkflowsFeatures": [
+      "Vehicle records, customer information, and workshop job tracking",
+      "WOF service records, invoices, purchase orders, and reminders",
+      "Integrated operational workflows across email, Xero, and internal business data"
+    ],
+    "businessOrOperationalImpact": "The system reduces duplicate data entry, improves traceability, and supports more reliable workshop coordination across operational tasks.",
+    "engineeringValue": "It demonstrates practical full-stack delivery, workflow modelling, integration design, and deployment-ready engineering."
+  },
+  "projectNarrative": {
+    "problem": "Paper-based workshop processes made tracking jobs, servicing history, purchasing, and communication harder to manage consistently.",
+    "approach": "I helped design and build a React, TypeScript, and .NET workflow platform that digitises the core workshop lifecycle and connects it to surrounding business systems.",
+    "result": "The platform created a more maintainable digital foundation for ongoing operational improvements, automation, and reporting."
+  },
+  "engineeringHighlights": [
+    "API-driven workflow architecture for workshop operations",
+    "Authentication-aware multi-workflow application design",
+    "Operational integrations spanning email, Xero, and internal data flows",
+    "Docker-based CI/CD support for Azure-hosted deployment workflows",
+    "Playwright coverage for critical end-to-end user journeys"
+  ],
+  "technologyTags": {
+    "frontend": ["React", "TypeScript", "Tailwind CSS"],
+    "backend": ["C#", ".NET Web API", "REST API"],
+    "database": ["PostgreSQL", "Redis"],
+    "cloudAndDevOps": ["Docker", "GitHub Actions", "Azure Container Registry", "Azure"],
+    "architecture": ["Workflow Systems", "RBAC", "Outbox Pattern", "Service-layer Architecture"],
+    "testingAndQuality": ["Playwright", "Unit Testing"],
+    "integrations": ["Xero", "Email Integration"]
+  },
+  "reflection": {
+    "tradeoffs": "Balancing workflow flexibility with maintainable structure required clearer separation between UI state, business rules, and operational workflow status.",
+    "lessonsLearned": [
+      "Real-world workflow software needs careful modelling before feature expansion.",
+      "Integration-heavy systems benefit from stronger delivery and testing discipline early.",
+      "Operational usability matters as much as technical correctness in internal tools."
+    ],
+    "futureImprovements": [
+      "Role-based dashboards",
+      "Deeper reporting and analytics visibility",
+      "Further workflow automation"
+    ]
+  },
+  "display": {
+    "featured": true,
+    "category": "full-stack",
+    "libraryMetaTag": "Full-Stack",
+    "heroImage": "./images/nzat-project.jpg",
+    "heroImageAlt": "NZAT workshop management system interface preview",
+    "skillFilters": ["react", "typescript", "dotnet", "docker"],
+    "libraryFocus": "workflow digitisation, business process clarity, and delivery-ready architecture",
+    "links": [
+      {
+        "label": "View featured summary",
+        "href": "#nzat-workshop-management-system",
+        "type": "anchor"
+      }
+    ]
+  }
+}
