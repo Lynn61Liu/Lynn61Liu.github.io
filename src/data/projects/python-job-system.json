@@ -61,18 +61,18 @@
     "featured": false,
     "category": "full-stack",
     "libraryMetaTag": "Python Flask",
-    "heroImage": "./images/internlink-project-thumbnail.jpg",
-    "heroImageAlt": "InternLink internship management system interface preview",
+    "heroImage": "./images/python-internship.png",
+    "heroImageAlt": "Python internship management system interface preview",
     "skillFilters": ["python", "flask", "mysql", "bootstrap"],
     "cardTags": {
       "featured": ["Python", "Flask", "MySQL", "RBAC", "Bootstrap"],
-      "library": ["Python", "Flask", "MySQL", "RBAC", "Bootstrap", "PythonAnywhere"]
+      "library": ["Python", "Flask", "MySQL", "RBAC", "Bootstrap",  "Multi-user System"]
     },
     "libraryFocus": "role-based access control, secure authentication, and multi-user internship workflow management",
     "links": [
       {
         "label": "View project summary",
-        "href": "#internlink-internship-management-system",
+        "href": "#python-internship-management-system",
         "type": "anchor"
       }
     ]
