@@ -26,7 +26,7 @@
     "Usability thinking tailored to age-appropriate interfaces"
   ],
   "technologyTags": {
-    "frontend": ["HTML", "CSS", "JavaScript"],
+    "frontend": [],
     "backend": [],
     "database": [],
     "cloudAndDevOps": [],
@@ -54,6 +54,10 @@
     "heroImage": "./images/NutriPlays_HERO.png",
     "heroImageAlt": "NutriPlays educational product preview",
     "skillFilters": ["ux", "accessibility"],
+    "cardTags": {
+      "featured": ["Component Architecture", "Accessibility", "Usability Testing", "Curriculum Alignment", "Educational Theory Mapping"],
+      "library": ["Accessibility", "Usability Testing", "Curriculum Alignment", "Educational Theory Mapping"]
+    },
     "libraryFocus": "product thinking, educational interaction design, and age-appropriate usability",
     "links": [
       {

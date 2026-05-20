@@ -27,13 +27,11 @@
     "Collaborative delivery using modern frontend engineering practices"
   ],
   "technologyTags": {
-    "frontend": ["React", "TypeScript", "Tailwind CSS", "Responsive UI"],
-    "backend": ["Node.js", "Express.js", "REST API"],
+    "frontend": ["React", "Responsive UI", "TypeScript", "Tailwind CSS"],
+    "backend": ["Node.js", "Express", "MERN", "Agile" ],
     "database": ["MongoDB"],
-    "cloudAndDevOps": ["GitHub"],
-    "architecture": ["API Platform", "Workflow Processing"],
     "testingAndQuality": ["Jest"],
-    "integrations": ["AI Features", "Grocery Price Comparison APIs"]
+    "integrations": ["OpenAI API", "Grocery Price Comparison APIs"]
   },
   "reflection": {
     "tradeoffs": "Combining smart suggestions with transparent user control meant keeping the planning workflow explainable instead of over-automated.",
@@ -51,10 +49,14 @@
   "display": {
     "featured": true,
     "category": "full-stack",
-    "libraryMetaTag": "Applied AI",
+    "libraryMetaTag": "MERN",
     "heroImage": "./images/ai-inventory-meal-planner-thumbnail.jpg",
     "heroImageAlt": "AI-enabled inventory and meal planning application preview",
     "skillFilters": ["react", "typescript", "node"],
+    "cardTags": {
+      "featured": ["React", "MERN", "OpenAI API", "Responsive UI", "Jest"],
+      "library": ["React", "MERN", "OpenAI API", "Responsive UI", "Jest","Agile"]
+    },
     "libraryFocus": "API integration, AI-assisted features, and user-centred workflow design",
     "links": [
       {

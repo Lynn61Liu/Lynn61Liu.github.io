@@ -28,12 +28,11 @@
   ],
   "technologyTags": {
     "frontend": ["React", "TypeScript", "Tailwind CSS"],
-    "backend": ["C#", ".NET Web API", "REST API"],
+    "backend": ["ASP.NET Core",  "REST API"],
     "database": ["PostgreSQL", "Redis"],
-    "cloudAndDevOps": ["Docker", "GitHub Actions", "Azure Container Registry", "Azure"],
-    "architecture": ["Workflow Systems", "RBAC", "Outbox Pattern", "Service-layer Architecture"],
-    "testingAndQuality": ["Playwright", "Unit Testing"],
-    "integrations": ["Xero", "Email Integration"]
+    "cloudAndDevOps": ["Docker", "GitHub Actions", "ACR"],
+    "architecture": ["Workflow Systems", "Outbox Pattern"],
+    "testingAndQuality": ["Playwright", "Unit Testing"]
   },
   "reflection": {
     "tradeoffs": "Balancing workflow flexibility with maintainable structure required clearer separation between UI state, business rules, and operational workflow status.",
@@ -55,6 +54,10 @@
     "heroImage": "./images/nzat-project.jpg",
     "heroImageAlt": "NZAT workshop management system interface preview",
     "skillFilters": ["react", "typescript", "dotnet", "docker"],
+    "cardTags": {
+      "library": ["React","TypeScript", "ASP.NET Core", "PostgreSQL", "Docker", "ACR", "CICD", "Outbox Pattern", "Playwright"],
+      "featured": ["React", "ASP.NET Core", "PostgreSQL", "Docker", "Workflow Systems", "Playwright"]
+    },
     "libraryFocus": "workflow digitisation, business process clarity, and delivery-ready architecture",
     "links": [
       {

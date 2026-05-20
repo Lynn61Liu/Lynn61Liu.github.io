@@ -25,8 +25,8 @@
     "Research-informed concept development"
   ],
   "technologyTags": {
-    "frontend": ["UX Design"],
-    "backend": [],
+    "frontend": ["UX Design", "Figma"],
+    "backend": [],  
     "database": [],
     "cloudAndDevOps": [],
     "architecture": ["Workflow Prototype"],
@@ -53,6 +53,9 @@
     "heroImage": "./images/kiwi.png",
     "heroImageAlt": "Tiny Eco Kiwis project preview",
     "skillFilters": ["ux", "accessibility"],
+    "cardTags": {
+      "library": ["Figma", "UX Design", "Accessibility", "User Research", "Learning Experience"]
+    },
     "libraryFocus": "playful communication, audience-aware design, and educational usability",
     "links": [
       {

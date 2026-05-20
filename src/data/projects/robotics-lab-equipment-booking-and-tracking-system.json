@@ -1,0 +1,70 @@
+{
+  "id": "robotics-lab-equipment-booking-and-tracking-system",
+  "projectName": "Robotics Lab Equipment Booking and Tracking System",
+  "projectTypeBadges": ["INTERNAL TOOL", "WORKFLOW PLATFORM"],
+  "status": "Completed / Team project",
+  "oneLineSummary": "A role-based laboratory operations system for managing robotics equipment, bookings, availability, incidents, and daily admin workflows.",
+  "summary": {
+    "systemDefinition": "A university lab equipment management platform built for students, staff, and administrators interacting with shared robotics equipment.",
+    "coreWorkflowsFeatures": [
+      "Equipment listing, equipment profiles, and availability visibility",
+      "Booking requests, approvals, cancellations, returns, and booking calendar views",
+      "Incident reporting, due-item notifications, and dashboard reminders for daily operations"
+    ],
+    "businessOrOperationalImpact": "The system streamlines equipment management, reduces booking friction, improves visibility into equipment usage, and creates a more organised incident-handling process for the lab.",
+    "engineeringValue": "It demonstrates role-based workflow design, layered Spring application architecture, controller-service-repository separation, and quality practices including CI and unit testing."
+  },
+  "projectNarrative": {
+    "problem": "The robotics lab needed a more organised way to manage equipment lending, booking approvals, incident reports, and day-to-day administrative follow-up across different user roles.",
+    "approach": "Our team designed and implemented a layered web system with separate student, staff, and admin workflows, backed by booking, equipment, incident, login, and notification controllers and services.",
+    "result": "The project produced a structured internal tool for lab equipment operations and gave the team a practical framework for coordinating bookings, incidents, notifications, and equipment tracking in one system."
+  },
+  "engineeringHighlights": [
+    "Role-based workflow support for students, staff, and administrators",
+    "Layered architecture spanning interface, controller, model, and database layers",
+    "Controller-service-repository design in Spring Boot with multiple domain modules",
+    "Booking, incident, notification, and dashboard workflow implementation",
+    "CI pipeline setup and unit testing coverage across bookings, incidents, notifications, dashboard, equipment, login, and users"
+  ],
+  "technologyTags": {
+    "frontend": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "backend": ["Java", "Spring Boot", "MVC", "REST-style Controllers"],
+    "database": ["PostgreSQL"],
+    "cloudAndDevOps": ["GitHub", "CI Pipeline"],
+    "architecture": ["Workflow Systems", "Service-layer Architecture", "Authentication", "Workflow Processing"],
+    "testingAndQuality": ["Unit Testing", "Debugging", "Maintainability"],
+    "integrations": ["Google Sign-In", "Email Notifications"]
+  },
+  "reflection": {
+    "tradeoffs": "Supporting multiple user roles and operational states in one system required clear workflow boundaries so booking, incident, and dashboard logic stayed understandable as the project grew.",
+    "lessonsLearned": [
+      "Role-based internal tools benefit from explicit controller and service boundaries early.",
+      "Operational dashboards are most useful when tied directly to concrete daily actions.",
+      "Testing and CI become more important as booking, notification, and equipment workflows start overlapping."
+    ],
+    "futureImprovements": [
+      "Complete and harden deployment workflow",
+      "Expand notification reliability and due-item automation",
+      "Polish unfinished features and improve production readiness"
+    ]
+  },
+  "display": {
+    "featured": false,
+    "category": "full-stack",
+    "libraryMetaTag": "Full-Stack",
+    "heroImage": "./images/logo.png",
+    "heroImageAlt": "Robotics lab equipment booking and tracking system project cover",
+    "skillFilters": [],
+    "cardTags": {
+      "library": ["Spring Boot", "PostgreSQL",  "Workflow Systems", "Authentication", "Java"]
+    },
+    "libraryFocus": "role-based equipment operations, workflow clarity, and layered full-stack architecture",
+    "links": [
+      {
+        "label": "View project summary",
+        "href": "#robotics-lab-equipment-booking-and-tracking-system",
+        "type": "anchor"
+      }
+    ]
+  }
+}

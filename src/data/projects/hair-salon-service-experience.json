@@ -49,10 +49,13 @@
   "display": {
     "featured": false,
     "category": "frontend",
-    "libraryMetaTag": "Service UX",
+    "libraryMetaTag": "wordpress & php",
     "heroImage": "./images/salon.png",
     "heroImageAlt": "Hair salon digital experience preview",
     "skillFilters": ["ux"],
+    "cardTags": {
+      "library": ["WordPress", "PHP", "MySQL", "Custom WordPress Development", "UX Design", "content management system", "Workflow Prototype"]
+    },
     "libraryFocus": "visual hierarchy, trust-building details, and service booking usability",
     "links": [
       {

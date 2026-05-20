@@ -53,7 +53,11 @@ function applyFilters() {
   const cards = document.querySelectorAll(".library-card");
   const countNode = document.querySelector("[data-project-count]");
   let visibleCount = 0;
-
+// cards 是哪里来的？在 renderProjects 函数中，
+// libraryRoot.innerHTML 被设置为所有项目的卡片 HTML，
+// 这些卡片都有一个 class "library-card"。
+// 因此，通过 document.querySelectorAll(".library-card") 获取
+//    所有这些卡片元素，以便根据用户选择的过滤条件来显示或隐藏它们。
   cards.forEach((card) => {
     const category = card.dataset.category;
     const skills = (card.dataset.skills || "").split(" ").filter(Boolean);
