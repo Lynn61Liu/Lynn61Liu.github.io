@@ -51,7 +51,7 @@
     "featured": true,
     "category": "full-stack",
     "libraryMetaTag": "Full-Stack",
-    "heroImage": "./images/nzat-project.jpg",
+    "heroImage": "./images/nzat-project.png",
     "heroImageAlt": "NZAT workshop management system interface preview",
     "skillFilters": ["react", "typescript", "dotnet", "docker"],
     "cardTags": {

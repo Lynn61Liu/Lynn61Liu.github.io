@@ -1,0 +1,147 @@
+{
+  "id": "internlink-internship-management-system",
+  "projectName": "InternLink Internship Management System",
+  "projectTypeBadges": [
+    "FULL-STACK PROJECT",
+    "ROLE-BASED WEB APP",
+    "FLASK + SQLITE/MYSQL"
+  ],
+  "status": "Academic full-stack project / locally runnable Python Flask application",
+  "oneLineSummary": "A role-based Flask internship portal that connects students, employers, and administrators through secure application, review, and account-management workflows.",
+  "summary": {
+    "systemDefinition": "A web-based internship management platform built for a fictitious early-career recruitment start-up, BrightPath Careers, to centralise internship discovery, application handling, and platform administration.",
+    "coreWorkflowsFeatures": [
+      "Secure login with Student, Employer, and Admin roles",
+      "Student workflows for browsing internships, applying, uploading resumes, reviewing submitted applications, and updating profiles",
+      "Employer workflows for viewing internship listings, reviewing applicants, reading cover letters, and updating application outcomes with feedback",
+      "Admin workflows for viewing platform activity, managing user accounts, and updating account status",
+      "Bootstrap-based multi-page interface with role-specific views and navigation",
+      "Support for profile images, employer logos, and PDF resume uploads",
+      "Local database bootstrap with seed data for development and demonstration"
+    ],
+    "businessOrOperationalImpact": "The system reduces friction between students seeking relevant internship opportunities and employers needing a simple workflow to review applicants and manage hiring decisions in one place.",
+    "engineeringValue": "The project demonstrates practical full-stack web engineering with Flask routing, session-based authentication, role-based access control, relational database design, file upload handling, password hashing, template-driven UI integration, and environment-aware local setup."
+  },
+  "projectNarrative": {
+    "problem": "Students often struggle to find and track relevant internship opportunities, while smaller employers lack a centralised system for posting roles, reviewing applicants, and managing decisions consistently.",
+    "approach": "I built a Python Flask application with separate student, employer, and admin experiences, integrated relational database models, Bootstrap templates, JavaScript-enhanced page interactions, secure login with hashed passwords, and a local-first runtime setup that can run with SQLite while preserving MySQL compatibility.",
+    "result": "The project delivered a structured internship management system with clear role-specific workflows, secure authentication, application tracking, profile management, and a reproducible database-backed local development environment."
+  },
+  "engineeringHighlights": [
+    "Role-based access control for Student, Employer, and Admin users",
+    "Session-based authentication and route protection with Flask",
+    "Secure password hashing with Flask-Bcrypt",
+    "Relational schema covering users, students, employers, internships, and applications",
+    "Student application workflow with PDF resume upload and cover letter submission",
+    "Employer review workflow with application status updates and feedback",
+    "Admin user-management workflow with account status controls",
+    "Bootstrap and JavaScript frontend integrated with Flask templates and server-rendered data",
+    "SQLite local bootstrap with seed users for demo/testing, while retaining MySQL-oriented compatibility",
+    "Smoke-test coverage for login, profile, application, employer, and admin pages"
+  ],
+  "technologyTags": {
+    "frontend": [
+      "HTML",
+      "Bootstrap",
+      "JavaScript",
+      "Jinja2",
+      "Responsive UI"
+    ],
+    "backend": [
+      "Python",
+      "Flask",
+      "Flask Sessions",
+      "Flask-Bcrypt"
+    ],
+    "database": [
+      "SQLite",
+      "MySQL-compatible SQL",
+      "Relational Data Modelling",
+      "Schema Bootstrapping"
+    ],
+    "cloudAndDevOps": [
+      "PythonAnywhere-ready structure",
+      "GitHub",
+      "requirements.txt",
+      "Local virtual environment"
+    ],
+    "architecture": [
+      "RBAC",
+      "Multi-user System",
+      "Session-based Authentication",
+      "Server-rendered Web App",
+      "Role-specific Workflows"
+    ],
+    "testingAndQuality": [
+      "unittest",
+      "Flask Test Client",
+      "Smoke Testing",
+      "Form Validation",
+      "Access Control Validation"
+    ],
+    "integrations": [
+      "File Uploads",
+      "PDF Resume Upload",
+      "Profile Image Upload",
+      "Employer Logo Upload"
+    ]
+  },
+  "reflection": {
+    "tradeoffs": "The main trade-off was balancing assignment simplicity with maintainability. The project stayed within a lightweight Flask and server-rendered architecture instead of adding heavier abstractions such as SQLAlchemy or a frontend framework, which kept it aligned with coursework constraints while still supporting secure authentication, role-specific workflows, and database-backed functionality.",
+    "lessonsLearned": [
+      "Role-based systems need explicit access checks and consistent session handling from the start.",
+      "Frontend templates and backend query fields must evolve together; mismatches quickly break real pages.",
+      "A reproducible local database setup is as important as the live schema because it determines whether the project can actually be demonstrated and maintained.",
+      "File uploads require both UX considerations and backend safeguards around paths, formats, and defaults.",
+      "Even academic systems benefit from lightweight automated smoke tests to catch broken routes, missing assets, and integration regressions early."
+    ],
+    "futureImprovements": [
+      "Add full automated tests for access control, application status transitions, and file upload paths",
+      "Allow employers to create and edit internship postings through the UI",
+      "Add richer admin analytics and internship activity dashboards",
+      "Introduce email notifications for application updates and account changes",
+      "Improve validation, audit history, and feedback visibility across workflows",
+      "Refine the data layer with migrations and cleaner environment-specific configuration"
+    ]
+  },
+  "display": {
+    "featured": false,
+    "category": "full-stack",
+    "libraryMetaTag": "Python Flask",
+    "heroImage": "./images/internlink-project-thumbnail.jpg",
+    "heroImageAlt": "InternLink internship management system interface preview",
+    "skillFilters": [
+      "python",
+      "flask",
+      "sqlite",
+      "mysql",
+      "bootstrap",
+      "javascript"
+    ],
+    "cardTags": {
+      "featured": [
+        "Python",
+        "Flask",
+        "SQLite",
+        "RBAC",
+        "Bootstrap"
+      ],
+      "library": [
+        "Python",
+        "Flask",
+        "SQLite",
+        "MySQL-compatible",
+        "RBAC",
+        "Bootstrap"
+      ]
+    },
+    "libraryFocus": "role-based access control, secure authentication, and end-to-end internship workflow management across students, employers, and administrators",
+    "links": [
+      {
+        "label": "View project summary",
+        "href": "#internlink-internship-management-system",
+        "type": "anchor"
+      }
+    ]
+  }
+}

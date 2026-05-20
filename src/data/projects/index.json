@@ -2,8 +2,10 @@
   "projects": [
     "./src/data/projects/nzat-workshop-management-system.json",
     "./src/data/projects/ai-enabled-inventory-meal-planning-application.json",
-    "./src/data/projects/nutriplays.json",
     "./src/data/projects/robotics-lab-equipment-booking-and-tracking-system.json",
+    "./src/data/projects/nutriplays.json",
+     "./src/data/projects/python-job-system.json",
+    
   
     "./src/data/projects/hair-salon-service-experience.json",
     "./src/data/projects/hometrip-booking-app.json",

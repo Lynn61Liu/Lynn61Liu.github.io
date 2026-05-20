@@ -1,0 +1,80 @@
+{
+  "id": "internlink-internship-management-system",
+  "projectName": "InternLink Internship Management System",
+  "projectTypeBadges": ["FULL-STACK PROJECT", "ROLE-BASED WEB APP"],
+  "status": "Academic project / Python Flask application",
+  "oneLineSummary": "A Flask-based internship management system designed to connect students, employers, and administrators through secure role-based workflows.",
+  "summary": {
+    "systemDefinition": "A web-based internship management platform for a fictitious early-career recruitment start-up, BrightPath Careers.",
+    "coreWorkflowsFeatures": [
+      "Secure multi-user login with Student, Employer, and Admin roles",
+      "Student workflows for browsing internships, applying, uploading resumes, and tracking application status",
+      "Employer workflows for viewing posted internships, managing applications, and accepting or rejecting applicants",
+      "Admin workflows for user management, platform oversight, and account status control",
+      "Responsive Bootstrap-based interface for students, employers, and administrators"
+    ],
+    "businessOrOperationalImpact": "The system addresses the gap between students looking for relevant internships and smaller employers needing a centralised way to manage early-career recruitment.",
+    "engineeringValue": "The project demonstrates Flask application structure, session-based authentication, role-based access control, MySQL data modelling, file upload handling, secure password hashing, and deployment-oriented web development."
+  },
+  "projectNarrative": {
+    "problem": "Students often struggle to find and track relevant internship opportunities, while smaller companies lack a centralised platform to connect with emerging talent and manage applications.",
+    "approach": "I developed a Python Flask web application with role-based access for students, employers, and administrators, supported by MySQL database scripts, Bootstrap interfaces, secure login, and deployment preparation for PythonAnywhere.",
+    "result": "The project produced a structured internship management system with clear user-role workflows, secure account handling, application tracking, and maintainable database-backed functionality."
+  },
+  "engineeringHighlights": [
+    "Role-based access control for Student, Employer, and Admin users",
+    "Flask session handling for authentication and page-level access control",
+    "Secure password hashing using Flask-Bcrypt",
+    "MySQL database design with creation and population scripts",
+    "Student application workflows with resume upload support",
+    "Employer application review and decision workflows",
+    "Responsive Bootstrap interface designed for mobile and desktop use",
+    "PythonAnywhere deployment preparation with environment-specific database configuration"
+  ],
+  "technologyTags": {
+    "frontend": ["HTML", "Bootstrap", "JavaScript", "Responsive UI"],
+    "backend": ["Python", "Flask", "Flask Sessions", "Flask-Bcrypt"],
+    "database": ["MySQL", "SQL Scripts", "Relational Data Modelling"],
+    "cloudAndDevOps": ["PythonAnywhere", "GitHub", "requirements.txt", ".gitignore"],
+    "architecture": ["RBAC", "Multi-user System", "Session-based Authentication", "Role-specific Workflows"],
+    "testingAndQuality": ["Form Validation", "Access Control Validation", "Manual QA"],
+    "integrations": ["File Uploads", "PDF Resume Upload", "Profile Image Upload"]
+  },
+  "reflection": {
+    "tradeoffs": "The main trade-off was balancing assignment constraints with maintainable system design. Because the project required Flask, Bootstrap, JavaScript, and MySQL without SQLAlchemy or React, the architecture needed to stay simple while still supporting secure authentication, role-specific workflows, and database-backed functionality.",
+    "lessonsLearned": [
+      "Role-based systems need clear access boundaries from the beginning.",
+      "Session handling becomes easier to maintain when user identity, role, and status are consistently checked across routes.",
+      "Database scripts are not just setup files; they are part of the application’s reliability and reproducibility.",
+      "Responsive design matters even for admin-style systems because different user groups access the platform from different devices.",
+      "Security requirements such as password hashing, file validation, and restricted role creation should be built into the workflow early."
+    ],
+    "futureImprovements": [
+      "Add automated tests for role-based access and application status workflows",
+      "Improve dashboard analytics for administrators and employers",
+      "Add clearer audit history for application decisions",
+      "Improve form-level validation and error messaging",
+      "Introduce email notifications for application status updates"
+    ]
+  },
+  "display": {
+    "featured": false,
+    "category": "full-stack",
+    "libraryMetaTag": "Python Flask",
+    "heroImage": "./images/internlink-project-thumbnail.jpg",
+    "heroImageAlt": "InternLink internship management system interface preview",
+    "skillFilters": ["python", "flask", "mysql", "bootstrap"],
+    "cardTags": {
+      "featured": ["Python", "Flask", "MySQL", "RBAC", "Bootstrap"],
+      "library": ["Python", "Flask", "MySQL", "RBAC", "Bootstrap", "PythonAnywhere"]
+    },
+    "libraryFocus": "role-based access control, secure authentication, and multi-user internship workflow management",
+    "links": [
+      {
+        "label": "View project summary",
+        "href": "#internlink-internship-management-system",
+        "type": "anchor"
+      }
+    ]
+  }
+}
