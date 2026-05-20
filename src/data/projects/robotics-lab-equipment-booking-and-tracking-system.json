@@ -52,7 +52,7 @@
     "featured": false,
     "category": "full-stack",
     "libraryMetaTag": "Full-Stack",
-    "heroImage": "./images/logo.png",
+    "heroImage": "./images/lab-booking.png",
     "heroImageAlt": "Robotics lab equipment booking and tracking system project cover",
     "skillFilters": [],
     "cardTags": {

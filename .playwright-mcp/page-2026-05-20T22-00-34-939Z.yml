@@ -1,0 +1,16 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "Plant/animal sources of Protein" [level=3] [ref=e4]
+    - paragraph [ref=e5]: Legumes, nuts, seeds, fish,eggs,chicken and meat privde protein and iron for growing bodies and brain development.
+  - generic [ref=e8]: ❤️ 🧡 💛 Rainbow Meals 💚 💙 💜
+  - generic [ref=e20]:
+    - generic [ref=e21]: 👇 D I Y
+    - link [ref=e22] [cursor=pointer]:
+      - /url: ./BuildingLunchBox.html
+  - generic [ref=e24]:
+    - generic [ref=e25] [cursor=pointer]: ×
+    - generic [ref=e26]:
+      - heading "🥗 Welcome to My Healthy Plate!" [level=2] [ref=e27]
+      - paragraph [ref=e28]: 👋 Hi there, little buddy! Did you know your body is like a super cool race car? And to go fast and feel great, it needs the right kind of fuel — healthy food! 🚗💨
+      - paragraph [ref=e29]: Click each part of the plate to learn what different foods do for your body. Some help your brain grow smarter 🧠, some make your bones strong 🦴, and others help you fight off sickness 🛡️!
+    - button "Next" [ref=e31] [cursor=pointer]

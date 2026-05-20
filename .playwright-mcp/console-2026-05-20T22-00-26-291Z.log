@@ -1,0 +1,11 @@
+[    8603ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0
+[    8610ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/NutriPlays/imgs/brain.mp3:0
+[    9054ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0
+[   13261ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0
+[   21997ms] TypeError: Cannot read properties of null (reading 'addEventListener')
+    at http://127.0.0.1:4173/NutriPlays/lunchBox.js:199:38
+[   21996ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/LunchBox/imgs/plus.png:0
+[   22001ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/NutriPlays/imgs/brain.mp3:0
+[   22009ms] TypeError: Cannot read properties of null (reading 'addEventListener')
+    at window.onload (http://127.0.0.1:4173/NutriPlays/lunchBox.js:31:13)
+[   24864ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0

@@ -76,6 +76,34 @@ function renderTagList(tags, maxTags) {
     .join("");
 }
 
+function getActionPresentation(action) {
+  const label = String(action?.label || "").toLowerCase();
+
+  if (label.includes("live demo")) {
+    return {
+      className: "project-link project-link-demo",
+      icon: `
+        <span class="project-link-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M8 7.14v9.72a1 1 0 0 0 1.53.85l7.3-4.86a1 1 0 0 0 0-1.7l-7.3-4.86A1 1 0 0 0 8 7.14Z"></path>
+          </svg>
+        </span>
+      `
+    };
+  }
+
+  return {
+    className: "project-link project-link-summary",
+    icon: `
+      <span class="project-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M6 7.75A1.75 1.75 0 0 1 7.75 6h8.5A1.75 1.75 0 0 1 18 7.75v8.5A1.75 1.75 0 0 1 16.25 18h-8.5A1.75 1.75 0 0 1 6 16.25Zm2.25-.25a.75.75 0 0 0-.75.75v8a.75.75 0 0 0 .75.75h7.5a.75.75 0 0 0 .75-.75v-8a.75.75 0 0 0-.75-.75Zm1 2a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Zm0 3a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z"></path>
+        </svg>
+      </span>
+    `
+  };
+}
+
 function renderAction(link, fallbackHref) {
   const action = link || {
     label: "View featured summary",
@@ -83,8 +111,28 @@ function renderAction(link, fallbackHref) {
     type: "anchor"
   };
   const target = action.type === "external" ? ' target="_blank" rel="noreferrer"' : "";
+  const presentation = getActionPresentation(action);
 
-  return `<a href="${escapeHtml(action.href)}"${target}>${escapeHtml(action.label)}</a>`;
+  return `
+    <a class="${presentation.className}" href="${escapeHtml(action.href)}"${target}>
+      ${presentation.icon}
+      <span class="project-link-label">${escapeHtml(action.label)}</span>
+    </a>
+  `;
+}
+
+function renderActions(links, fallbackHref) {
+  const actions = Array.isArray(links) && links.length
+    ? links
+    : [{
+        label: "View featured summary",
+        href: fallbackHref,
+        type: "anchor"
+      }];
+
+  return actions
+    .map((link) => renderAction(link, fallbackHref))
+    .join("");
 }
 
 function renderFeaturedCard(project) {
@@ -133,7 +181,7 @@ function renderFeaturedCard(project) {
         </div>
         <div class="tag-list">${renderTagList(tags, 20)}</div>
         <div class="project-actions">
-          ${renderAction(project.display?.links?.[0], `#${project.id}`)}
+          ${renderActions(project.display?.links, `#${project.id}`)}
         </div>
       </div>
     </article>
@@ -142,7 +190,6 @@ function renderFeaturedCard(project) {
 
 function renderLibraryCard(project) {
   const tags = selectDisplayTags(project, "library");
-  const link = project.display?.links?.[0];
   const fallbackAnchor = `#${project.id}`;
   const filterTokens = collectFilterTokens(project);
   const note = project.display?.libraryFocus
@@ -168,7 +215,7 @@ function renderLibraryCard(project) {
         <div class="tag-list">${renderTagList(tags,20)}</div>
         <p class="library-card-note">${escapeHtml(note)}</p>
         <div class="library-card-actions">
-          ${renderAction(link, fallbackAnchor)}
+          ${renderActions(project.display?.links, fallbackAnchor)}
         </div>
       </div>
     </article>

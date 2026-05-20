@@ -64,6 +64,11 @@
         "label": "View featured summary",
         "href": "#nutriplays",
         "type": "anchor"
+      },
+      {
+        "label": "Live demo",
+        "href": "./NutriPlays/",
+        "type": "internal"
       }
     ]
   }

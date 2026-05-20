@@ -1,0 +1,2 @@
+[  139591ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/index.css:0
+[  139599ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/assets/js/components/project-card.js:0
