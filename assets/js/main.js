@@ -1,6 +1,7 @@
 import { renderProjectCard } from "./components/project-card.js";
 
-const DATA_INDEX_URL = new URL("../../src/data/projects/index.json", import.meta.url);
+const CACHE_BUSTER = "20260527-1";
+const DATA_INDEX_URL = new URL(`../../src/data/projects/index.json?v=${CACHE_BUSTER}`, import.meta.url);
 
 const state = {
   category: "all",
@@ -17,7 +18,9 @@ async function loadProjectData() {
   const { projects } = await indexResponse.json();
   const projectResponses = await Promise.all(
     projects.map(async (path) => {
-      const response = await fetch(path);
+      const projectUrl = new URL(path, window.location.href);
+      projectUrl.searchParams.set("v", CACHE_BUSTER);
+      const response = await fetch(projectUrl);
 
       if (!response.ok) {
         throw new Error(`Failed to load project data: ${path}`);
