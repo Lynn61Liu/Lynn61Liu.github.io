@@ -64,7 +64,17 @@
         "label": "View featured summary",
         "href": "#nzat-workshop-management-system",
         "type": "anchor"
+      },
+      {
+        "label": "Live demo",
+        "href": "http://45.114.124.101:18513/jobs",
+        "type": "internal"
       }
     ]
   }
 }
+
+
+
+
+

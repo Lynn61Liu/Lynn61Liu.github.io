@@ -110,7 +110,8 @@ function renderAction(link, fallbackHref) {
     href: fallbackHref,
     type: "anchor"
   };
-  const target = action.type === "external" ? ' target="_blank" rel="noreferrer"' : "";
+  const opensInNewTab = action.type === "external" || String(action.label || "").toLowerCase().includes("live demo");
+  const target = opensInNewTab ? ' target="_blank" rel="noreferrer"' : "";
   const presentation = getActionPresentation(action);
 
   return `

@@ -64,6 +64,10 @@
         "label": "View project summary",
         "href": "#robotics-lab-equipment-booking-and-tracking-system",
         "type": "anchor"
+      },
+      {
+        "label": "Live demo",
+        "href": "http://45.114.124.101:18080/dashboard " 
       }
     ]
   }
