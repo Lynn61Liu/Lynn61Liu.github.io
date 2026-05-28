@@ -1,48 +1,995 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../images/logo copy.ico" type="image/x-icon" />
+  <title>NZAT Workshop Management System | Project Case Study</title>
+  <style>
+    :root {
+      --bg: #f7f7f2;
+      --surface: #ffffff;
+      --surface-soft: #eef5f3;
+      --surface-warm: #f5efe3;
+      --ink: #14212b;
+      --muted: #5d6b76;
+      --line: rgba(20, 33, 43, 0.14);
+      --line-strong: rgba(20, 33, 43, 0.24);
+      --accent: #0d8274;
+      --accent-dark: #075e55;
+      --blue: #315f8f;
+      --gold: #b46b25;
+      --shadow: 0 24px 64px rgba(20, 33, 43, 0.1);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fcfcf8 0%, var(--bg) 100%);
+      color: var(--ink);
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.78;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(20, 33, 43, 0.08);
+      background: rgba(247, 247, 242, 0.88);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 68px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    .case-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.82fr);
+      gap: 36px;
+      align-items: start;
+      padding: 20px 0 42px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin-top: 22px;
+      color: #2e3e49;
+      font-size: 1.08rem;
+      line-height: 1.78;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      background: #fff;
+    }
+
+    .button-primary {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .hero-media {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .media-caption {
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns:280px  minmax(0, 1fr) ;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .article {
+      display: grid;
+      gap: 28px;
+      min-width: 0;
+    }
+
+    .toc {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 18px 50px rgba(20, 33, 43, 0.06);
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .toc nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .toc a:hover {
+      background: var(--surface-soft);
+      color: var(--accent-dark);
+      opacity: 1;
+    }
+
+    .toc .toc-child {
+      padding-left: 22px;
+      font-size: 13px;
+    }
+
+    .section {
+      scroll-margin-top: 96px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 54px rgba(20, 33, 43, 0.06);
+    }
+
+    .section-header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      margin: 0;
+      color: var(--accent-dark);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: #40505a;
+      font-size: 1rem;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .snapshot-card,
+    .mini-card,
+    .takeaway-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .snapshot-card {
+      padding: 16px;
+    }
+
+    .snapshot-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .snapshot-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .visual-panel {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 22px;
+    }
+
+    .stack-visual,
+    .architecture-visual {
+      min-height: 320px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(13, 130, 116, 0.1), transparent 42%),
+        #fff;
+    }
+
+    .stack-title,
+    .diagram-title {
+      margin: 0 0 16px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .stack-layers {
+      display: grid;
+      gap: 10px;
+    }
+
+    .stack-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .stack-row b {
+      color: var(--accent-dark);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-list span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #283a45;
+      font-size: 13px;
+      font-weight: 700;
+      background: #fff;
+    }
+
+    .architecture-visual {
+      background:
+        linear-gradient(135deg, rgba(49, 95, 143, 0.1), transparent 44%),
+        #fff;
+    }
+
+    .diagram {
+      display: grid;
+      gap: 14px;
+    }
+
+    .diagram-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .diagram-node {
+      display: grid;
+      place-items: center;
+      min-height: 70px;
+      padding: 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      color: var(--ink);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      background: var(--surface-soft);
+    }
+
+    .diagram-node.dark {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .diagram-node.gold {
+      background: #fff4e6;
+      color: #6b3b0f;
+    }
+
+    .diagram-flow {
+      position: relative;
+      height: 26px;
+    }
+
+    .diagram-flow::before,
+    .diagram-flow::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .diagram-flow::before {
+      top: 0;
+      width: 2px;
+      height: 26px;
+      background: var(--line-strong);
+    }
+
+    .diagram-flow::after {
+      bottom: 0;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid var(--line-strong);
+      border-bottom: 2px solid var(--line-strong);
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .workflow-grid,
+    .deep-grid,
+    .reflection-grid,
+    .takeaway-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .workflow-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mini-card {
+      padding: 18px;
+    }
+
+    .mini-card h3,
+    .takeaway-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .mini-card p,
+    .takeaway-card p {
+      font-size: 0.96rem;
+    }
+
+    .deep-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .deep-card {
+      scroll-margin-top: 98px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .deep-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      background: var(--accent-dark);
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .detail-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.56;
+    }
+
+    .detail-list li::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .reflection-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .reflection-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .reflection-card:first-child {
+      background: var(--surface-soft);
+    }
+
+    .takeaway-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .takeaway-card {
+      padding: 20px;
+    }
+
+    .takeaway-card strong {
+      color: var(--accent-dark);
+    }
+
+    .note-box {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius);
+      background: var(--surface-warm);
+    }
+
+    .note-box p {
+      color: #4d4030;
+    }
+
+    @media (max-width: 980px) {
+      .case-hero,
+      .article-layout,
+      .visual-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+        order: -1;
+      }
+
+      .toc nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .toc .toc-child {
+        padding-left: 10px;
+      }
+
+      .snapshot-grid,
+      .workflow-grid,
+      .deep-grid,
+      .reflection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar-inner,
+      .page {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .topbar-inner {
+        min-height: 62px;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .page {
+        padding-top: 28px;
+      }
+
+      .case-hero {
+        padding-top: 8px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .snapshot-grid,
+      .workflow-grid,
+      .deep-grid,
+      .reflection-grid,
+      .takeaway-grid,
+      .diagram-row,
+      .toc nav {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <article class="project-card project-featured">
-        <div class="project-media">
-            <img src="../images/nzat-project.jpg" alt="NZAT workshop management system project preview" />
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="Lynn Liu logo" />
+        <span>Lynn Liu</span>
+      </a>
+      <a class="back-link" href="../index.html#project-library">Back to projects</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow">Project Overview</p>
+        <h2 id="case-title">NZAT Workshop Management System</h2>
+        <p class="hero-lead">
+          A production-oriented full-stack workshop operations platform built to replace fragmented paper processes
+          with centralised service, inventory, invoicing, and job-tracking workflows.
+        </p>
+      <!-- 1.ADD TECH STACK INFORMATION AND ICONS  THIS pragma -->
+        <div class="hero-actions">
+          <!-- <a class="button button-primary" href="#system-overview">Read the snapshot</a> -->
+          <a class="button" href="http://45.114.124.101:18513/jobs" target="_blank" rel="noreferrer">Open live demo</a>
         </div>
+      </div>
 
-        <div class="project-body">
-            <div class="card-topline">
-                <h3>NZAT Workshop Management System</h3>
-                <span class="status-pill">Full-Stack Project</span>
-            </div>
+      <figure class="hero-media">
+        <img src="../images/nzat-project.png" alt="NZAT workshop management system interface preview" />
+        <!-- <figcaption class="media-caption">
+          Interface preview for a workshop workflow platform connecting jobs, vehicle records, service activity, and
+          surrounding business operations.
+        </figcaption> -->
+      </figure>
+    </section>
 
-            <p class="project-summary">
-                A full-stack workshop management platform built from scratch to digitise and automate paper-based
-                workshop operations. The system centralises vehicle records, customer information,
-                job tracking, WOF service records, work logs, invoices, purchase orders, and follow-up tasks,
-                while integrating Excel, email, Xero, and internal data sources. By replacing fragmented
-                manual processes with a centralised digital workflow, the project helps reduce duplicate data entry,
-                improve operational efficiency, increase process traceability, minimise errors, and create a scalable
-                foundation for future reporting, automation, and business growth.
+    <div class="article-layout">
+      <aside class="toc" aria-label="Project article navigation">
+        <p class="toc-title ">On this page</p>
+        <nav>
+          <a href="#system-overview">System Overview</a>
+          <a href="#deep-dive">Deep Dive Sections</a>
+          <a class="toc-child" href="#workflow-modelling">Workflow modelling</a>
+          <a class="toc-child" href="#integrations">Integrations</a>
+          <a class="toc-child" href="#deployment-testing">Deployment and testing</a>
+          <a href="#reflection">Reflection</a>
+          <a href="#recruiter-takeaway">Personal Takeaway</a>
+        </nav>
+      </aside>
+      <article class="article">
+        <section class="section" id="system-overview">
+          <div class="section-header">
+            <p class="section-kicker">System Overview</p>
+            <!-- <h2>Thirty-second snapshot, architecture highlights, and core workflows</h2> -->
+            <p class="section-intro">
+              This project is best understood as a real workflow system rather than a standalone CRUD application. It
+              turns everyday workshop operations into traceable digital records and gives the business a stronger
+              foundation for automation, reporting, and future process improvement.
             </p>
-            <div class="tag-list">
-                <span>React</span>
-                <span>TypeScript</span>
-                <!-- <span>Tailwind CSS</span> -->
-                <!-- <span>C#</span> -->
-                <span>.NET Web API</span>
-                <span>PostgreSQL</span>
-                <span>Redis</span>
-                <span>Docker</span>
-                <span>GitHub Actions</span>
-                <span>REST API</span>
-                <span>outbox patterns</span>
-                <span>unit testing</span>
-                <span>Playwright</span>
-                <span>Azure</span>
-                <!-- <span>Figma</span> -->
+          </div>
+  <!-- snapshot-grid 在小一些，因为这些内容不是特别重要， -->
+          <!-- <div class="snapshot-grid" aria-label="Project snapshot">
+            <div class="snapshot-card">
+              <span class="snapshot-label">Project type</span>
+              <strong>Full-stack workflow platform</strong>
             </div>
-        </div>
-    </article>
+            <div class="snapshot-card">
+              <span class="snapshot-label">Status</span>
+              <strong>In progress / production use</strong>
+            </div>
+            <div class="snapshot-card">
+              <span class="snapshot-label">Business focus</span>
+              <strong>Workshop service operations</strong>
+            </div>
+            <div class="snapshot-card">
+              <span class="snapshot-label">Engineering value</span>
+              <strong>Workflow modelling and delivery-ready architecture</strong>
+            </div>
+          </div> -->
+
+          <div class="workflow-grid">
+            <div class="mini-card">
+              <h3>Problem</h3>
+              <p>
+                Paper-based processes made jobs, service history, purchasing, invoices, and follow-up communication
+                harder to track consistently across day-to-day workshop work.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Approach</h3>
+              <p>
+                I helped design and build a React, TypeScript, and ASP.NET Core platform that digitises the workshop
+                lifecycle and connects it to surrounding business systems.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Result</h3>
+              <p>
+                The platform reduces duplicate data entry, improves traceability, and creates a maintainable base for
+                ongoing workflow automation and reporting.
+              </p>
+            </div>
+          </div>
+
+          <div class="visual-panel" aria-label="Technology stack and architecture visuals">
+            <div class="stack-visual">
+              <p class="stack-title">Technology Stack</p>
+              <div class="stack-layers">
+                <div class="stack-row">
+                  <b>Frontend</b>
+                  <div class="tag-list">
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+                  </div>
+                </div>
+                <div class="stack-row">
+                  <b>Backend</b>
+                  <div class="tag-list">
+                    <span>ASP.NET Core</span>
+                    <span>REST API</span>
+                    <span>Auth-aware flows</span>
+                  </div>
+                </div>
+                <div class="stack-row">
+                  <b>Data</b>
+                  <div class="tag-list">
+                    <span>PostgreSQL</span>
+                    <span>Redis</span>
+                    <span>Outbox Pattern</span>
+                  </div>
+                </div>
+                <div class="stack-row">
+                  <b>Delivery</b>
+                  <div class="tag-list">
+                    <span>Docker</span>
+                    <span>GitHub Actions</span>
+                    <span>ACR</span>
+                    <span>Playwright</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="architecture-visual">
+              <p class="diagram-title">Architecture Picture</p>
+              <div class="diagram" role="img" aria-label="Architecture diagram showing users, frontend, API, database, integrations, and delivery pipeline">
+                <div class="diagram-row">
+                  <div class="diagram-node">Workshop users</div>
+                  <div class="diagram-node">React + TypeScript UI</div>
+                  <div class="diagram-node">Role-aware workflows</div>
+                </div>
+                <div class="diagram-flow" aria-hidden="true"></div>
+                <div class="diagram-row">
+                  <div class="diagram-node dark">ASP.NET Core REST API</div>
+                  <div class="diagram-node dark">Workflow rules</div>
+                  <div class="diagram-node dark">Integration boundary</div>
+                </div>
+                <div class="diagram-flow" aria-hidden="true"></div>
+                <div class="diagram-row">
+                  <div class="diagram-node gold">PostgreSQL + Redis</div>
+                  <div class="diagram-node gold">Email + Xero</div>
+                  <div class="diagram-node gold">Docker CI/CD + Tests</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="note-box">
+            <p>
+              Placeholder for future detail: this area can later include real metrics, screenshots of specific modules,
+              or a more formal architecture diagram once the project narrative becomes more complete.
+            </p>
+          </div> -->
+        </section>
+
+        <section class="section" id="deep-dive">
+          <div class="section-header">
+            <p class="section-kicker">Deep Dive Sections</p>
+            <!-- <h2>Three engineering areas worth discussing in an interview</h2> -->
+            <p class="section-intro">
+              The strongest story in this project is the movement from scattered operational activity to structured
+              software workflows. These sections can grow over time as more implementation detail, screenshots, and
+              lessons are added.
+            </p>
+          </div>
+
+          <div class="deep-grid">
+            <section class="deep-card" id="workflow-modelling">
+              <span class="deep-number">01</span>
+              <h3>Workflow modelling</h3>
+              <p>
+                The system needed to represent workshop work as a series of connected operational states, not isolated
+                screens. Customer records, vehicle information, jobs, WOF service records, invoices, purchase orders,
+                and reminders all influence the same service lifecycle.
+              </p>
+              <ul class="detail-list">
+                <li>Separated UI state from business workflow status so the system can stay maintainable as features grow.</li>
+                <li>Designed around traceability: users should be able to understand what happened, what is next, and what data supports the decision.</li>
+                <li>Kept the workflow practical for internal users who need speed and clarity during repeated daily tasks.</li>
+              </ul>
+            </section>
+
+            <section class="deep-card" id="integrations">
+              <span class="deep-number">02</span>
+              <h3>Integrations</h3>
+              <p>
+                Workshop software becomes more valuable when it connects to the systems already used by the business.
+                The project includes integration thinking across email, Xero, and internal operational data flows.
+              </p>
+              <ul class="detail-list">
+                <li>Used API-driven boundaries to keep external communication separate from core workflow logic.</li>
+                <li>Applied outbox-pattern thinking for more reliable operational messaging and integration behaviour.</li>
+                <li>Learned that integration-heavy systems need early attention to failure states, retries, and observability.</li>
+              </ul>
+            </section>
+
+            <section class="deep-card" id="deployment-testing">
+              <span class="deep-number">03</span>
+              <h3>Deployment and testing</h3>
+              <p>
+                Because this project supports real operations, delivery and quality practices matter as much as the
+                feature work itself. Docker-based workflows, GitHub Actions, Azure Container Registry, and Playwright
+                tests help make the system more repeatable and safer to evolve.
+              </p>
+              <ul class="detail-list">
+                <li>Containerised application delivery supports more consistent deployment across environments.</li>
+                <li>Playwright coverage focuses on critical end-to-end journeys rather than only isolated interface checks.</li>
+                <li>The project strengthened my understanding of release discipline for production-minded internal tools.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="section" id="reflection">
+          <div class="section-header">
+            <p class="section-kicker">Reflection</p>
+            <!-- <h2>Current lessons, trade-offs, and future improvements</h2> -->
+            <!-- <p class="section-intro">
+              This section is intentionally written as a living reflection. Some parts are conclusions from the current
+              build, while others are temporary observations that can be revised as the platform grows.
+            </p> -->
+          </div>
+
+          <div class="reflection-grid">
+            <div class="reflection-card">
+              <h3>Current lesson</h3>
+              <p>
+                Real-world workflow software needs careful modelling before feature expansion. The hard part is not only
+                building forms and tables, but deciding how business status, user action, and system records should
+                relate to each other.
+              </p>
+            </div>
+            <div class="reflection-card">
+              <h3>Trade-off</h3>
+              <p>
+                The system has to balance workflow flexibility with maintainable structure. Too much freedom can make
+                the system hard to reason about; too much rigidity can make it fail real workshop needs.
+              </p>
+            </div>
+            <div class="reflection-card">
+              <h3>Next iteration</h3>
+              <p>
+                Future improvements could include role-based dashboards, deeper reporting, stronger analytics
+                visibility, and more automation around reminders, purchasing, and follow-up tasks.
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="note-box">
+            <p>
+              Personal takeaway: this project helped me move from thinking mainly about individual features to thinking
+              about business processes, system boundaries, delivery quality, and long-term maintainability.
+            </p>
+          </div> -->
+        </section>
+
+        <section class="section" id="recruiter-takeaway">
+          <div class="section-header">
+            <p class="section-kicker">Personal Takeaway</p>
+            <h2>What this project shows about my engineering capability</h2>
+            <p class="section-intro">
+              This project helped me move from thinking mainly about individual features to thinking
+              about business processes, system boundaries, delivery quality, and long-term maintainability.
+            </p>
+          </div>
+
+          <div class="takeaway-grid">
+            <div class="takeaway-card">
+              <h3><strong>Full-stack delivery</strong></h3>
+              <p>
+                I can work across frontend, backend, database, testing, and deployment concerns while keeping the product
+                goal visible.
+              </p>
+            </div>
+            <div class="takeaway-card">
+              <h3><strong>Business workflow thinking</strong></h3>
+              <p>
+                I can translate messy real-world operations into clearer digital workflows that support traceability and
+                practical day-to-day use.
+              </p>
+            </div>
+            <div class="takeaway-card">
+              <h3><strong>Integration awareness</strong></h3>
+              <p>
+                I understand that useful systems often need to connect with external tools, internal data, and reliable
+                background processes.
+              </p>
+            </div>
+            <div class="takeaway-card">
+              <h3><strong>Reflective growth</strong></h3>
+              <p>
+                I document trade-offs, identify weak points, and use reflection to guide the next iteration rather than
+                treating a project as finished after the first working version.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+    
+    </div>
+  </main>
 </body>
+
 </html>

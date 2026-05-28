@@ -61,9 +61,9 @@
     "libraryFocus": "workflow digitisation, business process clarity, and delivery-ready architecture",
     "links": [
       {
-        "label": "View featured summary",
-        "href": "#nzat-workshop-management-system",
-        "type": "anchor"
+        "label": "View case study",
+        "href": "projects/nzat-project.html",
+        "type": "internal"
       },
       {
         "label": "Live demo",
@@ -73,7 +73,6 @@
     ]
   }
 }
-
 
 
 
