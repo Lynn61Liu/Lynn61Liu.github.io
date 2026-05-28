@@ -74,6 +74,11 @@
         "label": "View project summary",
         "href": "#python-internship-management-system",
         "type": "anchor"
+      },
+      {
+        "label": "Live demo",
+        "href": "http://45.114.124.101:18081/login",
+        "type": "external"
       }
     ]
   }
