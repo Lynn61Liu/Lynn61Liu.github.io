@@ -8,19 +8,20 @@
   <title>NZAT Workshop Management System | Project Case Study</title>
   <style>
     :root {
-      --bg: #f7f7f2;
-      --surface: #ffffff;
+      --bg: #f6f6f1;
+      --surface: rgba(255, 255, 255, 0.84);
       --surface-soft: #eef5f3;
-      --surface-warm: #f5efe3;
-      --ink: #14212b;
-      --muted: #5d6b76;
-      --line: rgba(20, 33, 43, 0.14);
-      --line-strong: rgba(20, 33, 43, 0.24);
-      --accent: #0d8274;
-      --accent-dark: #075e55;
+      --surface-warm: #f0e7d5;
+      --ink: #13212c;
+      --muted: #596774;
+      --line: rgba(25, 41, 52, 0.12);
+      --line-strong: rgba(25, 41, 52, 0.18);
+      --accent: #0f8f7e;
+      --accent-dark: #0b6e61;
       --blue: #315f8f;
       --gold: #b46b25;
-      --shadow: 0 24px 64px rgba(20, 33, 43, 0.1);
+      --shadow: 0 24px 70px rgba(19, 33, 44, 0.08);
+      --shadow-strong: 0 30px 80px rgba(19, 33, 44, 0.12);
       --radius: 8px;
       --max: 1180px;
     }
@@ -35,7 +36,9 @@
 
     body {
       margin: 0;
-      background: linear-gradient(180deg, #fcfcf8 0%, var(--bg) 100%);
+      background:
+        radial-gradient(circle at top left, rgba(15, 143, 126, 0.12), transparent 28%),
+        linear-gradient(180deg, #fcfcf8 0%, var(--bg) 100%);
       color: var(--ink);
       font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
       font-size: 16px;
@@ -182,12 +185,24 @@
       font-size: 14px;
       font-weight: 800;
       background: #fff;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
     }
 
     .button-primary {
       border-color: var(--ink);
       background: var(--ink);
       color: #fff;
+    }
+
+    .button-demo:hover,
+    .button-demo:focus-visible {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(15, 143, 126, 0.24);
+      outline: none;
     }
 
     .hero-media {
@@ -244,29 +259,39 @@
       text-transform: uppercase;
     }
 
-    .toc nav {
+    .toc nav,
+    .tab-list {
       display: grid;
       gap: 8px;
     }
 
-    .toc a {
+    .tab-button {
       display: block;
+      width: 100%;
       padding: 8px 10px;
+      border: 0;
       border-radius: 6px;
       color: var(--muted);
       font-size: 14px;
       line-height: 1.35;
+      text-align: left;
+      background: transparent;
+      font-family: inherit;
+      cursor: pointer;
     }
 
-    .toc a:hover {
+    .tab-button:hover,
+    .tab-button:focus-visible {
       background: var(--surface-soft);
       color: var(--accent-dark);
       opacity: 1;
+      outline: none;
     }
 
-    .toc .toc-child {
-      padding-left: 22px;
-      font-size: 13px;
+    .tab-button.is-active {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(15, 143, 126, 0.2);
     }
 
     .section {
@@ -276,6 +301,10 @@
       border-radius: var(--radius);
       background: rgba(255, 255, 255, 0.9);
       box-shadow: 0 18px 54px rgba(20, 33, 43, 0.06);
+    }
+
+    .tab-panel[hidden] {
+      display: none;
     }
 
     .section-header {
@@ -297,6 +326,17 @@
       max-width: 760px;
       color: #40505a;
       font-size: 1rem;
+    }
+
+    .keyword-highlight {
+      display: inline;
+      padding: 0.05em 0.24em;
+      border-radius: 0.35em;
+      color: var(--accent-dark);
+      font-weight: 800;
+      background: rgba(15, 143, 126, 0.12);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
 
     .snapshot-grid {
@@ -337,7 +377,7 @@
 
     .visual-panel {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
+      grid-template-columns: 1fr;
       gap: 18px;
       align-items: stretch;
       margin-top: 22px;
@@ -371,8 +411,8 @@
 
     .stack-row {
       display: grid;
-      grid-template-columns: 92px 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr;
+      gap: 8px;
       align-items: start;
       padding: 12px;
       border: 1px solid var(--line);
@@ -508,6 +548,84 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .feature-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .feature-tab-button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      background: #fff;
+      cursor: pointer;
+      transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .feature-tab-button:hover,
+    .feature-tab-button:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .feature-tab-button.is-active {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .feature-panel[hidden] {
+      display: none;
+    }
+
+    .feature-panel {
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .feature-panel-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.92fr);
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .feature-panel-copy {
+      padding: 22px;
+    }
+
+    .screenshot-placeholder {
+      display: grid;
+      place-items: center;
+      min-height: 360px;
+      padding: 22px;
+      border-left: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(15, 143, 126, 0.1), transparent 46%),
+        repeating-linear-gradient(45deg, rgba(25, 41, 52, 0.04) 0, rgba(25, 41, 52, 0.04) 8px, transparent 8px, transparent 16px),
+        #fbfcf8;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .deep-card {
       scroll-margin-top: 98px;
       padding: 20px;
@@ -558,7 +676,7 @@
     }
 
     .reflection-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr;
     }
 
     .reflection-card {
@@ -612,15 +730,21 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .toc .toc-child {
-        padding-left: 10px;
-      }
-
       .snapshot-grid,
       .workflow-grid,
       .deep-grid,
-      .reflection-grid {
+      .reflection-grid,
+      .feature-panel-layout {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-panel-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .screenshot-placeholder {
+        border-top: 1px solid var(--line);
+        border-left: 0;
       }
     }
 
@@ -655,8 +779,10 @@
       .deep-grid,
       .reflection-grid,
       .takeaway-grid,
+      .feature-panel-layout,
       .diagram-row,
-      .toc nav {
+      .toc nav,
+      .tab-list {
         grid-template-columns: 1fr;
       }
 
@@ -684,13 +810,13 @@
         <p class="eyebrow">Project Overview</p>
         <h2 id="case-title">NZAT Workshop Management System</h2>
         <p class="hero-lead">
-          A production-oriented full-stack workshop operations platform built to replace fragmented paper processes
-          with centralised service, inventory, invoicing, and job-tracking workflows.
+          A full-stack workshop management system that digitises repair workflows while respecting the team’s existing
+          Excel-based habits, adoption constraints, and long-term operational costs.
         </p>
       <!-- 1.ADD TECH STACK INFORMATION AND ICONS  THIS pragma -->
         <div class="hero-actions">
           <!-- <a class="button button-primary" href="#system-overview">Read the snapshot</a> -->
-          <a class="button" href="http://45.114.124.101:18513/jobs" target="_blank" rel="noreferrer">Open live demo</a>
+          <a class="button button-demo" href="http://45.114.124.101:18513/jobs" target="_blank" rel="noreferrer">Open live demo</a>
         </div>
       </div>
 
@@ -706,25 +832,23 @@
     <div class="article-layout">
       <aside class="toc" aria-label="Project article navigation">
         <p class="toc-title ">On this page</p>
-        <nav>
-          <a href="#system-overview">System Overview</a>
-          <a href="#deep-dive">Deep Dive Sections</a>
-          <a class="toc-child" href="#workflow-modelling">Workflow modelling</a>
-          <a class="toc-child" href="#integrations">Integrations</a>
-          <a class="toc-child" href="#deployment-testing">Deployment and testing</a>
-          <a href="#reflection">Reflection</a>
-          <a href="#recruiter-takeaway">Personal Takeaway</a>
+        <nav class="tab-list" role="tablist" aria-label="NZAT case study sections">
+          <button class="tab-button is-active" id="tab-system-overview" type="button" role="tab" aria-selected="true" aria-controls="system-overview" data-tab-target="system-overview">System Overview</button>
+          <button class="tab-button" id="tab-technology-architecture" type="button" role="tab" aria-selected="false" aria-controls="technology-architecture" data-tab-target="technology-architecture">Technology & Architecture</button>
+          <button class="tab-button" id="tab-feature-deep-dive" type="button" role="tab" aria-selected="false" aria-controls="feature-deep-dive" data-tab-target="feature-deep-dive">Feature Deep Dive</button>
+          <button class="tab-button" id="tab-reflection" type="button" role="tab" aria-selected="false" aria-controls="reflection" data-tab-target="reflection">Reflection</button>
+          <button class="tab-button" id="tab-recruiter-takeaway" type="button" role="tab" aria-selected="false" aria-controls="recruiter-takeaway" data-tab-target="recruiter-takeaway">Personal Takeaway</button>
         </nav>
       </aside>
       <article class="article">
-        <section class="section" id="system-overview">
+        <section class="section tab-panel" id="system-overview" role="tabpanel" aria-labelledby="tab-system-overview">
           <div class="section-header">
             <p class="section-kicker">System Overview</p>
             <!-- <h2>Thirty-second snapshot, architecture highlights, and core workflows</h2> -->
             <p class="section-intro">
-              This project is best understood as a real workflow system rather than a standalone CRUD application. It
-              turns everyday workshop operations into traceable digital records and gives the business a stronger
-              foundation for automation, reporting, and future process improvement.
+              This project is best understood as a real workflow system, not a standalone CRUD application. Its core
+              challenge was turning Excel-dependent workshop operations into traceable digital workflows without
+              ignoring the people, habits, and business constraints already inside the company.
             </p>
           </div>
   <!-- snapshot-grid 在小一些，因为这些内容不是特别重要， -->
@@ -751,24 +875,43 @@
             <div class="mini-card">
               <h3>Problem</h3>
               <p>
-                Paper-based processes made jobs, service history, purchasing, invoices, and follow-up communication
-                harder to track consistently across day-to-day workshop work.
+                NZAT relied on Excel, paper job sheets, manual emails, and separated repair records. This made job
+                status, WOF details, budgets, insurance information, and follow-up work difficult to track consistently.
               </p>
             </div>
             <div class="mini-card">
               <h3>Approach</h3>
               <p>
-                I helped design and build a React, TypeScript, and ASP.NET Core platform that digitises the workshop
-                lifecycle and connects it to surrounding business systems.
+                I helped build a React, TypeScript, ASP.NET Core, and PostgreSQL platform that connects vehicles,
+                customers, jobs, WOF records, budgets, email, Xero, and management reporting into one operational flow.
               </p>
             </div>
             <div class="mini-card">
               <h3>Result</h3>
               <p>
-                The platform reduces duplicate data entry, improves traceability, and creates a maintainable base for
-                ongoing workflow automation and reporting.
+                The system improves traceability, reduces duplicate data entry, and creates a maintainable foundation
+                for future automation such as AI-assisted insurance claim preparation and cloud migration.
               </p>
             </div>
+          </div>
+
+          <div class="note-box">
+            <p>
+              The hardest part was not building forms or dashboards. It was deciding which parts of the existing
+              workflow should be automated immediately, and which parts should remain familiar enough for the team to
+              adopt safely.
+            </p>
+          </div>
+        </section>
+
+        <section class="section tab-panel" id="technology-architecture" role="tabpanel" aria-labelledby="tab-technology-architecture" hidden>
+          <div class="section-header">
+            <p class="section-kicker">Technology Stack</p>
+            <p class="section-intro">
+              The stack was chosen to support a practical internal business application: a typed frontend, a structured
+              .NET API, relational data modelling, and deployment practices that can evolve from the existing Linux
+              server toward Azure when the business is ready.
+            </p>
           </div>
 
           <div class="visual-panel" aria-label="Technology stack and architecture visuals">
@@ -788,7 +931,7 @@
                   <div class="tag-list">
                     <span>ASP.NET Core</span>
                     <span>REST API</span>
-                    <span>Auth-aware flows</span>
+                    <span>API Boundaries</span>
                   </div>
                 </div>
                 <div class="stack-row">
@@ -796,15 +939,15 @@
                   <div class="tag-list">
                     <span>PostgreSQL</span>
                     <span>Redis</span>
-                    <span>Outbox Pattern</span>
+                    <span>Excel Imports</span>
                   </div>
                 </div>
                 <div class="stack-row">
                   <b>Delivery</b>
                   <div class="tag-list">
                     <span>Docker</span>
-                    <span>GitHub Actions</span>
-                    <span>ACR</span>
+                    <span>Linux Server</span>
+                    <span>Azure-ready</span>
                     <span>Playwright</span>
                   </div>
                 </div>
@@ -817,7 +960,7 @@
                 <div class="diagram-row">
                   <div class="diagram-node">Workshop users</div>
                   <div class="diagram-node">React + TypeScript UI</div>
-                  <div class="diagram-node">Role-aware workflows</div>
+                  <div class="diagram-node">Excel-assisted adoption</div>
                 </div>
                 <div class="diagram-flow" aria-hidden="true"></div>
                 <div class="diagram-row">
@@ -828,8 +971,8 @@
                 <div class="diagram-flow" aria-hidden="true"></div>
                 <div class="diagram-row">
                   <div class="diagram-node gold">PostgreSQL + Redis</div>
-                  <div class="diagram-node gold">Email + Xero</div>
-                  <div class="diagram-node gold">Docker CI/CD + Tests</div>
+                  <div class="diagram-node gold">Email + Xero APIs</div>
+                  <div class="diagram-node gold">Docker + Linux / Azure</div>
                 </div>
               </div>
             </div>
@@ -843,65 +986,81 @@
           </div> -->
         </section>
 
-        <section class="section" id="deep-dive">
+        <section class="section tab-panel" id="feature-deep-dive" role="tabpanel" aria-labelledby="tab-feature-deep-dive" hidden>
           <div class="section-header">
-            <p class="section-kicker">Deep Dive Sections</p>
+            <p class="section-kicker">Feature Deep Dive</p>
             <!-- <h2>Three engineering areas worth discussing in an interview</h2> -->
             <p class="section-intro">
               The strongest story in this project is the movement from scattered operational activity to structured
-              software workflows. These sections can grow over time as more implementation detail, screenshots, and
-              lessons are added.
+              software workflows. Each feature was designed around a business pain, not only around a screen.
             </p>
           </div>
 
-          <div class="deep-grid">
-            <section class="deep-card" id="workflow-modelling">
-              <span class="deep-number">01</span>
-              <h3>Workflow modelling</h3>
-              <p>
-                The system needed to represent workshop work as a series of connected operational states, not isolated
-                screens. Customer records, vehicle information, jobs, WOF service records, invoices, purchase orders,
-                and reminders all influence the same service lifecycle.
-              </p>
-              <ul class="detail-list">
-                <li>Separated UI state from business workflow status so the system can stay maintainable as features grow.</li>
-                <li>Designed around traceability: users should be able to understand what happened, what is next, and what data supports the decision.</li>
-                <li>Kept the workflow practical for internal users who need speed and clarity during repeated daily tasks.</li>
-              </ul>
-            </section>
-
-            <section class="deep-card" id="integrations">
-              <span class="deep-number">02</span>
-              <h3>Integrations</h3>
-              <p>
-                Workshop software becomes more valuable when it connects to the systems already used by the business.
-                The project includes integration thinking across email, Xero, and internal operational data flows.
-              </p>
-              <ul class="detail-list">
-                <li>Used API-driven boundaries to keep external communication separate from core workflow logic.</li>
-                <li>Applied outbox-pattern thinking for more reliable operational messaging and integration behaviour.</li>
-                <li>Learned that integration-heavy systems need early attention to failure states, retries, and observability.</li>
-              </ul>
-            </section>
-
-            <section class="deep-card" id="deployment-testing">
-              <span class="deep-number">03</span>
-              <h3>Deployment and testing</h3>
-              <p>
-                Because this project supports real operations, delivery and quality practices matter as much as the
-                feature work itself. Docker-based workflows, GitHub Actions, Azure Container Registry, and Playwright
-                tests help make the system more repeatable and safer to evolve.
-              </p>
-              <ul class="detail-list">
-                <li>Containerised application delivery supports more consistent deployment across environments.</li>
-                <li>Playwright coverage focuses on critical end-to-end journeys rather than only isolated interface checks.</li>
-                <li>The project strengthened my understanding of release discipline for production-minded internal tools.</li>
-              </ul>
-            </section>
+          <div class="feature-tabs" role="tablist" aria-label="Feature deep dive pages">
+            <button class="feature-tab-button is-active" id="feature-tab-job-sheet" type="button" role="tab" aria-selected="true" aria-controls="feature-job-sheet" data-feature-target="feature-job-sheet">Job Sheet / WOF</button>
+            <button class="feature-tab-button" id="feature-tab-integrations" type="button" role="tab" aria-selected="false" aria-controls="feature-integrations" data-feature-target="feature-integrations">Email + Xero APIs</button>
+            <button class="feature-tab-button" id="feature-tab-dashboard" type="button" role="tab" aria-selected="false" aria-controls="feature-dashboard" data-feature-target="feature-dashboard">PNP Dashboard</button>
           </div>
+
+          <section class="feature-panel" id="feature-job-sheet" role="tabpanel" aria-labelledby="feature-tab-job-sheet">
+            <div class="feature-panel-layout">
+              <div class="feature-panel-copy">
+                <span class="deep-number">01</span>
+                <h3>Job Sheet / WOF Layout</h3>
+                <p>
+                  Job sheets and WOF records had to work like real workshop tools, not generic forms. The layout brings
+                  vehicle details, service items, inspection notes, and next actions into a single workflow view.
+                </p>
+                <ul class="detail-list">
+                  <li><strong>Pain:</strong> Staff needed to jump between Excel, paper notes, and vehicle records during repeated daily tasks.</li>
+                  <li><strong>Design:</strong> The page is organised around the vehicle service lifecycle instead of a flat data-entry form.</li>
+                  <li><strong>Lesson:</strong> Good internal tools reduce context switching before they try to look impressive.</li>
+                </ul>
+              </div>
+              <div class="screenshot-placeholder">Screenshot placeholder<br />Job Sheet / WOF interface</div>
+            </div>
+          </section>
+
+          <section class="feature-panel" id="feature-integrations" role="tabpanel" aria-labelledby="feature-tab-integrations" hidden>
+            <div class="feature-panel-layout">
+              <div class="feature-panel-copy">
+                <span class="deep-number">02</span>
+                <h3>Email, Xero, API-driven Flows</h3>
+                <p>
+                  The system becomes more valuable when it connects with the tools the business already uses. Email,
+                  Xero, and internal data flows are treated as integration boundaries instead of being mixed into UI code.
+                </p>
+                <ul class="detail-list">
+                  <li><strong>Pain:</strong> Quotes, invoices, payments, and communication could easily become duplicated across tools.</li>
+                  <li><strong>Design:</strong> API-driven boundaries keep external communication separate from core workflow logic.</li>
+                  <li><strong>Lesson:</strong> Integration work needs clear ownership of data, failure states, and retry behaviour.</li>
+                </ul>
+              </div>
+              <div class="screenshot-placeholder">Screenshot placeholder<br />Email / Xero integration flow</div>
+            </div>
+          </section>
+
+          <section class="feature-panel" id="feature-dashboard" role="tabpanel" aria-labelledby="feature-tab-dashboard" hidden>
+            <div class="feature-panel-layout">
+              <div class="feature-panel-copy">
+                <span class="deep-number">03</span>
+                <h3>PNP Dashboard</h3>
+                <p>
+                  The dashboard is designed from a management perspective: what is blocked, what needs attention, and
+                  what operational state should be visible without asking another staff member.
+                </p>
+                <ul class="detail-list">
+                  <li><strong>Pain:</strong> Managers needed faster visibility across job progress, pending budget items, and follow-up tasks.</li>
+                  <li><strong>Design:</strong> Dashboard information is framed around action and exceptions, not only static charts.</li>
+                  <li><strong>Lesson:</strong> A useful dashboard reduces uncertainty; it is not just a prettier database table.</li>
+                </ul>
+              </div>
+              <div class="screenshot-placeholder">Screenshot placeholder<br />PNP dashboard view</div>
+            </div>
+          </section>
         </section>
 
-        <section class="section" id="reflection">
+        <section class="section tab-panel" id="reflection" role="tabpanel" aria-labelledby="tab-reflection" hidden>
           <div class="section-header">
             <p class="section-kicker">Reflection</p>
             <!-- <h2>Current lessons, trade-offs, and future improvements</h2> -->
@@ -915,42 +1074,46 @@
             <div class="reflection-card">
               <h3>Current lesson</h3>
               <p>
-                Real-world workflow software needs careful modelling before feature expansion. The hard part is not only
-                building forms and tables, but deciding how business status, user action, and system records should
+                Real-world workflow software needs careful modelling before feature expansion. The hard part is not
+                only building forms and tables, but deciding how business status, user action, and system records should
                 relate to each other.
               </p>
             </div>
             <div class="reflection-card">
               <h3>Trade-off</h3>
               <p>
-                The system has to balance workflow flexibility with maintainable structure. Too much freedom can make
-                the system hard to reason about; too much rigidity can make it fail real workshop needs.
+                Some data could theoretically communicate with the system directly, but stakeholders preferred Excel as
+                a preprocessing layer because several senior staff members were already comfortable with it. This taught
+                me that adoption cost is an engineering constraint too.
               </p>
             </div>
             <div class="reflection-card">
               <h3>Next iteration</h3>
               <p>
-                Future improvements could include role-based dashboards, deeper reporting, stronger analytics
-                visibility, and more automation around reminders, purchasing, and follow-up tasks.
+                The next iteration would focus on insurance claim preparation: AI-assisted image resizing, repair
+                description generation from uploaded photos, and insurer-specific report formats for different claim
+                requirements.
               </p>
             </div>
           </div>
 
-          <!-- <div class="note-box">
+          <div class="note-box">
             <p>
-              Personal takeaway: this project helped me move from thinking mainly about individual features to thinking
-              about business processes, system boundaries, delivery quality, and long-term maintainability.
+              The current deployment uses the company’s existing Linux server because it had already been purchased for
+              a one-year period. Once that sunk cost ends, moving to Azure could support pay-as-you-go infrastructure,
+              lower maintenance overhead, and scale more flexibly with actual usage.
             </p>
-          </div> -->
+          </div>
         </section>
 
-        <section class="section" id="recruiter-takeaway">
+        <section class="section tab-panel" id="recruiter-takeaway" role="tabpanel" aria-labelledby="tab-recruiter-takeaway" hidden>
           <div class="section-header">
             <p class="section-kicker">Personal Takeaway</p>
             <h2>What this project shows about my engineering capability</h2>
             <p class="section-intro">
-              This project helped me move from thinking mainly about individual features to thinking
-              about business processes, system boundaries, delivery quality, and long-term maintainability.
+              This project taught me that full-stack engineering is not just connecting frontend, backend, and database.
+              It is connecting software decisions with real business workflows, user habits, and long-term operational
+              cost.
             </p>
           </div>
 
@@ -958,29 +1121,29 @@
             <div class="takeaway-card">
               <h3><strong>Full-stack delivery</strong></h3>
               <p>
-                I can work across frontend, backend, database, testing, and deployment concerns while keeping the product
-                goal visible.
+                I practised working across React, TypeScript, ASP.NET Core, PostgreSQL, API design, testing, and
+                deployment while keeping the product goal visible.
               </p>
             </div>
             <div class="takeaway-card">
               <h3><strong>Business workflow thinking</strong></h3>
               <p>
-                I can translate messy real-world operations into clearer digital workflows that support traceability and
-                practical day-to-day use.
+                I learned to translate messy real-world operations into clearer digital workflows that support
+                traceability and practical day-to-day use.
               </p>
             </div>
             <div class="takeaway-card">
               <h3><strong>Integration awareness</strong></h3>
               <p>
-                I understand that useful systems often need to connect with external tools, internal data, and reliable
-                background processes.
+                I saw how useful internal systems often depend on external tools, existing Excel processes, reliable
+                APIs, and clear data ownership.
               </p>
             </div>
             <div class="takeaway-card">
               <h3><strong>Reflective growth</strong></h3>
               <p>
-                I document trade-offs, identify weak points, and use reflection to guide the next iteration rather than
-                treating a project as finished after the first working version.
+                I can identify trade-offs, explain why a design choice was made, and use reflection to guide the next
+                iteration instead of treating a project as finished after the first working version.
               </p>
             </div>
           </div>
@@ -990,6 +1153,186 @@
     
     </div>
   </main>
+  <script>
+    const articleKeywords = [
+      "full-stack",
+      "workshop management system",
+      "repair workflows",
+      "Excel-based habits",
+      "adoption constraints",
+      "operational costs",
+      "workflow system",
+      "CRUD application",
+      "Excel-dependent workshop operations",
+      "traceable digital workflows",
+      "business constraints",
+      "Problem",
+      "Approach",
+      "Result",
+      "Excel",
+      "WOF",
+      "budgets",
+      "insurance information",
+      "React",
+      "TypeScript",
+      "ASP.NET Core",
+      "PostgreSQL",
+      "Xero",
+      "management reporting",
+      "AI-assisted insurance claim preparation",
+      "cloud migration",
+      "automated",
+      "adopt safely",
+      "Technology Stack",
+      ".NET API",
+      "Linux server",
+      "Azure",
+      "REST API",
+      "API Boundaries",
+      "Redis",
+      "Docker",
+      "Azure-ready",
+      "Playwright",
+      "API-driven",
+      "integration boundaries",
+      "failure states",
+      "retry behaviour",
+      "PNP Dashboard",
+      "adoption cost",
+      "engineering constraint",
+      "AI-assisted image resizing",
+      "repair description generation",
+      "insurer-specific report formats",
+      "pay-as-you-go infrastructure",
+      "Full-stack delivery",
+      "Business workflow thinking",
+      "Integration awareness",
+      "Reflective growth",
+      "real business workflows",
+      "user habits",
+      "long-term operational cost"
+    ];
+
+    function escapeRegExp(value) {
+      return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function highlightArticleKeywords() {
+      const article = document.querySelector(".article");
+
+      if (!article) {
+        return;
+      }
+
+      const keywordPattern = new RegExp(`(${articleKeywords.sort((a, b) => b.length - a.length).map(escapeRegExp).join("|")})`, "i");
+      const walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          const parentElement = node.parentElement;
+
+          if (!parentElement || !node.nodeValue.trim()) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          if (parentElement.closest("script, style, button, a, .keyword-highlight")) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          return keywordPattern.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        }
+      });
+      const textNodes = [];
+
+      while (walker.nextNode()) {
+        textNodes.push(walker.currentNode);
+      }
+
+      textNodes.forEach((node) => {
+        const fragment = document.createDocumentFragment();
+        const parts = node.nodeValue.split(keywordPattern);
+
+        parts.forEach((part) => {
+          if (!part) {
+            return;
+          }
+
+          if (keywordPattern.test(part)) {
+            const highlight = document.createElement("span");
+            highlight.className = "keyword-highlight";
+            highlight.textContent = part;
+            fragment.appendChild(highlight);
+          } else {
+            fragment.appendChild(document.createTextNode(part));
+          }
+        });
+
+        node.parentNode.replaceChild(fragment, node);
+      });
+    }
+
+    highlightArticleKeywords();
+
+    const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
+    const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
+    const featureTabButtons = Array.from(document.querySelectorAll("[data-feature-target]"));
+    const featurePanels = Array.from(document.querySelectorAll(".feature-panel"));
+
+    function activateTab(targetId, shouldUpdateHash = true) {
+      const targetPanel = document.getElementById(targetId);
+
+      if (!targetPanel) {
+        return;
+      }
+
+      tabButtons.forEach((button) => {
+        const isActive = button.dataset.tabTarget === targetId;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-selected", String(isActive));
+      });
+
+      tabPanels.forEach((panel) => {
+        panel.hidden = panel.id !== targetId;
+      });
+
+      if (shouldUpdateHash) {
+        history.replaceState(null, "", `#${targetId}`);
+      }
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activateTab(button.dataset.tabTarget);
+      });
+    });
+
+    function activateFeatureTab(targetId) {
+      const targetPanel = document.getElementById(targetId);
+
+      if (!targetPanel) {
+        return;
+      }
+
+      featureTabButtons.forEach((button) => {
+        const isActive = button.dataset.featureTarget === targetId;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-selected", String(isActive));
+      });
+
+      featurePanels.forEach((panel) => {
+        panel.hidden = panel.id !== targetId;
+      });
+    }
+
+    featureTabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activateFeatureTab(button.dataset.featureTarget);
+      });
+    });
+
+    const initialTab = window.location.hash.replace("#", "");
+    if (initialTab) {
+      activateTab(initialTab, false);
+    }
+  </script>
 </body>
 
 </html>
