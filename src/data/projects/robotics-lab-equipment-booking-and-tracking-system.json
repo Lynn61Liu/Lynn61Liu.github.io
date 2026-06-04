@@ -51,6 +51,7 @@
   "display": {
     "featured": false,
     "category": "full-stack",
+    "categories": ["full-stack", "deploy"],
     "libraryMetaTag": "Full-Stack",
     "heroImage": "./images/lab-booking.png",
     "heroImageAlt": "Robotics lab equipment booking and tracking system project cover",
@@ -60,11 +61,6 @@
     },
     "libraryFocus": "role-based equipment operations, workflow clarity, and layered full-stack architecture",
     "links": [
-      {
-        "label": "View project summary",
-        "href": "#robotics-lab-equipment-booking-and-tracking-system",
-        "type": "anchor"
-      },
       {
         "label": "Live demo",
         "href": "http://45.114.124.101:18080/dashboard " 

@@ -60,9 +60,9 @@
     "libraryFocus": "API integration, AI-assisted features, and user-centred workflow design",
     "links": [
       {
-        "label": "View featured summary",
-        "href": "#ai-enabled-inventory-meal-planning-application",
-        "type": "anchor"
+        "label": "Open case study",
+        "href": "./casestudy/Marvelous_Moose_Seminar.pdf",
+        "type": "external"
       }
     ]
   }

@@ -54,7 +54,7 @@
     "heroImageAlt": "HomeTrip booking app preview",
     "skillFilters": ["ux"],
     "cardTags": {
-      "library": ["Responsive UI", "Interface Design", "UX Flow", "Workflow Prototype"]
+      "library": ["Single Page Application","Responsive UI", "Interface Design","JavaScript", "UX Flow", "Workflow Prototype"]
     },
     "libraryFocus": "front-end clarity, booking journey structure, and user decision support",
     "links": [

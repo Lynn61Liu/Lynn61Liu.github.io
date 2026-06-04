@@ -61,11 +61,6 @@
     "libraryFocus": "product thinking, educational interaction design, and age-appropriate usability",
     "links": [
       {
-        "label": "View featured summary",
-        "href": "#nutriplays",
-        "type": "anchor"
-      },
-      {
         "label": "Live demo",
         "href": "./NutriPlays/",
         "type": "internal"

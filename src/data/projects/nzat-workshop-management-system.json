@@ -50,6 +50,7 @@
   "display": {
     "featured": true,
     "category": "full-stack",
+    "categories": ["full-stack", "deploy"],
     "libraryMetaTag": "Full-Stack",
     "heroImage": "./images/nzat-project.png",
     "heroImageAlt": "NZAT workshop management system interface preview",
@@ -73,7 +74,6 @@
     ]
   }
 }
-
 
 
 

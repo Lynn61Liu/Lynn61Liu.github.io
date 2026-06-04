@@ -1,6 +1,6 @@
 import { renderProjectCard } from "./components/project-card.js";
 
-const CACHE_BUSTER = "20260527-1";
+const CACHE_BUSTER = "20260605-1";
 const DATA_INDEX_URL = new URL(`../../src/data/projects/index.json?v=${CACHE_BUSTER}`, import.meta.url);
 
 const state = {
@@ -62,9 +62,9 @@ function applyFilters() {
 // 因此，通过 document.querySelectorAll(".library-card") 获取
 //    所有这些卡片元素，以便根据用户选择的过滤条件来显示或隐藏它们。
   cards.forEach((card) => {
-    const category = card.dataset.category;
+    const categories = (card.dataset.category || "").split(" ").filter(Boolean);
     const skills = (card.dataset.skills || "").split(" ").filter(Boolean);
-    const categoryMatch = state.category === "all" || category === state.category;
+    const categoryMatch = state.category === "all" || categories.includes(state.category);
     const skillMatch = state.skill === "all" || skills.includes(state.skill);
     const shouldShow = categoryMatch && skillMatch;
 

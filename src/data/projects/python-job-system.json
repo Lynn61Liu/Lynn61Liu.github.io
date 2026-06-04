@@ -60,6 +60,7 @@
   "display": {
     "featured": false,
     "category": "full-stack",
+    "categories": ["full-stack", "deploy"],
     "libraryMetaTag": "Python Flask",
     "heroImage": "./images/python-internship.png",
     "heroImageAlt": "Python internship management system interface preview",

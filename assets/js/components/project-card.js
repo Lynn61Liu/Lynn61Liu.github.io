@@ -193,6 +193,10 @@ function renderLibraryCard(project) {
   const tags = selectDisplayTags(project, "library");
   const fallbackAnchor = `#${project.id}`;
   const filterTokens = collectFilterTokens(project);
+  const categoryTokens = uniqueTags([
+    project.display?.category,
+    ...((project.display?.categories || []))
+  ]).filter(Boolean);
   const note = project.display?.libraryFocus
     ? `Focus: ${project.display.libraryFocus}.`
     : "";
@@ -200,7 +204,7 @@ function renderLibraryCard(project) {
   return `
     <article
       class="library-card"
-      data-category="${escapeHtml(project.display?.category || "all")}"
+      data-category="${escapeHtml(categoryTokens.length ? categoryTokens.join(" ") : "all")}"
       data-skills="${escapeHtml(filterTokens.join(" "))}"
       aria-label="${escapeHtml(project.projectName)} ${SECTION_LABELS.library}"
     >
