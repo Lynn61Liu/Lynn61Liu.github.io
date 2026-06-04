@@ -146,8 +146,7 @@ podman images
 前端容器本身通常不存业务数据，所以可以直接删除并重建。
 
 ```bash
-podman rm -f nzat-web
-podman rmi image id
+podman rm -f nzat-demo-web
 ```
 
 ### 成功标准
@@ -157,7 +156,7 @@ podman rmi image id
 
 ---
 
-## 5.7 用新镜像重新启动 `nzat-web`
+## 5.7 用新镜像重新启动 `nzat-demo-web`
 
 重新启动时，必须继续挂载当前正在使用的 Nginx 配置文件，否则默认镜像中的配置可能会覆盖你现在的代理逻辑。
 
@@ -174,6 +173,7 @@ podman run -d \
 
 ### 注意事项
 
+- 如果出现 `the container name "nzat-demo-web" is already in use`，说明旧容器还没有删除，先执行 `podman rm -f nzat-demo-web`
 - `--pod nzat-demo-pod` 不要漏掉
 - `default.conf` 挂载不要漏掉
 - 镜像 tag 要确认是新版本，不要误用旧镜像

@@ -1,0 +1,267 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Order part workflow board</title>
+  <desc id="desc">A workshop parts reservation board with English labels for pending orders, PartsTrader quotes, and pickup or in-transit parts.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f6fa; }
+      .title { fill: #111827; font: 700 25px Arial, sans-serif; }
+      .column { fill: #ffffff; stroke: #d8dee8; stroke-width: 1; }
+      .header { font: 700 14px Arial, sans-serif; }
+      .card { fill: #ffffff; stroke: #dce3ec; stroke-width: 1; }
+      .vehicle { fill: #1f2937; font: 700 12px Arial, sans-serif; }
+      .label { fill: #4b5563; font: 700 11px Arial, sans-serif; }
+      .small { fill: #6b7280; font: 11px Arial, sans-serif; }
+      .timeText { fill: #e44b20; font: 700 11px Arial, sans-serif; }
+      .job { fill: #7434ff; font: 11px Arial, sans-serif; }
+      .note { fill: #2563ff; font: 11px Arial, sans-serif; }
+      .part { fill: #374151; font: 20px Arial, sans-serif; }
+      .partSmall { fill: #374151; font: 15px Arial, sans-serif; }
+      .tag { fill: #f1f3f6; }
+      .divider { stroke: #edf0f4; stroke-width: 1; }
+      .icon { fill: none; stroke: #697386; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .action { fill: none; stroke: #697386; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="980"/>
+  <text class="title" x="28" y="38">Parts Reservation</text>
+
+  <g transform="translate(28 76)">
+    <rect class="column" width="354" height="876" rx="5"/>
+    <rect width="354" height="42" rx="5" fill="#fff4c6"/>
+    <text class="header" x="14" y="27" fill="#9a4a0c">Pending Order (48)</text>
+
+    <g transform="translate(14 60)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">MITSUBISHI PAJERO SPORT - PHC510</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 1d 20h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="78" height="28" rx="3"/>
+      <text class="part" x="46" y="120">Fog light</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#946</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+
+    <g transform="translate(14 228)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">TOYOTA HIACE - KBQ172</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 2d 20h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="90" height="28" rx="3"/>
+      <text class="part" x="46" y="120">Four tyres</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#940</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+
+    <g transform="translate(14 396)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">KIA EV5 - RDH74</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 7d 19h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="132" height="28" rx="3"/>
+      <text class="part" x="46" y="120">Shock left front</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#917</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+
+    <g transform="translate(14 564)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">TOYOTA PRIUS - QJD944</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 7d 21h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="112" height="28" rx="3"/>
+      <text class="part" x="46" y="120">195 65 15 x2</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#914</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+  </g>
+
+  <g transform="translate(410 76)">
+    <rect class="column" width="354" height="876" rx="5"/>
+    <rect width="354" height="42" rx="5" fill="#dbeafe"/>
+    <text class="header" x="14" y="27" fill="#1854c8">Needs PT Quote (0)</text>
+  </g>
+
+  <g transform="translate(792 76)">
+    <rect class="column" width="354" height="876" rx="5"/>
+    <rect width="354" height="42" rx="5" fill="#f0e3ff"/>
+    <text class="header" x="14" y="27" fill="#6d28d9">PartsTrader (4)</text>
+
+    <g transform="translate(14 60)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">HONDA CIVIC - JEY652</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 49d 16h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="164" height="28" rx="3"/>
+      <text class="partSmall" x="46" y="118">Both front guard liners</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#619</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+
+    <g transform="translate(14 228)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">HONDA CR-Z - MEN975</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 86d 15h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="24" height="28" rx="3"/>
+      <text class="part" x="47" y="120">L</text>
+      <rect class="tag" x="69" y="99" width="108" height="28" rx="3"/>
+      <text class="part" x="76" y="120">F Headlight</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#188</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+
+    <g transform="translate(14 396)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">BMW 320I - MCZ557</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 82d 20h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="180" height="28" rx="3"/>
+      <text class="partSmall" x="46" y="118">Left rear guard connector</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#213</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+
+    <g transform="translate(14 564)">
+      <rect class="card" width="326" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">BMW 116I - PQD161</text>
+      <rect x="12" y="48" width="302" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 80d 20h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="24" height="28" rx="3"/>
+      <text class="part" x="47" y="120">R</text>
+      <rect class="tag" x="69" y="99" width="108" height="28" rx="3"/>
+      <text class="part" x="76" y="120">F Headlight</text>
+      <line class="divider" x1="12" y1="137" x2="314" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#241</text>
+      <path class="action" d="M268 144h13v10h-13zM271 141h7M288 144h10v10h-10zM291 141h4"/>
+    </g>
+  </g>
+
+  <g transform="translate(1174 76)">
+    <rect class="column" width="398" height="876" rx="5"/>
+    <rect width="398" height="42" rx="5" fill="#d8f8e1"/>
+    <text class="header" x="14" y="27" fill="#047857">Pickup / In Transit (9)</text>
+
+    <g transform="translate(14 60)">
+      <rect class="card" width="370" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">ACR500184991</text>
+      <rect x="12" y="48" width="346" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 78d 9h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="230" height="28" rx="3"/>
+      <text class="partSmall" x="46" y="118">Power door control module x2</text>
+      <line class="divider" x1="12" y1="137" x2="358" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#303</text>
+      <path class="action" d="M276 144l10 7 10-7v10h-20zM311 144h13v10h-13zM314 141h7M333 144h10v10h-10zM336 141h4"/>
+    </g>
+
+    <g transform="translate(14 228)">
+      <rect class="card" width="370" height="190" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">TESLA MODEL Y - PUF567</text>
+      <rect x="12" y="48" width="346" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 78d 15h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="24" height="28" rx="3"/>
+      <text class="part" x="47" y="120">L</text>
+      <rect class="tag" x="69" y="99" width="90" height="28" rx="3"/>
+      <text class="part" x="76" y="120">R tyre 255</text>
+      <rect class="tag" x="39" y="132" width="308" height="44" rx="3"/>
+      <text class="partSmall" x="46" y="151">45R19 104W ZETA ARTORIA EV</text>
+      <text class="partSmall" x="46" y="170">159 + 6.65</text>
+      <line class="divider" x1="12" y1="176" x2="358" y2="176"/>
+      <text class="note" x="14" y="188">Add note</text><text class="job" x="82" y="188">job#297</text>
+      <path class="action" d="M276 180l10 7 10-7v10h-20zM311 180h13v10h-13zM314 177h7M333 180h10v10h-10zM336 177h4"/>
+    </g>
+
+    <g transform="translate(14 438)">
+      <rect class="card" width="370" height="154" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">LEXUS RX350 - EHY171</text>
+      <rect x="12" y="48" width="346" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 79d 4h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="172" height="28" rx="3"/>
+      <text class="part" x="46" y="120">Left front bearing</text>
+      <line class="divider" x1="12" y1="137" x2="358" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#287</text>
+      <path class="action" d="M276 144l10 7 10-7v10h-20zM311 144h13v10h-13zM314 141h7M333 144h10v10h-10zM336 141h4"/>
+    </g>
+
+    <g transform="translate(14 608)">
+      <rect class="card" width="370" height="180" rx="5"/>
+      <path class="icon" d="M11 28h17l5 5h6a4 4 0 0 1 4 4v3H7v-7a5 5 0 0 1 4-5z"/>
+      <circle class="icon" cx="16" cy="42" r="3"/><circle class="icon" cx="35" cy="42" r="3"/>
+      <text class="vehicle" x="52" y="34">MERCEDES-BENZ SPRINTER - LAH331</text>
+      <rect x="12" y="48" width="346" height="22" rx="2" fill="#fff7ed" stroke="#fed7aa"/>
+      <circle class="action" cx="25" cy="59" r="5"/><path class="action" d="M25 56v4l3 2"/>
+      <text class="timeText" x="39" y="63">Time in shop: 86d 16h</text>
+      <path class="icon" d="M15 86l13-13 7 7-13 13h-7z"/>
+      <text class="label" x="39" y="91">Required parts:</text>
+      <rect class="tag" x="39" y="99" width="70" height="28" rx="3"/>
+      <text class="part" x="46" y="120">Brake pads</text>
+      <rect class="tag" x="115" y="99" width="178" height="28" rx="3"/>
+      <text class="partSmall" x="122" y="118">Check front or rear</text>
+      <line class="divider" x1="12" y1="137" x2="358" y2="137"/>
+      <text class="note" x="14" y="151">Add note</text><text class="job" x="82" y="151">job#180</text>
+      <path class="action" d="M276 144l10 7 10-7v10h-20zM311 144h13v10h-13zM314 141h7M333 144h10v10h-10zM336 141h4"/>
+    </g>
+  </g>
+</svg>

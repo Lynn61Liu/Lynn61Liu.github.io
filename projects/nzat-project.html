@@ -328,17 +328,6 @@
       font-size: 1rem;
     }
 
-    .keyword-highlight {
-      display: inline;
-      padding: 0.05em 0.24em;
-      border-radius: 0.35em;
-      color: var(--accent-dark);
-      font-weight: 800;
-      background: rgba(15, 143, 126, 0.12);
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
-    }
-
     .snapshot-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -425,6 +414,16 @@
       font-size: 12px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+    }
+
+    .stack-row-split {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stack-column {
+      display: grid;
+      gap: 8px;
     }
 
     .tag-list {
@@ -604,8 +603,31 @@
       align-items: stretch;
     }
 
+    .feature-panel-layout-wide {
+      grid-template-columns: 1fr;
+    }
+
+    #feature-order-parts .feature-panel-layout {
+      grid-template-columns: 1fr;
+    }
+
+    #feature-integrations .feature-panel-layout {
+      grid-template-columns: 1fr;
+    }
+
+    #feature-dashboard .feature-panel-layout {
+      grid-template-columns: 1fr;
+    }
+
     .feature-panel-copy {
       padding: 22px;
+    }
+
+    .feature-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
     .screenshot-placeholder {
@@ -626,6 +648,67 @@
       text-transform: uppercase;
     }
 
+    .feature-screenshot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 360px;
+      margin: 0;
+      padding: 18px;
+      border-left: 1px solid var(--line);
+      background: #fbfcf8;
+    }
+
+    .feature-screenshot img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 18px 44px rgba(19, 33, 44, 0.08);
+    }
+
+    .feature-panel-layout-wide .feature-screenshot {
+      min-height: 0;
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    #feature-order-parts .feature-screenshot {
+      min-height: 0;
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    #feature-integrations .feature-screenshot {
+      min-height: 0;
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    #feature-dashboard .feature-screenshot {
+      min-height: 0;
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    .feature-panel-layout-wide .feature-screenshot img {
+      max-height: none;
+    }
+
+    #feature-order-parts .feature-screenshot img {
+      max-height: none;
+    }
+
+    #feature-integrations .feature-screenshot img {
+      max-height: none;
+    }
+
+    #feature-dashboard .feature-screenshot img {
+      max-height: none;
+    }
+
     .deep-card {
       scroll-margin-top: 98px;
       padding: 20px;
@@ -640,7 +723,6 @@
       justify-content: center;
       width: 34px;
       height: 34px;
-      margin-bottom: 14px;
       border-radius: 50%;
       color: #fff;
       font-size: 13px;
@@ -743,6 +825,11 @@
       }
 
       .screenshot-placeholder {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .feature-screenshot {
         border-top: 1px solid var(--line);
         border-left: 0;
       }
@@ -889,8 +976,8 @@
             <div class="mini-card">
               <h3>Result</h3>
               <p>
-                The system improves traceability, reduces duplicate data entry, and creates a maintainable foundation
-                for future automation such as AI-assisted insurance claim preparation and cloud migration.
+                The system turns scattered manual management into a more visual and automated workflow, helping the
+                business organise repair work, standardise daily processes, and track operational status more clearly.
               </p>
             </div>
           </div>
@@ -931,31 +1018,45 @@
                   <div class="tag-list">
                     <span>ASP.NET Core</span>
                     <span>REST API</span>
-                    <span>API Boundaries</span>
-                  </div>
-                </div>
-                <div class="stack-row">
-                  <b>Data</b>
-                  <div class="tag-list">
-                    <span>PostgreSQL</span>
-                    <span>Redis</span>
+                    <span>Outbox Pattern</span>
+                    <span>Xero API </span>
+                    <span>Gmail API </span>
                     <span>Excel Imports</span>
                   </div>
                 </div>
+                <div class="stack-row stack-row-split">
+                  <div class="stack-column">
+                    <b>Data</b>
+                    <div class="tag-list">
+                      <span>PostgreSQL</span>
+                      <span>Redis</span>
+                    </div>
+                  </div>
+                  <div class="stack-column">
+                    <b>Deploy</b>
+                    <div class="tag-list">
+                      <span>Docker</span>
+                      <span>Linux Server</span>
+                      <span>Azure-ready</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="stack-row">
-                  <b>Delivery</b>
+                  <b>Test</b>
                   <div class="tag-list">
-                    <span>Docker</span>
-                    <span>Linux Server</span>
-                    <span>Azure-ready</span>
+                    <span>Swagger</span>
+                    <span>xUnit</span>
                     <span>Playwright</span>
+                    <span>User Acceptance Testing</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="architecture-visual">
-              <p class="diagram-title">Architecture Picture</p>
+        <p class="diagram-title">Architecture Picture</p>
+              <img src="../images/internal-system-architecture.png" alt="Architecture diagram showing users, frontend, API, database, integrations, and delivery pipeline" />
+              <!-- <p class="diagram-title">Architecture Picture</p>
               <div class="diagram" role="img" aria-label="Architecture diagram showing users, frontend, API, database, integrations, and delivery pipeline">
                 <div class="diagram-row">
                   <div class="diagram-node">Workshop users</div>
@@ -974,7 +1075,7 @@
                   <div class="diagram-node gold">Email + Xero APIs</div>
                   <div class="diagram-node gold">Docker + Linux / Azure</div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -997,65 +1098,81 @@
           </div>
 
           <div class="feature-tabs" role="tablist" aria-label="Feature deep dive pages">
-            <button class="feature-tab-button is-active" id="feature-tab-job-sheet" type="button" role="tab" aria-selected="true" aria-controls="feature-job-sheet" data-feature-target="feature-job-sheet">Job Sheet / WOF</button>
-            <button class="feature-tab-button" id="feature-tab-integrations" type="button" role="tab" aria-selected="false" aria-controls="feature-integrations" data-feature-target="feature-integrations">Email + Xero APIs</button>
+            <button class="feature-tab-button is-active" id="feature-tab-order-parts" type="button" role="tab" aria-selected="true" aria-controls="feature-order-parts" data-feature-target="feature-order-parts">Order Part Flow</button>
+            <button class="feature-tab-button" id="feature-tab-integrations" type="button" role="tab" aria-selected="false" aria-controls="feature-integrations" data-feature-target="feature-integrations">Email + Xero Integration</button>
             <button class="feature-tab-button" id="feature-tab-dashboard" type="button" role="tab" aria-selected="false" aria-controls="feature-dashboard" data-feature-target="feature-dashboard">PNP Dashboard</button>
           </div>
 
-          <section class="feature-panel" id="feature-job-sheet" role="tabpanel" aria-labelledby="feature-tab-job-sheet">
-            <div class="feature-panel-layout">
+          <section class="feature-panel" id="feature-order-parts" role="tabpanel" aria-labelledby="feature-tab-order-parts">
+            <div class="feature-panel-layout feature-panel-layout-wide">
               <div class="feature-panel-copy">
-                <span class="deep-number">01</span>
-                <h3>Job Sheet / WOF Layout</h3>
+                <div class="feature-heading">
+                  <span class="deep-number">01</span>
+                  <h3>Order Part Flow</h3>
+                </div>
                 <p>
-                  Job sheets and WOF records had to work like real workshop tools, not generic forms. The layout brings
-                  vehicle details, service items, inspection notes, and next actions into a single workflow view.
+                  Parts ordering became a workflow problem, not only a purchasing task. Different vehicles needed
+                  different parts, suppliers were not always the same, and the path from finding a part to quoting the
+                  customer, reserving it, receiving it, and booking the repair could stretch across several days.
                 </p>
                 <ul class="detail-list">
-                  <li><strong>Pain:</strong> Staff needed to jump between Excel, paper notes, and vehicle records during repeated daily tasks.</li>
-                  <li><strong>Design:</strong> The page is organised around the vehicle service lifecycle instead of a flat data-entry form.</li>
-                  <li><strong>Lesson:</strong> Good internal tools reduce context switching before they try to look impressive.</li>
+                  <li><strong>Pain:</strong> Notes were too easy to miss when staff had to track sourcing, supplier options, quotes, reservations, delivery, sign-off, and customer repair updates manually.</li>
+                  <li><strong>Solution:</strong> The Order Part workflow gives every request a clear status, so staff can move each vehicle through ordering, PartsTrader quoting, pickup or transit, and follow-up actions.</li>
+                  <li><strong>Result:</strong> Part orders became visual and trackable, with standardised order statuses that make delays, blockers, and next steps easier to see.</li>
                 </ul>
               </div>
-              <div class="screenshot-placeholder">Screenshot placeholder<br />Job Sheet / WOF interface</div>
+              <figure class="feature-screenshot" aria-label="Order part workflow board screenshot">
+                <img src="../images/order-part-flow-board.svg" alt="Order part workflow board with pending order, PartsTrader, pickup, and in transit columns" />
+              </figure>
             </div>
           </section>
 
           <section class="feature-panel" id="feature-integrations" role="tabpanel" aria-labelledby="feature-tab-integrations" hidden>
-            <div class="feature-panel-layout">
+            <div class="feature-panel-layout feature-panel-layout-wide">
               <div class="feature-panel-copy">
-                <span class="deep-number">02</span>
-                <h3>Email, Xero, API-driven Flows</h3>
+                <div class="feature-heading">
+                  <span class="deep-number">02</span>
+                  <h3>Email and Xero Integration</h3>
+                </div>
                 <p>
-                  The system becomes more valuable when it connects with the tools the business already uses. Email,
-                  Xero, and internal data flows are treated as integration boundaries instead of being mixed into UI code.
+                  After a job is completed, Business customers often need to create a purchase order before payment can move
+                  forward. Before the system, staff manually created Xero invoices for each job, emailed invoice details
+                  as attachments, waited for a PO reply, then searched for the matching invoice again to update the PO
+                  number as the reference.
                 </p>
                 <ul class="detail-list">
-                  <li><strong>Pain:</strong> Quotes, invoices, payments, and communication could easily become duplicated across tools.</li>
-                  <li><strong>Design:</strong> API-driven boundaries keep external communication separate from core workflow logic.</li>
-                  <li><strong>Lesson:</strong> Integration work needs clear ownership of data, failure states, and retry behaviour.</li>
+                  <li><strong>Pain:</strong> The payment workflow depended on manual checking across Xero and email, with staff switching windows to create invoices, verify job details, monitor replies, and match PO numbers back to the right record.</li>
+                  <li><strong>Solution:</strong> The system integrates Xero invoice APIs with the job workflow, automatically building invoice line items from repair work and sending PO request emails when an invoice is ready.</li>
+                  <li><strong>Result:</strong> A multi-window manual process became one integrated workflow, giving staff one place to review invoice data, request PO numbers, track replies, and keep the Xero reference aligned.</li>
                 </ul>
               </div>
-              <div class="screenshot-placeholder">Screenshot placeholder<br />Email / Xero integration flow</div>
+              <figure class="feature-screenshot" aria-label="Email and Xero integration screenshot">
+                <img src="../images/email-xero-integration-flow.svg" alt="Sanitized Email and Xero integration interface showing invoice details, PO request email, and PO detection" />
+              </figure>
             </div>
           </section>
 
           <section class="feature-panel" id="feature-dashboard" role="tabpanel" aria-labelledby="feature-tab-dashboard" hidden>
-            <div class="feature-panel-layout">
+            <div class="feature-panel-layout feature-panel-layout-wide">
               <div class="feature-panel-copy">
-                <span class="deep-number">03</span>
-                <h3>PNP Dashboard</h3>
+                <div class="feature-heading">
+                  <span class="deep-number">03</span>
+                  <h3>PNP Dashboard</h3>
+                </div>
                 <p>
-                  The dashboard is designed from a management perspective: what is blocked, what needs attention, and
-                  what operational state should be visible without asking another staff member.
+                  The PNP dashboard is a real-time vehicle painting progress board for the paint technician team. It
+                  helps technicians see each vehicle's current paint stage, days in the workshop, overdue risk, and WOF
+                  status, while also allowing them to update painting stages and WOF Todo or Checked states directly.
                 </p>
                 <ul class="detail-list">
-                  <li><strong>Pain:</strong> Managers needed faster visibility across job progress, pending budget items, and follow-up tasks.</li>
-                  <li><strong>Design:</strong> Dashboard information is framed around action and exceptions, not only static charts.</li>
-                  <li><strong>Lesson:</strong> A useful dashboard reduces uncertainty; it is not just a prettier database table.</li>
+                  <li><strong>Pain:</strong> Paint shop job status was scattered and not always updated in time, making it hard for technicians to know which vehicles were waiting, in panel and primer, sanding, painting, assembly, or completed paint.</li>
+                  <li><strong>Solution:</strong> The page centralises paint jobs into a full-screen Kanban and table board with five-minute auto refresh, manual refresh, stage summary cards, distribution charts, Top 5 longest vehicles in shop, search, stage filters, pagination, and inline stage updates.</li>
+                  <li><strong>Result:</strong> The workshop can see painting capacity and bottlenecks in real time, quickly identify vehicles stuck for more than three days, reduce verbal follow-ups, and keep paint progress better aligned with WOF scheduling.</li>
                 </ul>
               </div>
-              <div class="screenshot-placeholder">Screenshot placeholder<br />PNP dashboard view</div>
+              <figure class="feature-screenshot" aria-label="PNP paint technician dashboard screenshot">
+                <img src="../images/pnp-dashboard-flow.svg" alt="Sanitized PNP paint technician dashboard showing stage cards, status distribution, longest vehicles in shop, filters, and vehicle progress table" />
+              </figure>
             </div>
           </section>
         </section>
@@ -1109,7 +1226,7 @@
         <section class="section tab-panel" id="recruiter-takeaway" role="tabpanel" aria-labelledby="tab-recruiter-takeaway" hidden>
           <div class="section-header">
             <p class="section-kicker">Personal Takeaway</p>
-            <h2>What this project shows about my engineering capability</h2>
+            <!-- <h2>What this project shows about my engineering capability</h2> -->
             <p class="section-intro">
               This project taught me that full-stack engineering is not just connecting frontend, backend, and database.
               It is connecting software decisions with real business workflows, user habits, and long-term operational
@@ -1154,123 +1271,6 @@
     </div>
   </main>
   <script>
-    const articleKeywords = [
-      "full-stack",
-      "workshop management system",
-      "repair workflows",
-      "Excel-based habits",
-      "adoption constraints",
-      "operational costs",
-      "workflow system",
-      "CRUD application",
-      "Excel-dependent workshop operations",
-      "traceable digital workflows",
-      "business constraints",
-      "Problem",
-      "Approach",
-      "Result",
-      "Excel",
-      "WOF",
-      "budgets",
-      "insurance information",
-      "React",
-      "TypeScript",
-      "ASP.NET Core",
-      "PostgreSQL",
-      "Xero",
-      "management reporting",
-      "AI-assisted insurance claim preparation",
-      "cloud migration",
-      "automated",
-      "adopt safely",
-      "Technology Stack",
-      ".NET API",
-      "Linux server",
-      "Azure",
-      "REST API",
-      "API Boundaries",
-      "Redis",
-      "Docker",
-      "Azure-ready",
-      "Playwright",
-      "API-driven",
-      "integration boundaries",
-      "failure states",
-      "retry behaviour",
-      "PNP Dashboard",
-      "adoption cost",
-      "engineering constraint",
-      "AI-assisted image resizing",
-      "repair description generation",
-      "insurer-specific report formats",
-      "pay-as-you-go infrastructure",
-      "Full-stack delivery",
-      "Business workflow thinking",
-      "Integration awareness",
-      "Reflective growth",
-      "real business workflows",
-      "user habits",
-      "long-term operational cost"
-    ];
-
-    function escapeRegExp(value) {
-      return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    }
-
-    function highlightArticleKeywords() {
-      const article = document.querySelector(".article");
-
-      if (!article) {
-        return;
-      }
-
-      const keywordPattern = new RegExp(`(${articleKeywords.sort((a, b) => b.length - a.length).map(escapeRegExp).join("|")})`, "i");
-      const walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, {
-        acceptNode(node) {
-          const parentElement = node.parentElement;
-
-          if (!parentElement || !node.nodeValue.trim()) {
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          if (parentElement.closest("script, style, button, a, .keyword-highlight")) {
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          return keywordPattern.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-        }
-      });
-      const textNodes = [];
-
-      while (walker.nextNode()) {
-        textNodes.push(walker.currentNode);
-      }
-
-      textNodes.forEach((node) => {
-        const fragment = document.createDocumentFragment();
-        const parts = node.nodeValue.split(keywordPattern);
-
-        parts.forEach((part) => {
-          if (!part) {
-            return;
-          }
-
-          if (keywordPattern.test(part)) {
-            const highlight = document.createElement("span");
-            highlight.className = "keyword-highlight";
-            highlight.textContent = part;
-            fragment.appendChild(highlight);
-          } else {
-            fragment.appendChild(document.createTextNode(part));
-          }
-        });
-
-        node.parentNode.replaceChild(fragment, node);
-      });
-    }
-
-    highlightArticleKeywords();
-
     const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
     const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
     const featureTabButtons = Array.from(document.querySelectorAll("[data-feature-target]"));

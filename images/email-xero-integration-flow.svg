@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Email and Xero integration flow</title>
+  <desc id="desc">A sanitized workshop interface showing a Xero invoice, a purchase order request email, and incoming PO detection.</desc>
+  <defs>
+    <style>
+      .page { fill: #f7f9fc; }
+      .surface { fill: #ffffff; stroke: #e5eaf1; stroke-width: 1; }
+      .panel { fill: #ffffff; stroke: #dfe6ee; stroke-width: 1; }
+      .mutedPanel { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1; }
+      .tabText { fill: #5b6472; font: 600 19px Arial, sans-serif; }
+      .tabActive { fill: #ef3325; }
+      .activeText { fill: #ffffff; font: 700 17px Arial, sans-serif; }
+      .title { fill: #172033; font: 800 28px Arial, sans-serif; }
+      .heading { fill: #172033; font: 700 18px Arial, sans-serif; }
+      .label { fill: #4b5563; font: 700 14px Arial, sans-serif; }
+      .value { fill: #172033; font: 17px Arial, sans-serif; }
+      .small { fill: #64748b; font: 14px Arial, sans-serif; }
+      .body { fill: #24272f; font: 17px Arial, sans-serif; }
+      .button { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; }
+      .buttonText { fill: #313640; font: 700 16px Arial, sans-serif; }
+      .buttonPrimary { fill: #ef3325; }
+      .buttonPrimaryText { fill: #ffffff; font: 700 16px Arial, sans-serif; }
+      .blueText { fill: #0b75bd; font: 700 16px Arial, sans-serif; }
+      .pill { fill: #eef2f7; stroke: #d6dee8; stroke-width: 1; }
+      .pillText { fill: #374151; font: 700 14px Arial, sans-serif; }
+      .tableHeader { fill: #eef2f7; stroke: #d7dee8; stroke-width: 1; }
+      .tableLine { stroke: #dfe6ee; stroke-width: 1; }
+      .line { stroke: #e5eaf1; stroke-width: 1; }
+      .field { fill: #f9fafb; stroke: #d6dee8; stroke-width: 1; }
+      .icon { fill: none; stroke: #64748b; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .success { fill: #ecfdf5; stroke: #a7f3d0; stroke-width: 1; }
+      .successText { fill: #047857; font: 700 14px Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="page" width="1600" height="1080"/>
+
+  <g transform="translate(34 24)">
+    <rect class="surface" width="1532" height="472" rx="16"/>
+    <g transform="translate(24 24)">
+      <text class="tabText" x="0" y="22">WOF</text>
+      <text class="tabText" x="76" y="22">Repair</text>
+      <text class="tabText" x="170" y="22">Paint</text>
+      <text class="tabText" x="248" y="22">Labour</text>
+      <text class="tabText" x="344" y="22">Log</text>
+      <text class="tabText" x="424" y="22">Invoice</text>
+      <rect class="tabActive" x="516" y="-10" width="58" height="38" rx="10"/>
+      <text class="activeText" x="536" y="15">PO</text>
+      <rect class="button" x="1364" y="-10" width="128" height="38" rx="10"/>
+      <path class="icon" d="M1388 9h14M1395 2v14"/>
+      <text class="buttonText" x="1412" y="15">Add Parts</text>
+    </g>
+
+    <line class="line" x1="24" y1="70" x2="1508" y2="70"/>
+
+    <g transform="translate(48 118)">
+      <rect class="panel" width="1436" height="326" rx="14"/>
+      <g transform="translate(24 24)">
+        <path class="icon" d="M2 10l17 11 17-11M2 10h34v24H2z"/>
+        <rect class="pill" x="48" y="-7" width="78" height="28" rx="14"/>
+        <text class="pillText" x="68" y="12">Ready</text>
+      </g>
+
+      <g transform="translate(24 72)">
+        <rect class="mutedPanel" width="1388" height="232" rx="12"/>
+        <g transform="translate(0 0)">
+          <rect class="panel" width="1388" height="52" rx="12"/>
+          <path class="icon" d="M28 21h16M28 31h16M34 15v22"/>
+          <text class="blueText" x="58" y="32">Write Email</text>
+          <path class="icon" d="M172 18h20v18h-20zM176 24h12"/>
+          <text class="tabText" x="206" y="32">Incoming Mail</text>
+          <rect class="pill" x="330" y="13" width="30" height="26" rx="13"/>
+          <text class="pillText" x="340" y="31">0</text>
+          <text class="tabText" x="412" y="32">PO Detection</text>
+        </g>
+
+        <g transform="translate(24 76)">
+          <text class="label" x="0" y="0">To</text>
+          <rect class="field" x="0" y="12" width="1340" height="42" rx="8"/>
+          <text class="small" x="16" y="39">partner-ap@example.co.nz</text>
+          <rect class="field" x="0" y="70" width="1340" height="42" rx="8"/>
+          <text class="small" x="16" y="97">Quick add customer / staff email</text>
+
+          <text class="label" x="0" y="138">Subject</text>
+          <rect class="field" x="0" y="150" width="1340" height="42" rx="8"/>
+          <text class="value" x="16" y="177">PO Request for QUF657 2019 TOYOTA C-HR [PO-938-ULFD]</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(84 520)">
+    <rect class="surface" width="1432" height="516" rx="18"/>
+    <g transform="translate(28 30)">
+      <text class="title" x="0" y="0">Xero Invoice</text>
+      <text class="small" x="0" y="36">Last synced: 31 May 2026, 15:06</text>
+      <rect class="pill" x="246" y="16" width="76" height="28" rx="8"/>
+      <text class="pillText" x="270" y="36">Draft</text>
+
+      <rect class="button" x="1080" y="-8" width="180" height="42" rx="10"/>
+      <path class="icon" d="M1105 8a12 12 0 1 0 8-3M1113 5v13h-13"/>
+      <text class="buttonText" x="1136" y="18">Pull From Xero</text>
+      <rect class="button" x="1276" y="-8" width="132" height="42" rx="10"/>
+      <circle cx="1304" cy="13" r="7" fill="#20aee5"/>
+      <text class="buttonText" x="1325" y="18">Open Xero</text>
+    </g>
+
+    <line class="line" x1="28" y1="88" x2="1404" y2="88"/>
+
+    <g transform="translate(28 120)">
+      <text class="label" x="0" y="0">Contact</text>
+      <rect class="field" x="0" y="16" width="224" height="50" rx="8"/>
+      <text class="value" x="14" y="49">Partner Company Ltd</text>
+
+      <text class="label" x="248" y="0">Issue date</text>
+      <rect class="field" x="248" y="16" width="224" height="50" rx="8"/>
+      <text class="value" x="290" y="49">31 May 2026</text>
+      <path class="icon" d="M266 31h18v18h-18zM266 37h18M271 27v8M279 27v8"/>
+
+      <text class="label" x="496" y="0">Due date</text>
+      <rect class="field" x="496" y="16" width="224" height="50" rx="8"/>
+      <text class="value" x="538" y="49">31 May 2026</text>
+      <path class="icon" d="M514 31h18v18h-18zM514 37h18M519 27v8M527 27v8"/>
+
+      <text class="label" x="744" y="0">Invoice number</text>
+      <rect class="field" x="744" y="16" width="224" height="50" rx="8"/>
+      <text class="value" x="790" y="49">INV-09303</text>
+      <text class="value" x="766" y="49">#</text>
+
+      <text class="label" x="992" y="0">Reference</text>
+      <rect class="field" x="992" y="16" width="224" height="50" rx="8"/>
+      <text class="value" x="1006" y="49">PO Pending QUF657</text>
+
+      <text class="label" x="1240" y="0">Online payments</text>
+      <rect class="field" x="1240" y="16" width="136" height="50" rx="8"/>
+      <text class="value" x="1278" y="49">None</text>
+      <path class="icon" d="M1258 33h15v15h-15zM1268 31h8v8"/>
+
+      <text class="label" x="0" y="104">Currency</text>
+      <rect class="field" x="0" y="120" width="224" height="50" rx="8"/>
+      <text class="value" x="14" y="153">New Zealand Dollar</text>
+
+      <text class="label" x="248" y="104">Amounts are</text>
+      <rect class="field" x="248" y="120" width="224" height="50" rx="8"/>
+      <text class="value" x="262" y="153">Tax exclusive</text>
+    </g>
+
+    <g transform="translate(28 314)">
+      <rect class="tableHeader" width="1376" height="58" rx="10"/>
+      <text class="heading" x="70" y="37">Item</text>
+      <text class="heading" x="220" y="37">Description</text>
+      <text class="heading" x="560" y="37">Qty.</text>
+      <text class="heading" x="656" y="37">Price</text>
+      <text class="heading" x="780" y="37">Account</text>
+      <text class="heading" x="930" y="37">Tax rate</text>
+      <text class="heading" x="1130" y="37">Tax amount</text>
+      <text class="heading" x="1280" y="37">Amount NZD</text>
+
+      <g transform="translate(0 58)">
+        <line class="tableLine" x1="0" y1="0" x2="1376" y2="0"/>
+        <text class="small" x="15" y="36">::</text>
+        <rect class="pill" x="70" y="17" width="76" height="30" rx="6"/>
+        <text class="pillText" x="84" y="38">WoF-4S</text>
+        <text class="value" x="220" y="38">WoF Inspection</text>
+        <text class="value" x="565" y="38">1</text>
+        <text class="value" x="656" y="38">50.00</text>
+        <text class="value" x="780" y="38">208</text>
+        <text class="value" x="930" y="30">15% GST on</text>
+        <text class="value" x="930" y="53">Income</text>
+        <text class="value" x="1164" y="38">7.50</text>
+        <text class="value" x="1328" y="38">50.00</text>
+      </g>
+
+      <g transform="translate(0 118)">
+        <line class="tableLine" x1="0" y1="0" x2="1376" y2="0"/>
+        <text class="small" x="15" y="36">::</text>
+        <rect class="pill" x="70" y="17" width="44" height="30" rx="6"/>
+        <text class="pillText" x="84" y="38">FB</text>
+        <text class="value" x="220" y="38">Paint - Front Bumper</text>
+        <text class="value" x="565" y="38">1</text>
+        <text class="value" x="656" y="38">275.00</text>
+        <text class="value" x="780" y="38">206</text>
+        <text class="value" x="930" y="30">15% GST on</text>
+        <text class="value" x="930" y="53">Income</text>
+        <text class="value" x="1156" y="38">41.25</text>
+        <text class="value" x="1320" y="38">275.00</text>
+      </g>
+
+      <g transform="translate(0 178)">
+        <line class="tableLine" x1="0" y1="0" x2="1376" y2="0"/>
+        <text class="small" x="15" y="36">::</text>
+        <text class="small" x="88" y="38">-</text>
+        <text class="value" x="220" y="38">WOF, FB - front bumper note</text>
+        <text class="value" x="565" y="38">1</text>
+        <text class="value" x="656" y="38">0.00</text>
+        <text class="value" x="780" y="38">-</text>
+        <text class="value" x="930" y="38">No GST</text>
+        <text class="value" x="1164" y="38">0.00</text>
+        <text class="value" x="1336" y="38">0.00</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(976 878)">
+    <rect class="success" width="484" height="100" rx="12"/>
+    <text class="successText" x="24" y="34">Integrated workflow</text>
+    <text class="small" x="24" y="62">Invoice items are generated from the job record.</text>
+    <text class="small" x="24" y="84">PO replies can be matched back to the Xero reference.</text>
+  </g>
+
+  <g transform="translate(976 1010)">
+    <text class="heading" x="0" y="0">Total</text>
+    <text class="title" x="418" y="0">373.75</text>
+  </g>
+</svg>

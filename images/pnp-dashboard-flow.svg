@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+  <title id="title">PNP paint technician dashboard</title>
+  <desc id="desc">A sanitized full-screen paint technician dashboard with stage cards, status distribution, longest vehicles in shop, filters, and a vehicle progress table.</desc>
+  <defs>
+    <style>
+      .page { fill: #f4f7fb; }
+      .surface { fill: #ffffff; stroke: #dfe7f0; stroke-width: 1; }
+      .card { fill: #ffffff; stroke: #dce5ef; stroke-width: 1; }
+      .title { fill: #162235; font: 800 26px Arial, sans-serif; }
+      .subtitle { fill: #52627a; font: 15px Arial, sans-serif; }
+      .heading { fill: #1d2a3d; font: 800 17px Arial, sans-serif; }
+      .label { fill: #58687f; font: 700 14px Arial, sans-serif; }
+      .small { fill: #6d7d96; font: 13px Arial, sans-serif; }
+      .value { fill: #1d2a3d; font: 16px Arial, sans-serif; }
+      .metric { font: 800 30px Arial, sans-serif; }
+      .blue { fill: #2563eb; }
+      .gray { fill: #5b677a; }
+      .cyan { fill: #0284c7; }
+      .orange { fill: #c45c14; }
+      .purple { fill: #a21caf; }
+      .red { fill: #e11d48; }
+      .brown { fill: #9a4d22; }
+      .green { fill: #078960; }
+      .button { fill: #ffffff; stroke: #dfe7f0; stroke-width: 1; }
+      .buttonText { fill: #1d2a3d; font: 700 15px Arial, sans-serif; }
+      .field { fill: #fbfcfe; stroke: #d7e1eb; stroke-width: 1; }
+      .pillText { font: 700 13px Arial, sans-serif; }
+      .tableHead { fill: #f8fafc; }
+      .line { stroke: #e8eef5; stroke-width: 1; }
+      .risk { fill: #fff4f4; stroke: #ff6b6b; stroke-width: 1.5; }
+      .riskText { fill: #e11d48; font: 700 14px Arial, sans-serif; }
+      .plate { fill: #111827; }
+      .plateText { fill: #ffffff; font: 800 13px Arial, sans-serif; }
+      .tagBlue { fill: #e0f2fe; stroke: #7dd3fc; stroke-width: 1; }
+      .icon { fill: none; stroke: #60718a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect class="page" width="1600" height="1180"/>
+
+  <g transform="translate(70 18)">
+    <circle cx="32" cy="32" r="24" fill="#2563eb"/>
+    <path d="M20 33h20l5 5h6a5 5 0 0 1 5 5v2H16v-8a4 4 0 0 1 4-4z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="27" cy="46" r="3" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="48" cy="46" r="3" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text class="title" x="72" y="30">NZAT PNP Board - Paint Dashboard</text>
+    <text class="subtitle" x="72" y="56">Vehicle Painting Tracking Dashboard</text>
+    <text class="subtitle" x="1210" y="36">2026/06/05 10:00:33</text>
+  </g>
+
+  <line class="line" x1="0" y1="88" x2="1600" y2="88"/>
+
+  <g transform="translate(70 120)">
+    <rect class="surface" width="1460" height="76" rx="16"/>
+    <rect class="button" x="22" y="18" width="130" height="40" rx="10"/>
+    <path class="icon" d="M44 30a11 11 0 1 0 8-3M52 27v11H41"/>
+    <text class="buttonText" x="68" y="44">Manual Refresh</text>
+    <path d="M198 30a11 11 0 1 0 8-3M206 27v11H195" fill="none" stroke="#ef3325" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="heading" x="226" y="44">Paint Tech Board is using 5-minute auto refresh</text>
+    <text class="small" x="880" y="44">Refreshes every 5 minutes. On Hold and Delivered jobs are hidden. Last refreshed 2026/06/05 10:00:33</text>
+  </g>
+
+  <g transform="translate(70 220)">
+    <g>
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">On Hold</text>
+      <text class="metric orange" x="22" y="78">1</text>
+      <text class="small" x="24" y="104">vehicle</text>
+    </g>
+    <g transform="translate(184 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Waiting</text>
+      <text class="metric gray" x="22" y="78">79</text>
+      <text class="small" x="24" y="104">vehicles</text>
+    </g>
+    <g transform="translate(368 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Panel / Primer</text>
+      <text class="metric cyan" x="22" y="78">0</text>
+      <text class="small" x="24" y="104">vehicles</text>
+    </g>
+    <g transform="translate(552 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Base Coat</text>
+      <text class="metric orange" x="22" y="78">1</text>
+      <text class="small" x="24" y="104">vehicle</text>
+    </g>
+    <g transform="translate(736 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Sanding</text>
+      <text class="metric purple" x="22" y="78">1</text>
+      <text class="small" x="24" y="104">vehicle</text>
+    </g>
+    <g transform="translate(920 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Painting</text>
+      <text class="metric red" x="22" y="78">2</text>
+      <text class="small" x="24" y="104">vehicles</text>
+    </g>
+    <g transform="translate(1104 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Assembly / Polish</text>
+      <text class="metric brown" x="22" y="78">6</text>
+      <text class="small" x="24" y="104">vehicles</text>
+    </g>
+    <g transform="translate(1288 0)">
+      <rect class="card" width="170" height="126" rx="16"/>
+      <text class="label" x="48" y="36">Completed Paint</text>
+      <text class="metric green" x="22" y="78">15</text>
+      <text class="small" x="24" y="104">vehicles</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 372)">
+    <rect class="surface" width="980" height="298" rx="16"/>
+    <text class="heading" x="22" y="38">Status Distribution</text>
+    <g transform="translate(42 84)">
+      <rect x="0" y="134" width="50" height="22" rx="10" fill="#bd6a35"/>
+      <rect x="138" y="0" width="50" height="156" rx="10" fill="#5b677a"/>
+      <rect x="276" y="148" width="50" height="8" rx="4" fill="#0284c7"/>
+      <rect x="414" y="134" width="50" height="22" rx="10" fill="#c45c14"/>
+      <rect x="552" y="134" width="50" height="22" rx="10" fill="#a21caf"/>
+      <rect x="690" y="134" width="50" height="22" rx="10" fill="#c93c65"/>
+      <rect x="828" y="134" width="50" height="22" rx="10" fill="#8c553b"/>
+      <text class="label" x="-2" y="188">On Hold</text>
+      <text class="label" x="132" y="188">Waiting</text>
+      <text class="label" x="254" y="188">Panel / Primer</text>
+      <text class="label" x="404" y="188">Base Coat</text>
+      <text class="label" x="548" y="188">Sanding</text>
+      <text class="label" x="686" y="188">Painting</text>
+      <text class="label" x="804" y="188">Assembly</text>
+    </g>
+  </g>
+
+  <g transform="translate(1070 372)">
+    <rect class="surface" width="460" height="298" rx="16"/>
+    <text class="heading" x="22" y="38">Top 5 Longest In Shop</text>
+    <text class="small" x="390" y="38">82 overdue</text>
+    <g transform="translate(22 66)">
+      <text class="value" x="0" y="18">JRG147 - 2016 SKODA FABIA</text><text class="orange" x="386" y="18" style="font:800 15px Arial">69 days</text>
+      <rect x="0" y="28" width="416" height="10" rx="5" fill="#f6b71b"/>
+      <text class="value" x="0" y="68">WP5788 - 1997 MERCEDES-BENZ C</text><text class="orange" x="386" y="68" style="font:800 15px Arial">51 days</text>
+      <rect x="0" y="78" width="416" height="10" rx="5" fill="#f6b71b"/>
+      <text class="value" x="0" y="118">JSM752 - 2016 SKODA OCTAVIA</text><text class="orange" x="386" y="118" style="font:800 15px Arial">51 days</text>
+      <rect x="0" y="128" width="416" height="10" rx="5" fill="#f6b71b"/>
+      <text class="value" x="0" y="168">NWU161 - 2021 FORD RANGER</text><text class="orange" x="386" y="168" style="font:800 15px Arial">51 days</text>
+      <rect x="0" y="178" width="416" height="10" rx="5" fill="#f6b71b"/>
+      <text class="value" x="0" y="218">FKW478 - 2010 TOYOTA PRADO</text><text class="orange" x="386" y="218" style="font:800 15px Arial">47 days</text>
+      <rect x="0" y="228" width="416" height="10" rx="5" fill="#f6b71b"/>
+    </g>
+  </g>
+
+  <g transform="translate(70 696)">
+    <rect class="surface" width="1460" height="184" rx="16"/>
+    <rect class="field" x="22" y="22" width="1360" height="46" rx="12"/>
+    <path class="icon" d="M45 44a10 10 0 1 0 7 3l9 9"/>
+    <text class="small" x="82" y="51">Search plate, model, or work details...</text>
+    <path class="icon" d="M1408 34h18M1414 28v12M1408 54h18M1420 48v12"/>
+    <text class="label" x="1430" y="51">Filter</text>
+
+    <rect class="field" x="22" y="84" width="1416" height="42" rx="10"/>
+    <text class="heading" x="42" y="111">Waiting</text>
+    <path class="icon" d="M1410 100l8 8 8-8"/>
+
+    <g transform="translate(22 142)">
+      <rect x="0" y="0" width="86" height="30" rx="15" fill="#e7f0ff"/><text class="pillText blue" x="14" y="20">All (96)</text>
+      <rect x="96" y="0" width="118" height="30" rx="15" fill="#f0f4f8"/><text class="pillText gray" x="110" y="20">Waiting (79)</text>
+      <rect x="224" y="0" width="130" height="30" rx="15" fill="#e0f2fe"/><text class="pillText cyan" x="238" y="20">Panel / Primer (0)</text>
+      <rect x="364" y="0" width="94" height="30" rx="15" fill="#fff7ed"/><text class="pillText orange" x="378" y="20">Base Coat (1)</text>
+      <rect x="468" y="0" width="90" height="30" rx="15" fill="#fdf4ff"/><text class="pillText purple" x="482" y="20">Sanding (1)</text>
+      <rect x="568" y="0" width="94" height="30" rx="15" fill="#fff1f2"/><text class="pillText red" x="582" y="20">Painting (2)</text>
+      <rect x="672" y="0" width="148" height="30" rx="15" fill="#fffbeb"/><text class="pillText brown" x="686" y="20">Assembly / Polish (6)</text>
+      <rect x="830" y="0" width="150" height="30" rx="15" fill="#ecfdf5"/><text class="pillText green" x="844" y="20">Completed Paint (15)</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 906)">
+    <rect class="surface" width="1460" height="244" rx="16"/>
+    <text class="heading" x="22" y="40">Showing 73 / 96 vehicles</text>
+    <rect class="tableHead" x="22" y="64" width="1416" height="38"/>
+    <text class="label" x="22" y="88">Entry date</text>
+    <text class="label" x="118" y="88">Days in shop</text>
+    <text class="label" x="218" y="88">Plate</text>
+    <text class="label" x="420" y="88">Vehicle</text>
+    <text class="label" x="748" y="88">Stage</text>
+    <text class="label" x="864" y="88">WOF status</text>
+    <text class="label" x="994" y="88">Work details</text>
+    <text class="label" x="1390" y="88">Panels</text>
+
+    <g transform="translate(22 112)">
+      <line class="line" x1="0" y1="0" x2="1416" y2="0"/>
+      <text class="value" x="0" y="30">2026/05/19</text>
+      <rect class="risk" x="98" y="8" width="64" height="32" rx="16"/><text class="riskText" x="114" y="29">18d !</text>
+      <rect class="plate" x="174" y="8" width="66" height="32" rx="7"/><text class="plateText" x="188" y="29">RDF77</text>
+      <text class="value" x="366" y="30">2025 HONDA ZRV</text>
+      <text class="value" x="702" y="30">Waiting</text><path class="icon" d="M780 19l8 8 8-8"/>
+      <text class="small" x="842" y="30">-</text>
+      <text class="small" x="930" y="30">FB - front bumper, RB - rear bumper, wheel arch RR</text>
+      <circle cx="1408" cy="24" r="16" fill="#f0f4f8"/><text class="label" x="1403" y="30">3</text>
+    </g>
+
+    <g transform="translate(22 166)">
+      <line class="line" x1="0" y1="0" x2="1416" y2="0"/>
+      <text class="value" x="0" y="30">2026/05/21</text>
+      <rect class="risk" x="98" y="8" width="64" height="32" rx="16"/><text class="riskText" x="114" y="29">16d !</text>
+      <rect class="plate" x="174" y="8" width="66" height="32" rx="7"/><text class="plateText" x="187" y="29">PFS437</text>
+      <text class="value" x="366" y="30">2022 MAZDA CX-5</text>
+      <text class="value" x="702" y="30">Waiting</text><path class="icon" d="M780 19l8 8 8-8"/>
+      <rect class="tagBlue" x="842" y="0" width="110" height="40" rx="18"/><text class="blue" x="874" y="26" style="font:700 14px Arial">Todo</text><path class="icon" d="M928 16l8 8 8-8"/>
+      <text class="small" x="994" y="30">front bumper cover + dent removal + primer</text>
+      <circle cx="1408" cy="24" r="16" fill="#f0f4f8"/><text class="label" x="1403" y="30">1</text>
+    </g>
+  </g>
+</svg>
