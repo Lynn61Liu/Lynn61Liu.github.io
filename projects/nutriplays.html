@@ -1,43 +1,1211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../images/logo copy.ico" type="image/x-icon" />
+  <title>NutriPlays | Project Case Study</title>
+  <style>
+    :root {
+      --bg: #f7f8f1;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-soft: #edf7ec;
+      --surface-warm: #fff2d8;
+      --ink: #17212b;
+      --muted: #5f6a73;
+      --line: rgba(23, 33, 43, 0.12);
+      --line-strong: rgba(23, 33, 43, 0.18);
+      --accent: #3d9b4f;
+      --accent-dark: #26723a;
+      --berry: #b04772;
+      --sky: #327ca6;
+      --gold: #c78322;
+      --shadow: 0 24px 70px rgba(23, 33, 43, 0.08);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(61, 155, 79, 0.14), transparent 28%),
+        radial-gradient(circle at 88% 8%, rgba(176, 71, 114, 0.1), transparent 24%),
+        linear-gradient(180deg, #fffdf7 0%, var(--bg) 100%);
+      color: var(--ink);
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.78;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(23, 33, 43, 0.08);
+      background: rgba(248, 248, 241, 0.88);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 68px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    .case-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.82fr);
+      gap: 36px;
+      align-items: start;
+      padding: 20px 0 42px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin-top: 22px;
+      color: #2e3e49;
+      font-size: 1.08rem;
+      line-height: 1.78;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      background: #fff;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .button-primary {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .button-demo:hover,
+    .button-demo:focus-visible {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(61, 155, 79, 0.24);
+      outline: none;
+    }
+
+    .hero-media {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .media-caption {
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 44px;
+      align-items: start;
+    }
+
+    .article {
+      display: grid;
+      gap: 28px;
+      min-width: 0;
+    }
+
+    .toc {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 18px 50px rgba(23, 33, 43, 0.06);
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .toc nav,
+    .tab-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .tab-button {
+      display: block;
+      width: 100%;
+      padding: 8px 10px;
+      border: 0;
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+      text-align: left;
+      background: transparent;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .tab-button:hover,
+    .tab-button:focus-visible {
+      background: var(--surface-soft);
+      color: var(--accent-dark);
+      opacity: 1;
+      outline: none;
+    }
+
+    .tab-button.is-active {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(61, 155, 79, 0.2);
+    }
+
+    .section {
+      scroll-margin-top: 96px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 54px rgba(23, 33, 43, 0.06);
+    }
+
+    .tab-panel[hidden],
+    .feature-panel[hidden] {
+      display: none;
+    }
+
+    .section-header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      margin: 0;
+      color: var(--accent-dark);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: #40505a;
+      font-size: 1rem;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .snapshot-card,
+    .mini-card,
+    .takeaway-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .snapshot-card {
+      padding: 16px;
+    }
+
+    .snapshot-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .snapshot-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .visual-panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 22px;
+    }
+
+    .stack-visual,
+    .architecture-visual {
+      min-height: 320px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(61, 155, 79, 0.1), transparent 42%),
+        #fff;
+    }
+
+    .architecture-visual {
+      background:
+        linear-gradient(135deg, rgba(50, 124, 166, 0.1), transparent 44%),
+        #fff;
+    }
+
+    .stack-title,
+    .diagram-title {
+      margin: 0 0 16px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .stack-layers {
+      display: grid;
+      gap: 10px;
+    }
+
+    .stack-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      align-items: start;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .stack-row b {
+      color: var(--accent-dark);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .stack-row-split {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stack-column {
+      display: grid;
+      gap: 8px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-list span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #283a45;
+      font-size: 13px;
+      font-weight: 700;
+      background: #fff;
+    }
+
+    .diagram {
+      display: grid;
+      gap: 14px;
+    }
+
+    .diagram-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .diagram-node {
+      display: grid;
+      place-items: center;
+      min-height: 70px;
+      padding: 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      color: var(--ink);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+      background: var(--surface-soft);
+    }
+
+    .diagram-node.dark {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .diagram-node.gold {
+      background: #fff4e6;
+      color: #6b3b0f;
+    }
+
+    .diagram-flow {
+      position: relative;
+      height: 26px;
+    }
+
+    .diagram-flow::before,
+    .diagram-flow::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .diagram-flow::before {
+      top: 0;
+      width: 2px;
+      height: 26px;
+      background: var(--line-strong);
+    }
+
+    .diagram-flow::after {
+      bottom: 0;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid var(--line-strong);
+      border-bottom: 2px solid var(--line-strong);
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .workflow-grid,
+    .deep-grid,
+    .reflection-grid,
+    .takeaway-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .workflow-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mini-card {
+      padding: 18px;
+    }
+
+    .mini-card h3,
+    .takeaway-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .mini-card p,
+    .takeaway-card p {
+      font-size: 0.96rem;
+    }
+
+    .feature-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .feature-tab-button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      background: #fff;
+      cursor: pointer;
+      transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .feature-tab-button:hover,
+    .feature-tab-button:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .feature-tab-button.is-active {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .feature-panel {
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .feature-panel-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.92fr);
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .feature-panel-layout-wide {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-panel-copy {
+      padding: 22px;
+    }
+
+    .feature-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .feature-screenshot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 360px;
+      margin: 0;
+      padding: 18px;
+      border-left: 1px solid var(--line);
+      background: #fbfcf8;
+    }
+
+    .feature-panel-layout-wide .feature-screenshot {
+      min-height: 0;
+      border-top: 1px solid var(--line);
+      border-left: 0;
+    }
+
+    .feature-screenshot img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 18px 44px rgba(23, 33, 43, 0.08);
+    }
+
+    .feature-panel-layout-wide .feature-screenshot img {
+      max-height: none;
+    }
+
+    .deep-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      background: var(--accent-dark);
+      flex: 0 0 auto;
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .detail-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.56;
+    }
+
+    .detail-list li::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .reflection-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .reflection-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .reflection-card:first-child {
+      background: var(--surface-soft);
+    }
+
+    .takeaway-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .takeaway-card {
+      padding: 20px;
+    }
+
+    .takeaway-card strong {
+      color: var(--accent-dark);
+    }
+
+    .note-box {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius);
+      background: var(--surface-warm);
+    }
+
+    .note-box p {
+      color: #4d4030;
+    }
+
+    @media (max-width: 980px) {
+      .case-hero,
+      .article-layout,
+      .visual-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+        order: -1;
+      }
+
+      .toc nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .snapshot-grid,
+      .workflow-grid,
+      .takeaway-grid,
+      .feature-panel-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-panel-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-screenshot {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar-inner,
+      .page {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .topbar-inner {
+        min-height: 62px;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .page {
+        padding-top: 28px;
+      }
+
+      .case-hero {
+        padding-top: 8px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .snapshot-grid,
+      .workflow-grid,
+      .takeaway-grid,
+      .feature-panel-layout,
+      .diagram-row,
+      .toc nav,
+      .tab-list,
+      .stack-row-split {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <article class="project-card project-featured">
-        <div class="project-media project-thumbnail-square">
-            <img src="../images/NutriPlays_HERO.png"
-                alt="NutriPlays interactive nutrition education web application preview" />
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="Lynn Liu logo" />
+        <span>Lynn Liu</span>
+      </a>
+      <a class="back-link" href="../index.html#project-library">Back to projects</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow">Project Overview</p>
+        <h1 id="case-title">NutriPlays</h1>
+        <p class="hero-lead">
+          An interactive nutrition education web concept for 5-6 year old children, using playful food selection,
+          animated feedback, audio guidance, and offline family activities to make healthy eating easier to understand.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#system-overview">Read the snapshot</a>
+          <a class="button button-demo" href="../NutriPlays/" target="_blank" rel="noreferrer">Open live demo</a>
         </div>
+      </div>
 
-        <div class="project-body">
-            <div class="card-topline">
-                <h3>NutriPlays</h3>
-                <span class="status-pill">Product Thinking </span>
-            </div>
+      <figure class="hero-media">
+        <img src="../images/NutriPlays_HERO.png" alt="NutriPlays interactive nutrition education web application preview" />
+        <figcaption class="media-caption">
+          A child-focused learning experience built around visual food groups, simple interaction, and guided lunchbox creation.
+        </figcaption>
+      </figure>
+    </section>
 
-            <p class="project-summary">
-                NutriPlays is an interactive educational web application that helps young primary
-                school children learn healthy eating by building their own lunchbox through
-                colour-based food grouping and playful interaction. The project connects nutrition
-                learning with New Zealand health and physical education goals, while demonstrating
-                product thinking, target-user research, accessibility-aware UI design, competitor
-                analysis, educational theory mapping, and user testing for an age-appropriate
-                digital learning experience.
+    <div class="article-layout">
+      <aside class="toc" aria-label="Project article navigation">
+        <p class="toc-title">On this page</p>
+        <nav class="tab-list" role="tablist" aria-label="NutriPlays case study sections">
+          <button class="tab-button is-active" id="tab-system-overview" type="button" role="tab" aria-selected="true" aria-controls="system-overview" data-tab-target="system-overview">System Overview</button>
+          <button class="tab-button" id="tab-technology-architecture" type="button" role="tab" aria-selected="false" aria-controls="technology-architecture" data-tab-target="technology-architecture">Technology &amp; Architecture</button>
+          <button class="tab-button" id="tab-feature-deep-dive" type="button" role="tab" aria-selected="false" aria-controls="feature-deep-dive" data-tab-target="feature-deep-dive">Feature Deep Dive</button>
+          <button class="tab-button" id="tab-reflection" type="button" role="tab" aria-selected="false" aria-controls="reflection" data-tab-target="reflection">Reflection</button>
+          <button class="tab-button" id="tab-recruiter-takeaway" type="button" role="tab" aria-selected="false" aria-controls="recruiter-takeaway" data-tab-target="recruiter-takeaway">Personal Takeaway</button>
+        </nav>
+      </aside>
+
+      <article class="article">
+        <section class="section tab-panel" id="system-overview" role="tabpanel" aria-labelledby="tab-system-overview">
+          <div class="section-header">
+            <p class="section-kicker">System Overview</p>
+            <p class="section-intro">
+              NutriPlays translates nutrition education into a small digital learning journey. The main challenge was
+              making abstract ideas such as balance, proportion, and food benefits understandable for very young users.
             </p>
+          </div>
 
-            <div class="tag-list">
-                <span>UX Design</span>
-                <span>Accessibility Design</span>
-                <span>User Research</span>
-                <span>Competitor Analysis</span>
-                <span>Educational Theory Mapping</span>
-                <span>Curriculum Alignment</span>
-                <span>Usability Testing</span>
-                <span>Product Thinking</span>
+          <div class="snapshot-grid" aria-label="Project snapshot">
+            <div class="snapshot-card">
+              <span class="snapshot-label">Project type</span>
+              <strong>Educational web experience</strong>
             </div>
-        </div>
-    </article>
+            <div class="snapshot-card">
+              <span class="snapshot-label">Audience</span>
+              <strong>5-6 year old children</strong>
+            </div>
+            <div class="snapshot-card">
+              <span class="snapshot-label">Learning focus</span>
+              <strong>Healthy eating and food groups</strong>
+            </div>
+            <div class="snapshot-card">
+              <span class="snapshot-label">Design value</span>
+              <strong>Child-centred interaction design</strong>
+            </div>
+          </div>
+
+          <div class="workflow-grid">
+            <div class="mini-card">
+              <h3>Problem</h3>
+              <p>
+                Healthy eating lessons can feel too abstract for children who mainly understand concrete images,
+                simple actions, and visible outcomes.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Approach</h3>
+              <p>
+                I used food-group visuals, click feedback, short audio, plate proportions, and DIY lunchbox creation to
+                turn nutrition concepts into hands-on learning tasks.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Result</h3>
+              <p>
+                The concept demonstrates how gamification, educational theory, and parent-informed research can support
+                a clearer nutrition learning experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p>
+              This is an early project detail page draft. The structure is ready for deeper editing, and the content is
+              intentionally concise so it can be revised against the full report later.
+            </p>
+          </div>
+        </section>
+
+        <section class="section tab-panel" id="technology-architecture" role="tabpanel" aria-labelledby="tab-technology-architecture" hidden>
+          <div class="section-header">
+            <p class="section-kicker">Technology Stack</p>
+            <p class="section-intro">
+              The technical structure stays deliberately simple: a static front-end prototype with separate pages for
+              learning, practice, media feedback, and an offline extension activity.
+            </p>
+          </div>
+
+          <div class="visual-panel" aria-label="Technology stack and learning architecture visuals">
+            <div class="stack-visual">
+              <p class="stack-title">Technology Stack</p>
+              <div class="stack-layers">
+                <div class="stack-row">
+                  <b>Frontend</b>
+                  <div class="tag-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                  </div>
+                </div>
+                <div class="stack-row">
+                  <b>Interaction</b>
+                  <div class="tag-list">
+                    <span>Click feedback</span>
+                    <span>Food selection</span>
+                    <span>Animated tips</span>
+                    <span>Audio prompts</span>
+                  </div>
+                </div>
+                <div class="stack-row stack-row-split">
+                  <div class="stack-column">
+                    <b>Learning design</b>
+                    <div class="tag-list">
+                      <span>Gamification</span>
+                      <span>Behaviourism</span>
+                      <span>Cognitivism</span>
+                      <span>Constructivism</span>
+                    </div>
+                  </div>
+                  <div class="stack-column">
+                    <b>Quality</b>
+                    <div class="tag-list">
+                      <span>User research</span>
+                      <span>Peer feedback</span>
+                      <span>Iteration</span>
+                      <span>Accessibility awareness</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="architecture-visual">
+              <p class="diagram-title">Learning Flow</p>
+              <div class="diagram" role="img" aria-label="Learning flow diagram from nutrition concepts to practice and family extension">
+                <div class="diagram-row">
+                  <div class="diagram-node">Nutrition concept</div>
+                  <div class="diagram-node">Visual food group</div>
+                  <div class="diagram-node">Audio explanation</div>
+                </div>
+                <div class="diagram-flow" aria-hidden="true"></div>
+                <div class="diagram-row">
+                  <div class="diagram-node dark">Rainbow Meals</div>
+                  <div class="diagram-node dark">DIY Lunchbox</div>
+                  <div class="diagram-node dark">Immediate feedback</div>
+                </div>
+                <div class="diagram-flow" aria-hidden="true"></div>
+                <div class="diagram-row">
+                  <div class="diagram-node gold">Reflection prompt</div>
+                  <div class="diagram-node gold">Shopping list activity</div>
+                  <div class="diagram-node gold">Parent conversation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section tab-panel" id="feature-deep-dive" role="tabpanel" aria-labelledby="tab-feature-deep-dive" hidden>
+          <div class="section-header">
+            <p class="section-kicker">Feature Deep Dive</p>
+            <p class="section-intro">
+              The strongest product story is the path from passive nutrition information to active learning. Each
+              feature gives children a concrete action they can understand.
+            </p>
+          </div>
+
+          <div class="feature-tabs" role="tablist" aria-label="Feature deep dive pages">
+            <button class="feature-tab-button is-active" id="feature-tab-rainbow" type="button" role="tab" aria-selected="true" aria-controls="feature-rainbow" data-feature-target="feature-rainbow">Rainbow Meals</button>
+            <button class="feature-tab-button" id="feature-tab-lunchbox" type="button" role="tab" aria-selected="false" aria-controls="feature-lunchbox" data-feature-target="feature-lunchbox">DIY Lunchbox</button>
+            <button class="feature-tab-button" id="feature-tab-shopping" type="button" role="tab" aria-selected="false" aria-controls="feature-shopping" data-feature-target="feature-shopping">Offline Activity</button>
+          </div>
+
+          <section class="feature-panel" id="feature-rainbow" role="tabpanel" aria-labelledby="feature-tab-rainbow">
+            <div class="feature-panel-layout feature-panel-layout-wide">
+              <div class="feature-panel-copy">
+                <div class="feature-heading">
+                  <span class="deep-number">01</span>
+                  <h3>Rainbow Meals</h3>
+                </div>
+                <p>
+                  The first learning page introduces the healthy plate through clear visual segments. Children can
+                  explore food groups and receive immediate feedback through pop-up information, animation, and audio.
+                </p>
+                <ul class="detail-list">
+                  <li><strong>Pain:</strong> Terms such as balance, nutrition, proportion, and food group can be difficult for young children to process as abstract text.</li>
+                  <li><strong>Solution:</strong> The plate layout turns food groups into visible areas, while click-triggered tips explain body benefits in concrete language.</li>
+                  <li><strong>Result:</strong> Children can connect food choices with body outcomes through image, action, and repetition.</li>
+                </ul>
+              </div>
+              <figure class="feature-screenshot" aria-label="Rainbow Meals healthy plate preview">
+                <img src="../NutriPlays/imgs/foodPlate2.png" alt="Healthy plate visual used in the NutriPlays Rainbow Meals page" />
+              </figure>
+            </div>
+          </section>
+
+          <section class="feature-panel" id="feature-lunchbox" role="tabpanel" aria-labelledby="feature-tab-lunchbox" hidden>
+            <div class="feature-panel-layout feature-panel-layout-wide">
+              <div class="feature-panel-copy">
+                <div class="feature-heading">
+                  <span class="deep-number">02</span>
+                  <h3>DIY Lunchbox</h3>
+                </div>
+                <p>
+                  The practice page asks children to build their own lunchbox by choosing foods. The task encourages
+                  active knowledge construction instead of only listening to information.
+                </p>
+                <ul class="detail-list">
+                  <li><strong>Pain:</strong> Children may know individual foods but struggle to apply food-group knowledge when choosing a meal.</li>
+                  <li><strong>Solution:</strong> Drag-or-click style selection gives them a concrete way to test combinations and notice missing categories.</li>
+                  <li><strong>Result:</strong> Completed and incomplete lunchboxes both become discussion points for parents or teachers.</li>
+                </ul>
+              </div>
+              <figure class="feature-screenshot" aria-label="DIY lunchbox preview image">
+                <img src="../images/NutriPlays.png" alt="NutriPlays lunchbox building interface preview" />
+              </figure>
+            </div>
+          </section>
+
+          <section class="feature-panel" id="feature-shopping" role="tabpanel" aria-labelledby="feature-tab-shopping" hidden>
+            <div class="feature-panel-layout feature-panel-layout-wide">
+              <div class="feature-panel-copy">
+                <div class="feature-heading">
+                  <span class="deep-number">03</span>
+                  <h3>Offline Activity</h3>
+                </div>
+                <p>
+                  The shopping list activity extends the digital lesson into a real-world family context. Children can
+                  connect screen-based learning with a later conversation or supermarket activity.
+                </p>
+                <ul class="detail-list">
+                  <li><strong>Pain:</strong> Nutrition learning can stay isolated inside the screen if it is not connected to daily food choices.</li>
+                  <li><strong>Solution:</strong> The activity asks children to draw or list foods they may need for a healthy lunchbox.</li>
+                  <li><strong>Result:</strong> The concept creates a bridge from digital exploration to parent-supported practice.</li>
+                </ul>
+              </div>
+              <figure class="feature-screenshot" aria-label="Shopping list activity preview">
+                <img src="../NutriPlays/imgs/shoppingKid.jpg" alt="Child shopping image used for the NutriPlays offline grocery list activity" />
+              </figure>
+            </div>
+          </section>
+        </section>
+
+        <section class="section tab-panel" id="reflection" role="tabpanel" aria-labelledby="tab-reflection" hidden>
+          <div class="section-header">
+            <p class="section-kicker">Reflection</p>
+          </div>
+
+          <div class="reflection-grid">
+            <div class="reflection-card">
+              <h3>Current lesson</h3>
+              <p>
+                Designing for children changed the meaning of usability. Clear visuals, immediate feedback, simple
+                language, and limited choices became core design requirements, not surface polish.
+              </p>
+            </div>
+            <div class="reflection-card">
+              <h3>Trade-off</h3>
+              <p>
+                The early concept tried to include many learning goals. Peer review helped narrow the focus toward a
+                clearer path: learn the plate, build a lunchbox, then connect it to an offline activity.
+              </p>
+            </div>
+            <div class="reflection-card">
+              <h3>Team challenge</h3>
+              <p>
+                The project involved a large team with different expectations and uneven communication. I eventually
+                built a separate front-end page to demonstrate the features and design direction I believed were most important.
+              </p>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p>
+              My position as a parent of a target-age child helped me gather first-hand observations and test whether
+              the idea matched real parent and child needs.
+            </p>
+          </div>
+        </section>
+
+        <section class="section tab-panel" id="recruiter-takeaway" role="tabpanel" aria-labelledby="tab-recruiter-takeaway" hidden>
+          <div class="section-header">
+            <p class="section-kicker">Personal Takeaway</p>
+            <p class="section-intro">
+              NutriPlays shows my ability to connect user research, learning theory, visual interaction, and front-end
+              implementation into a coherent product concept.
+            </p>
+          </div>
+
+          <div class="takeaway-grid">
+            <div class="takeaway-card">
+              <h3><strong>Audience-aware design</strong></h3>
+              <p>
+                I learned to adapt interaction complexity, copy, and visual feedback to the cognitive stage of younger users.
+              </p>
+            </div>
+            <div class="takeaway-card">
+              <h3><strong>Research-backed decisions</strong></h3>
+              <p>
+                Literature review and parent feedback helped shape features around motivation, active learning, and real-life context.
+              </p>
+            </div>
+            <div class="takeaway-card">
+              <h3><strong>Prototype delivery</strong></h3>
+              <p>
+                I practised turning a product idea into working static pages with HTML, CSS, JavaScript, images, animation, and audio.
+              </p>
+            </div>
+            <div class="takeaway-card">
+              <h3><strong>Reflective iteration</strong></h3>
+              <p>
+                I used peer feedback and AI-assisted brainstorming to refine the scope while keeping the final design grounded in evidence.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    const tabButtons = Array.from(document.querySelectorAll("[data-tab-target]"));
+    const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
+    const featureTabButtons = Array.from(document.querySelectorAll("[data-feature-target]"));
+    const featurePanels = Array.from(document.querySelectorAll(".feature-panel"));
+
+    function activateTab(targetId, shouldUpdateHash = true) {
+      const targetPanel = document.getElementById(targetId);
+
+      if (!targetPanel) {
+        return;
+      }
+
+      tabButtons.forEach((button) => {
+        const isActive = button.dataset.tabTarget === targetId;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-selected", String(isActive));
+      });
+
+      tabPanels.forEach((panel) => {
+        panel.hidden = panel.id !== targetId;
+      });
+
+      if (shouldUpdateHash) {
+        history.replaceState(null, "", `#${targetId}`);
+      }
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activateTab(button.dataset.tabTarget);
+      });
+    });
+
+    function activateFeatureTab(targetId) {
+      const targetPanel = document.getElementById(targetId);
+
+      if (!targetPanel) {
+        return;
+      }
+
+      featureTabButtons.forEach((button) => {
+        const isActive = button.dataset.featureTarget === targetId;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-selected", String(isActive));
+      });
+
+      featurePanels.forEach((panel) => {
+        panel.hidden = panel.id !== targetId;
+      });
+    }
+
+    featureTabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activateFeatureTab(button.dataset.featureTarget);
+      });
+    });
+
+    const initialTab = window.location.hash.replace("#", "");
+    if (initialTab) {
+      activateTab(initialTab, false);
+    }
+  </script>
 </body>
+
 </html>
